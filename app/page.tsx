@@ -53,38 +53,32 @@ const dayPlans: DayPlan[] = [
   {
     day: "Friday",
     era: "Arrival Era",
-    subtitle: "Touchdown, reset, and first-night sparkle.",
+    subtitle: "An easy night in before the chaos begins.",
     cardClass: "bg-[#FFF2F8] border-[#FF4FA3]/35",
     events: [
       {
-        time: "2:00 PM",
+        time: "Afternoon",
         type: "arrivals",
-        label: "Arrivals + villa drop",
-        detail: "Airport pickups, room claims, swimsuit roll call.",
+        label: "Everyone arrives",
+        detail: "Flights roll in and everyone settles into trip mode.",
       },
       {
-        time: "4:30 PM",
-        type: "meal",
-        label: "Light bites + glam prep",
-        detail: "Quick snacks, makeup rotation, playlist on blast.",
-      },
-      {
-        time: "6:30 PM",
-        type: "drinks",
-        label: "Welcome spritzes",
-        detail: "First toast to Chelsea before heading into the city.",
-      },
-      {
-        time: "8:00 PM",
+        time: "4:00 PM",
         type: "reservation",
-        label: "Dinner in Old San Juan",
-        detail: "Colorful streets, cute fits, and camera-ready corners.",
+        label: "Airbnb check-in",
+        detail: "Bag drop, room claims, and cozy reset at the house.",
       },
       {
-        time: "10:30 PM",
+        time: "Evening",
+        type: "activity",
+        label: "Girls Go Mild",
+        detail: "Friday night theme: low-key, cute, and easy.",
+      },
+      {
+        time: "Night",
         type: "nightlife",
-        label: "Night out kickoff",
-        detail: "Cocktail bar hop, dancing, and zero early exits.",
+        label: "Pajama night at the house",
+        detail: "Chill night in before the busy weekend begins.",
       },
     ],
   },
@@ -105,6 +99,12 @@ const dayPlans: DayPlan[] = [
         type: "meal",
         label: "Poolside lunch",
         detail: "Fresh bowls, fries, and frozen drinks on repeat.",
+      },
+      {
+        time: "1:00 PM",
+        type: "drinks",
+        label: "Cocktail class at Bacardi",
+        detail: "Confirmed activity: group cocktail class at Bacardi.",
       },
       {
         time: "2:30 PM",
@@ -492,6 +492,41 @@ export default function FrennergyPage() {
           </p>
         </section>
 
+        <section className="mt-8 sm:mt-10" aria-labelledby="music-title">
+          <div className="relative overflow-hidden rounded-[2rem] border border-[#FF4FA3]/45 bg-[#FF7A59] px-6 py-7 shadow-[0_24px_40px_-22px_rgba(255,122,89,0.65)] sm:px-8 sm:py-8">
+            <div className="pointer-events-none absolute right-4 top-4 text-[#FFD966]/85">
+              <IconSparkle className="h-6 w-6" />
+            </div>
+            <div className="pointer-events-none absolute right-12 bottom-4 text-[#FFD966]/80">
+              <IconMusic className="h-6 w-6" />
+            </div>
+
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white/85">
+              NOW PLAYING
+            </p>
+            <h2
+              id="music-title"
+              className="mt-2 inline-flex items-center gap-2 text-3xl font-black tracking-tight text-white sm:text-4xl"
+            >
+              <IconMusic className="h-6 w-6 text-[#FFD966]" />
+              Hot Girl Frennergy
+            </h2>
+
+            <a
+              href={playlistUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-white px-6 py-4 text-base font-bold text-[#FF4FA3] shadow-[0_18px_28px_-14px_rgba(61,43,87,0.45)] transition duration-300 hover:-translate-y-1 hover:bg-[#FFF4EA] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#FF7A59] sm:w-auto sm:min-w-[280px]"
+            >
+              🎧 Cue the Chaos
+            </a>
+
+            <p className="mt-3 text-sm leading-7 text-white/90 sm:text-base">
+              Add your favorite songs to the weekend soundtrack.
+            </p>
+          </div>
+        </section>
+
         <section className="mt-12 rounded-[2rem] border border-white/85 bg-[#F9DCE7]/70 p-6 shadow-[0_18px_34px_-24px_rgba(255,122,89,0.35)] sm:mt-16 sm:p-10" aria-labelledby="overview-title">
           <h2 id="overview-title" className="inline-flex items-center gap-2 text-2xl font-bold tracking-tight text-[#43285F] sm:text-3xl">
             <IconCocktail className="h-5 w-5 text-[#FF7A59]" />
@@ -662,43 +697,6 @@ export default function FrennergyPage() {
                   <p className="mt-2 text-sm leading-7 text-[#5A406F]">{item.copy}</p>
                 </article>
               ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="mt-10 sm:mt-14" aria-labelledby="music-title">
-          <div className="relative overflow-hidden rounded-[2.2rem] border border-[#FF7A59]/45 bg-[linear-gradient(120deg,#FF7A59_0%,#FFA552_45%,#FFD966_100%)] p-6 shadow-[0_24px_46px_-24px_rgba(255,122,89,0.65)] sm:p-10">
-            <div className="pointer-events-none absolute right-4 top-4 text-white/80">
-              <IconSparkle className="h-6 w-6" />
-            </div>
-            <div className="pointer-events-none absolute left-5 bottom-4 text-[#FF4FA3]/70">
-              <IconMusic className="h-7 w-7" />
-            </div>
-
-            <div className="relative rounded-[1.7rem] border border-white/70 bg-[#FFF4EA]/85 p-5 sm:p-7">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#7B578F]">
-                NOW PLAYING
-              </p>
-              <h2
-                id="music-title"
-                className="mt-2 inline-flex items-center gap-2 text-3xl font-black tracking-tight text-[#4A2E63] sm:text-4xl"
-              >
-                <IconMusic className="h-6 w-6 text-[#FF4FA3]" />
-                Hot Girl Frennergy
-              </h2>
-
-              <a
-                href={playlistUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-[#FF4FA3] px-6 py-4 text-base font-bold text-white shadow-[0_18px_28px_-14px_rgba(255,79,163,0.85)] transition duration-300 hover:-translate-y-1 hover:bg-[#E93593] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF4FA3] focus-visible:ring-offset-2 sm:w-auto sm:min-w-[260px]"
-              >
-                🎧 Cue the Chaos
-              </a>
-
-              <p className="mt-3 text-sm leading-7 text-[#5A3E71] sm:text-base">
-                Add your favorite songs to the weekend soundtrack.
-              </p>
             </div>
           </div>
         </section>
