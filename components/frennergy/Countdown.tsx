@@ -53,34 +53,37 @@ export function Countdown({ targetDate, label = "Hot Girl Summer begins in..." }
     {
       label: "Days",
       value: timeLeft.days,
-      style: "border-[#FFD55C]/70 bg-[#FFD55C]/25 text-[#241243]",
+      style: "border-[#FF4FA3]/60 bg-[#FF4FA3]/20 text-[#4A2F69]",
     },
     {
       label: "Hours",
       value: timeLeft.hours,
-      style: "border-[#17C3C8]/70 bg-[#17C3C8]/25 text-[#241243]",
+      style: "border-[#27C7C8]/60 bg-[#27C7C8]/20 text-[#27535A]",
     },
     {
       label: "Minutes",
       value: timeLeft.minutes,
-      style: "border-[#FF2E8B]/70 bg-[#FF2E8B]/25 text-[#241243]",
+      style: "border-[#FFA552]/60 bg-[#FFA552]/25 text-[#5A3E2A]",
     },
   ];
 
   return (
-    <section aria-label="Countdown to trip" className="mt-8 rounded-[1.7rem] border border-white/40 bg-[#241243]/90 p-4 text-[#F8EBDD] shadow-[0_24px_40px_-24px_rgba(36,18,67,0.95)] sm:p-5">
-      <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#FFD55C]">
-        <Spark className="h-4 w-4" />
+    <section
+      aria-label="Countdown to trip"
+      className="mt-8 rounded-[1.8rem] border border-white/70 bg-[linear-gradient(120deg,#FFF2F8_0%,#FFF6E7_45%,#ECFBF9_100%)] p-4 shadow-[0_18px_32px_-20px_rgba(255,79,163,0.55)] sm:p-5"
+    >
+      <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#5D3D74]">
+        <Spark className="h-4 w-4 text-[#FF4FA3]" />
         {label}
       </p>
       <div className="mt-4 grid grid-cols-3 gap-2 sm:gap-3">
         {items.map((item) => (
           <div
             key={item.label}
-            className={`rounded-2xl border px-3 py-3 text-center shadow-[0_14px_24px_-18px_rgba(36,18,67,0.75)] ${item.style}`}
+            className={`rounded-2xl border px-3 py-3 text-center shadow-[0_12px_20px_-16px_rgba(61,43,87,0.45)] ${item.style}`}
           >
             <p className="text-2xl font-black leading-none sm:text-3xl">{item.value}</p>
-            <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#F8EBDD] sm:text-xs">
+            <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.16em] sm:text-xs">
               {item.label}
             </p>
           </div>
