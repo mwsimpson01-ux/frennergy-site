@@ -4,7 +4,7 @@ import { Countdown } from "@/components/frennergy/Countdown";
 export const metadata: Metadata = {
   title: "Hot Girl Frennergy | San Juan Bachelorette",
   description:
-    "A vibrant San Juan bachelorette weekend invite, itinerary, and moodboard for Chelsea.",
+    "A playful San Juan bachelorette weekend guide with timeline plans, outfits, details, and trip extras.",
 };
 
 const tripStart = "2026-05-22T00:00:00-04:00";
@@ -18,37 +18,143 @@ const vibeStrip = [
   "Chelsea",
 ];
 
-const itinerary = [
+const overviewPills = [
+  "Pool Hair",
+  "Old San Juan Dinner",
+  "Spritz Hour",
+  "Golden Hour Photos",
+];
+
+type ActivityType =
+  | "arrivals"
+  | "meal"
+  | "reservation"
+  | "drinks"
+  | "activity"
+  | "nightlife"
+  | "departure";
+
+type DayPlan = {
+  day: "Friday" | "Saturday" | "Sunday";
+  era: string;
+  subtitle: string;
+  cardClass: string;
+  events: Array<{
+    time: string;
+    type: ActivityType;
+    label: string;
+    detail: string;
+  }>;
+};
+
+const dayPlans: DayPlan[] = [
   {
     day: "Friday",
-    tone: "Pink Start",
+    era: "Arrival Era",
+    subtitle: "Touchdown, reset, and first-night sparkle.",
     cardClass: "bg-[#FFF2F8] border-[#FF4FA3]/35",
-    dotClass: "bg-[#FF4FA3]",
-    highlights: [
-      "Arrivals & check-in",
-      "Welcome drinks",
-      "Dinner in Old San Juan",
-      "Night out",
+    events: [
+      {
+        time: "2:00 PM",
+        type: "arrivals",
+        label: "Arrivals + villa drop",
+        detail: "Airport pickups, room claims, swimsuit roll call.",
+      },
+      {
+        time: "4:30 PM",
+        type: "meal",
+        label: "Light bites + glam prep",
+        detail: "Quick snacks, makeup rotation, playlist on blast.",
+      },
+      {
+        time: "6:30 PM",
+        type: "drinks",
+        label: "Welcome spritzes",
+        detail: "First toast to Chelsea before heading into the city.",
+      },
+      {
+        time: "8:00 PM",
+        type: "reservation",
+        label: "Dinner in Old San Juan",
+        detail: "Colorful streets, cute fits, and camera-ready corners.",
+      },
+      {
+        time: "10:30 PM",
+        type: "nightlife",
+        label: "Night out kickoff",
+        detail: "Cocktail bar hop, dancing, and zero early exits.",
+      },
     ],
   },
   {
     day: "Saturday",
-    tone: "Main Character Day",
+    era: "Main Character Day",
+    subtitle: "Beach club energy from sunrise glow to late-night chaos.",
     cardClass: "bg-[#EFFBFA] border-[#27C7C8]/35",
-    dotClass: "bg-[#27C7C8]",
-    highlights: [
-      "Beach / pool day",
-      "Cocktails",
-      "Sunset photos",
-      "Dinner + going out",
+    events: [
+      {
+        time: "10:00 AM",
+        type: "activity",
+        label: "Beach + pool setup",
+        detail: "Chairs, sunscreen, speaker, and turquoise look check.",
+      },
+      {
+        time: "12:30 PM",
+        type: "meal",
+        label: "Poolside lunch",
+        detail: "Fresh bowls, fries, and frozen drinks on repeat.",
+      },
+      {
+        time: "2:30 PM",
+        type: "drinks",
+        label: "Cocktail o'clock",
+        detail: "Round of signature drinks for the full squad.",
+      },
+      {
+        time: "6:00 PM",
+        type: "activity",
+        label: "Sunset photo run",
+        detail: "Golden hour content sprint before dinner glam.",
+      },
+      {
+        time: "8:00 PM",
+        type: "reservation",
+        label: "Dinner reservation",
+        detail: "Coral + gold fits, flash photos, and toasts.",
+      },
+      {
+        time: "10:45 PM",
+        type: "nightlife",
+        label: "Going out",
+        detail: "Dance floor, chaotic stories, and iconic group pics.",
+      },
     ],
   },
   {
     day: "Sunday",
-    tone: "Recovery Glow",
+    era: "Recovery Glow",
+    subtitle: "Slow morning, one more pool moment, and airport hugs.",
     cardClass: "bg-[#FFF7EC] border-[#FFA552]/40",
-    dotClass: "bg-[#FFA552]",
-    highlights: ["Brunch", "Pool hang", "Departures"],
+    events: [
+      {
+        time: "10:30 AM",
+        type: "meal",
+        label: "Recovery brunch",
+        detail: "Coffee, carbs, recap, and best-story voting.",
+      },
+      {
+        time: "12:00 PM",
+        type: "activity",
+        label: "Pool hang + reset",
+        detail: "Final dip, hydration, and suitcase regrouping.",
+      },
+      {
+        time: "2:30 PM",
+        type: "departure",
+        label: "Departures",
+        detail: "Airport rides, hugs, and post-trip group chat spam.",
+      },
+    ],
   },
 ];
 
@@ -124,6 +230,37 @@ const tripDetails = [
     value: "Hot, sunny, and humid - pack accordingly",
     icon: "flame",
     tileClass: "bg-[#FFF7EC] border-[#FF8A3D]/45",
+  },
+] as const;
+
+const tripExtras = [
+  {
+    title: "Packing Guide",
+    subtitle: "Must-pack edits",
+    copy: "Swimsuits, coverups, comfy sandals, SPF, fan, and one dramatic dinner look.",
+    icon: "bikini",
+    cardClass: "bg-[#FFF2F8] border-[#FF4FA3]/35",
+  },
+  {
+    title: "Villa / Hotel Info",
+    subtitle: "Stay details",
+    copy: "Address, room split, and keypad details will be pinned in the group chat.",
+    icon: "palm",
+    cardClass: "bg-[#EFFBFA] border-[#27C7C8]/35",
+  },
+  {
+    title: "Spotify Playlist",
+    subtitle: "Weekend soundtrack",
+    copy: "Queue up pregame anthems, pool tracks, and late-night chaos songs.",
+    icon: "music",
+    cardClass: "bg-[#F2ECFF] border-[#C9A6FF]/45",
+  },
+  {
+    title: "Weather",
+    subtitle: "Forecast vibe",
+    copy: "Hot and humid all weekend. Lightweight fabrics and hydration are non-negotiable.",
+    icon: "sun",
+    cardClass: "bg-[#FFF7EC] border-[#FFA552]/45",
   },
 ] as const;
 
@@ -234,13 +371,45 @@ function IconWave({ className = "h-5 w-5" }: IconProps) {
   );
 }
 
-function iconByName(name: (typeof tripDetails)[number]["icon"]) {
+function IconCamera({ className = "h-5 w-5" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className={className}>
+      <path d="M4 8h16v11H4z" />
+      <path d="M8 8 9.4 5.8h5.2L16 8" />
+      <circle cx="12" cy="13.5" r="2.7" />
+    </svg>
+  );
+}
+
+function IconMusic({ className = "h-5 w-5" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className={className}>
+      <path d="M9 18V6l10-2v12" />
+      <circle cx="7" cy="18" r="2" />
+      <circle cx="17" cy="16" r="2" />
+    </svg>
+  );
+}
+
+function iconByName(name: (typeof tripDetails)[number]["icon"] | (typeof tripExtras)[number]["icon"]) {
   if (name === "palm") return <IconPalm className="h-5 w-5" />;
   if (name === "sun") return <IconSunburst className="h-5 w-5" />;
   if (name === "sunglasses") return <IconSunglasses className="h-5 w-5" />;
   if (name === "shell") return <IconShell className="h-5 w-5" />;
   if (name === "sparkle") return <IconSparkle className="h-5 w-5" />;
+  if (name === "bikini") return <IconBikini className="h-5 w-5" />;
+  if (name === "music") return <IconMusic className="h-5 w-5" />;
   return <IconFlame className="h-5 w-5" />;
+}
+
+function activityIconByType(type: ActivityType) {
+  if (type === "arrivals") return <IconPalm className="h-4 w-4" />;
+  if (type === "meal") return <IconShell className="h-4 w-4" />;
+  if (type === "reservation") return <IconSparkle className="h-4 w-4" />;
+  if (type === "drinks") return <IconCocktail className="h-4 w-4" />;
+  if (type === "activity") return <IconSunburst className="h-4 w-4" />;
+  if (type === "nightlife") return <IconFlame className="h-4 w-4" />;
+  return <IconWave className="h-4 w-4" />;
 }
 
 export default function FrennergyPage() {
@@ -272,12 +441,6 @@ export default function FrennergyPage() {
           </div>
           <div className="pointer-events-none absolute left-1/2 top-6 -translate-x-1/2 text-[#FF7A59]/70">
             <IconWave className="h-8 w-8" />
-          </div>
-          <div className="pointer-events-none absolute right-1/3 bottom-4 text-[#FFA552]">
-            <IconShell className="h-6 w-6" />
-          </div>
-          <div className="pointer-events-none absolute left-1/4 bottom-5 text-[#FF7A59]">
-            <IconFlame className="h-6 w-6" />
           </div>
 
           <div className="relative mx-auto max-w-3xl text-center">
@@ -321,10 +484,8 @@ export default function FrennergyPage() {
           </div>
         </section>
 
-        <section className="mt-4" aria-label="Countdown card">
-          <div className="rounded-[1.8rem] border border-[#FF4FA3]/20 bg-[#FFF4EA] p-3 shadow-[0_18px_30px_-24px_rgba(255,79,163,0.5)] sm:p-4">
-            <Countdown targetDate={tripStart} label="Hot Girl Summer begins in..." />
-          </div>
+        <section className="mt-4 rounded-[1.8rem] border border-[#FF4FA3]/20 bg-[#FFF4EA] p-3 shadow-[0_18px_30px_-24px_rgba(255,79,163,0.5)] sm:p-4" aria-label="Countdown card">
+          <Countdown targetDate={tripStart} label="Countdown to San Juan" />
         </section>
 
         <section
@@ -342,54 +503,73 @@ export default function FrennergyPage() {
         </section>
 
         <section className="mt-12 rounded-[2rem] bg-[#F7D8E3]/55 p-6 shadow-[0_22px_40px_-28px_rgba(255,79,163,0.55)] sm:mt-16 sm:p-10" aria-labelledby="overview-title">
-          <div className="grid gap-6 sm:grid-cols-[1.1fr_0.9fr] sm:items-start">
-            <div>
-              <h2 id="overview-title" className="inline-flex items-center gap-2 text-2xl font-bold tracking-tight text-[#43285F] sm:text-3xl">
-                <IconCocktail className="h-5 w-5 text-[#FF6B4A]" />
-                Weekend Overview
-              </h2>
-              <p className="mt-4 text-base leading-8 text-[#5A406F] sm:text-lg">
-                Welcome to Chelsea&apos;s San Juan bachelorette weekend - a few days of beach clubs,
-                dinner glam, frozen drinks, late nights, recovery brunches, and elite memories.
-              </p>
-            </div>
-            <div className="grid grid-cols-2 gap-2 text-xs font-semibold uppercase tracking-[0.12em] text-[#4C3366]">
-              <span className="rounded-full bg-[#FFD966]/65 px-3 py-2 text-center">bikini lineup</span>
-              <span className="rounded-full bg-[#8DE1D2]/65 px-3 py-2 text-center">spritz hour</span>
-              <span className="rounded-full bg-[#FFA552]/65 px-3 py-2 text-center">sunset shots</span>
-              <span className="rounded-full bg-[#C9A6FF]/60 px-3 py-2 text-center">main character</span>
-            </div>
+          <h2 id="overview-title" className="inline-flex items-center gap-2 text-2xl font-bold tracking-tight text-[#43285F] sm:text-3xl">
+            <IconCocktail className="h-5 w-5 text-[#FF6B4A]" />
+            Weekend Overview
+          </h2>
+          <p className="mt-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#7B578F]">
+            quick moodboard before the chaos starts
+          </p>
+          <p className="mt-4 text-base leading-8 text-[#5A406F] sm:text-lg">
+            Welcome to Chelsea&apos;s San Juan bachelorette weekend - beach clubs, dinner glam,
+            frozen drinks, late nights, and elite memory-making across Old San Juan.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-[0.12em] text-[#4C3366]">
+            {overviewPills.map((pill) => (
+              <span key={pill} className="rounded-full bg-white/70 px-3 py-2">
+                {pill}
+              </span>
+            ))}
           </div>
         </section>
 
         <section id="itinerary" className="mt-10 sm:mt-14" aria-labelledby="itinerary-title">
           <div className="rounded-[2rem] bg-white/75 p-6 shadow-[0_22px_40px_-28px_rgba(255,165,82,0.55)] sm:p-10">
-            <div className="flex items-end justify-between gap-3">
-              <h2 id="itinerary-title" className="inline-flex items-center gap-2 text-2xl font-bold tracking-tight text-[#462A62] sm:text-3xl">
-                <IconPalm className="h-5 w-5 text-[#27C7C8]" />
-                Itinerary
-              </h2>
-              <span className="rounded-full bg-[#FFD966]/50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-[#5D4305]">
-                Weekend Flow
-              </span>
-            </div>
+            <h2 id="itinerary-title" className="inline-flex items-center gap-2 text-2xl font-bold tracking-tight text-[#462A62] sm:text-3xl">
+              <IconPalm className="h-5 w-5 text-[#27C7C8]" />
+              Day-by-Day Guide
+            </h2>
+            <p className="mt-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#7B578F]">
+              itinerary flow by era
+            </p>
 
-            <div className="mt-6 grid gap-4 sm:mt-8 md:grid-cols-3">
-              {itinerary.map((item) => (
+            <div className="mt-6 space-y-5 sm:mt-8">
+              {dayPlans.map((plan) => (
                 <article
-                  key={item.day}
-                  className={`rounded-[1.7rem] border p-5 shadow-[0_18px_34px_-24px_rgba(61,43,87,0.55)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_26px_40px_-24px_rgba(61,43,87,0.55)] sm:p-6 ${item.cardClass}`}
+                  key={plan.day}
+                  className={`rounded-[1.8rem] border p-5 shadow-[0_18px_34px_-24px_rgba(61,43,87,0.55)] sm:p-6 ${plan.cardClass}`}
                 >
-                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#FF4FA3]">{item.tone}</p>
-                  <h3 className="mt-2 text-2xl font-bold text-[#3D2B57]">{item.day}</h3>
-                  <ul className="mt-4 space-y-2 text-sm leading-6 text-[#5A406F] sm:text-base">
-                    {item.highlights.map((highlight) => (
-                      <li key={highlight} className="flex items-start gap-2">
-                        <span className={`mt-[0.45rem] h-2 w-2 shrink-0 rounded-full ${item.dotClass}`} />
-                        <span>{highlight}</span>
-                      </li>
+                  <div className="flex flex-wrap items-end justify-between gap-3">
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#FF4FA3]">
+                        {plan.era}
+                      </p>
+                      <h3 className="mt-1 text-2xl font-bold text-[#3D2B57]">{plan.day}</h3>
+                    </div>
+                    <p className="text-sm font-semibold text-[#5B426F]">{plan.subtitle}</p>
+                  </div>
+
+                  <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                    {plan.events.map((event) => (
+                      <article
+                        key={`${plan.day}-${event.time}-${event.label}`}
+                        className="rounded-2xl border border-white/80 bg-white/85 p-4 shadow-[0_10px_20px_-16px_rgba(61,43,87,0.45)]"
+                      >
+                        <div className="flex items-start gap-3">
+                          <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white text-[#FF4FA3]">
+                            {activityIconByType(event.type)}
+                          </span>
+                          <div>
+                            <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#7B578F]">
+                              {event.time}
+                            </p>
+                            <h4 className="mt-1 text-sm font-bold text-[#402E59]">{event.label}</h4>
+                            <p className="mt-1 text-sm leading-6 text-[#5A406F]">{event.detail}</p>
+                          </div>
+                        </div>
+                      </article>
                     ))}
-                  </ul>
+                  </div>
                 </article>
               ))}
             </div>
@@ -402,6 +582,9 @@ export default function FrennergyPage() {
               <IconBikini className="h-5 w-5 text-[#FF4FA3]" />
               Dress Themes
             </h2>
+            <p className="mt-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#4A6D73]">
+              fashion brief for every phase
+            </p>
             <div className="mt-6 grid gap-4 sm:mt-8 sm:grid-cols-2">
               {dressThemes.map((theme) => (
                 <article
@@ -424,6 +607,9 @@ export default function FrennergyPage() {
               <IconSparkle className="h-5 w-5 text-[#FF4FA3]" />
               Weekend Rules
             </h2>
+            <p className="mt-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#7B578F]">
+              sticker commandments
+            </p>
             <div className="mt-6 flex flex-wrap gap-3 sm:mt-8">
               {weekendRules.map((rule) => (
                 <p
@@ -443,6 +629,9 @@ export default function FrennergyPage() {
               <IconShell className="h-5 w-5 text-[#FF8A3D]" />
               Trip Details
             </h2>
+            <p className="mt-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#7B578F]">
+              cute travel tiles
+            </p>
             <div className="mt-6 grid gap-4 sm:mt-8 sm:grid-cols-2 lg:grid-cols-3">
               {tripDetails.map((detail) => (
                 <article
@@ -460,24 +649,51 @@ export default function FrennergyPage() {
           </div>
         </section>
 
+        <section className="mt-10 sm:mt-14" aria-labelledby="extras-title">
+          <div className="rounded-[2rem] bg-[#EFF6FF]/70 p-6 shadow-[0_22px_40px_-28px_rgba(121,217,209,0.55)] sm:p-10">
+            <h2 id="extras-title" className="inline-flex items-center gap-2 text-2xl font-bold tracking-tight text-[#40275F] sm:text-3xl">
+              <IconWave className="h-5 w-5 text-[#27C7C8]" />
+              Trip Extras
+            </h2>
+            <p className="mt-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#67828A]">
+              helpful links and prep
+            </p>
+            <div className="mt-6 grid gap-4 sm:mt-8 sm:grid-cols-2">
+              {tripExtras.map((item) => (
+                <article
+                  key={item.title}
+                  className={`rounded-[1.7rem] border px-5 py-5 shadow-[0_18px_32px_-24px_rgba(61,43,87,0.5)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_38px_-24px_rgba(61,43,87,0.5)] ${item.cardClass}`}
+                >
+                  <div className="inline-flex items-center gap-2 rounded-full bg-white/70 px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-[#4A3168]">
+                    <span className="text-[#FF4FA3]">{iconByName(item.icon)}</span>
+                    {item.subtitle}
+                  </div>
+                  <h3 className="mt-3 text-lg font-bold text-[#3F2A58]">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-7 text-[#5A406F]">{item.copy}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section id="photos" className="mt-12 sm:mt-16" aria-labelledby="photos-title">
-          <div className="relative overflow-hidden rounded-[2.2rem] border border-white/70 bg-[linear-gradient(118deg,#FF6B4A_0%,#FFA552_34%,#FFD966_64%,#27C7C8_100%)] px-6 py-9 text-[#43275F] shadow-[0_26px_56px_-24px_rgba(255,107,74,0.6)] sm:px-10 sm:py-11">
-            <div className="pointer-events-none absolute -right-10 top-2 h-44 w-44 rounded-full bg-[#FF4FA3]/25 blur-3xl" />
+          <div className="relative overflow-hidden rounded-[2.2rem] border border-white/70 bg-[linear-gradient(120deg,#FF6B4A_0%,#FFA552_45%,#FFD966_100%)] px-6 py-9 text-[#4A2E63] shadow-[0_26px_56px_-24px_rgba(255,122,89,0.6)] sm:px-10 sm:py-11">
+            <div className="pointer-events-none absolute -right-10 top-2 h-44 w-44 rounded-full bg-[#FF4FA3]/20 blur-3xl" />
             <div className="pointer-events-none absolute -left-16 bottom-0 h-44 w-44 rounded-full bg-[#8DE1D2]/35 blur-3xl" />
 
             <div className="relative">
               <h2 id="photos-title" className="inline-flex items-center gap-2 text-3xl font-black tracking-tight sm:text-4xl">
-                <IconSparkle className="h-6 w-6 text-[#FF4FA3]" />
-                Frennenergy Photo Dump
+                <IconCamera className="h-7 w-7 text-[#FF4FA3]" />
+                Camera Roll Chaos
               </h2>
-              <p className="mt-3 max-w-2xl text-sm leading-7 text-[#50326C] sm:text-base">
-                Upload all the chaos, candids, glam, and blurry late-night masterpieces here.
+              <p className="mt-3 max-w-2xl text-sm leading-7 text-[#5A3B74] sm:text-base">
+                Drop the chaos, the glam, and the blurry late-night evidence here.
               </p>
               <a
                 href="#photos"
                 className="mt-7 inline-flex items-center justify-center gap-2 rounded-full bg-[#FF4FA3] px-6 py-3 text-sm font-semibold text-white shadow-[0_16px_28px_-14px_rgba(255,79,163,0.75)] transition duration-300 hover:-translate-y-1 hover:bg-[#E93593] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF4FA3] focus-visible:ring-offset-2"
               >
-                <IconCocktail className="h-4 w-4" />
+                <IconSparkle className="h-4 w-4" />
                 Add Shared Album Link
               </a>
             </div>
