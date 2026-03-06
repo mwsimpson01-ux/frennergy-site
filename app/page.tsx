@@ -54,7 +54,7 @@ const dayPlans: DayPlan[] = [
     day: "Friday",
     era: "Arrival Era",
     subtitle: "An easy night in before the chaos begins.",
-    cardClass: "bg-[#FFF2F8] border-[#FF4FA3]/35",
+    cardClass: "bg-[#FFF4EA] border-[#F9DCE7]",
     events: [
       {
         time: "Afternoon",
@@ -86,7 +86,7 @@ const dayPlans: DayPlan[] = [
     day: "Saturday",
     era: "Main Character Day",
     subtitle: "Beach club energy from sunrise glow to late-night chaos.",
-    cardClass: "bg-[#ECFDFC] border-[#79D9D1]/45",
+    cardClass: "bg-[#FFF4EA] border-[#F9DCE7]",
     events: [
       {
         time: "10:00 AM",
@@ -136,7 +136,7 @@ const dayPlans: DayPlan[] = [
     day: "Sunday",
     era: "Recovery Glow",
     subtitle: "Slow morning, one more pool moment, and airport hugs.",
-    cardClass: "bg-[#FFF8EE] border-[#FFA552]/45",
+    cardClass: "bg-[#FFF4EA] border-[#F9DCE7]",
     events: [
       {
         time: "10:30 AM",
@@ -161,50 +161,38 @@ const dayPlans: DayPlan[] = [
 ];
 
 const weekendRules = [
-  { label: "Take the shot", className: "bg-[#FFD966] text-[#493503] rotate-[-2deg]" },
-  { label: "Take the photo", className: "bg-[#FF7A59] text-white rotate-[2deg]" },
-  { label: "Drink the cocktail", className: "bg-[#79D9D1] text-[#124F4B] rotate-[-1deg]" },
-  { label: "Hydrate occasionally", className: "bg-[#BFECE4] text-[#1C5E58] rotate-[1deg]" },
-  { label: "Celebrate Chelsea", className: "bg-[#FF4FA3] text-white rotate-[-2deg]" },
-  { label: "No bad vibes", className: "bg-[#C9A6FF] text-[#341A57] rotate-[1deg]" },
+  "Take the shot",
+  "Take the photo",
+  "Drink the cocktail",
+  "Hydrate occasionally",
+  "Celebrate Chelsea",
+  "No bad vibes",
 ];
 
 const tripDetails = [
   {
     label: "House",
     value: "Villa details coming soon",
-    icon: "palm",
-    tileClass: "bg-[#FFF2F8] border-[#FF4FA3]/35",
   },
   {
     label: "Airport",
     value: "Fly into SJU",
-    icon: "sun",
-    tileClass: "bg-[#FFF8EE] border-[#FFA552]/45",
   },
   {
     label: "Transportation",
     value: "Uber is easiest for getting around",
-    icon: "sunglasses",
-    tileClass: "bg-[#ECFDFC] border-[#79D9D1]/45",
   },
   {
     label: "Check-in",
     value: "Details to come",
-    icon: "shell",
-    tileClass: "bg-[#F9DCE7] border-[#FF4FA3]/35",
   },
   {
     label: "Group Chat",
     value: "Watch the chat for live updates",
-    icon: "sparkle",
-    tileClass: "bg-[#F4EDFF] border-[#C9A6FF]/45",
   },
   {
     label: "Weather",
     value: "Hot, sunny, and humid - pack accordingly",
-    icon: "flame",
-    tileClass: "bg-[#FFF8EE] border-[#FFA552]/45",
   },
 ] as const;
 
@@ -213,22 +201,16 @@ const tripExtras = [
     title: "Packing Guide",
     subtitle: "Must-pack edits",
     copy: "Swimsuits, coverups, comfy sandals, SPF, fan, and one dramatic dinner look.",
-    icon: "bikini",
-    cardClass: "bg-[#FFF2F8] border-[#FF4FA3]/35",
   },
   {
     title: "Villa / Hotel Info",
     subtitle: "Stay details",
     copy: "Address, room split, and keypad details will be pinned in the group chat.",
-    icon: "palm",
-    cardClass: "bg-[#ECFDFC] border-[#79D9D1]/45",
   },
   {
     title: "Weather",
     subtitle: "Forecast vibe",
     copy: "Hot and humid all weekend. Lightweight fabrics and hydration are non-negotiable.",
-    icon: "sun",
-    cardClass: "bg-[#FFF8EE] border-[#FFA552]/45",
   },
 ] as const;
 
@@ -285,19 +267,6 @@ function IconSparkle({ className = "h-5 w-5" }: IconProps) {
   );
 }
 
-function IconBikini({ className = "h-5 w-5" }: IconProps) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className={className}>
-      <path d="M7 6c1.8 0 2.6 1.4 3 2.5" />
-      <path d="M17 6c-1.8 0-2.6 1.4-3 2.5" />
-      <path d="M4 10h16" />
-      <path d="M8.5 14.5c1.3 1.5 1.3 4.5 0 6" />
-      <path d="M15.5 14.5c-1.3 1.5-1.3 4.5 0 6" />
-      <path d="M8.5 14.5h7" />
-    </svg>
-  );
-}
-
 function IconShell({ className = "h-5 w-5" }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className={className}>
@@ -307,16 +276,6 @@ function IconShell({ className = "h-5 w-5" }: IconProps) {
       <path d="M15.2 6.2 14 20" />
       <path d="M6.5 9.3 9.6 19.4" />
       <path d="M17.5 9.3 14.4 19.4" />
-    </svg>
-  );
-}
-
-function IconSunglasses({ className = "h-5 w-5" }: IconProps) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className={className}>
-      <path d="M3.5 11.2h17" />
-      <path d="M4.5 11.2 6 16c.2.6.8 1 1.4 1h2.2c.6 0 1.2-.4 1.4-1l1-3.1" />
-      <path d="M19.5 11.2 18 16c-.2.6-.8 1-1.4 1h-2.2c-.6 0-1.2-.4-1.4-1l-1-3.1" />
     </svg>
   );
 }
@@ -349,26 +308,6 @@ function IconCamera({ className = "h-5 w-5" }: IconProps) {
   );
 }
 
-function IconMusic({ className = "h-5 w-5" }: IconProps) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className={className}>
-      <path d="M9 18V6l10-2v12" />
-      <circle cx="7" cy="18" r="2" />
-      <circle cx="17" cy="16" r="2" />
-    </svg>
-  );
-}
-
-function iconByName(name: (typeof tripDetails)[number]["icon"] | (typeof tripExtras)[number]["icon"]) {
-  if (name === "palm") return <IconPalm className="h-5 w-5" />;
-  if (name === "sun") return <IconSunburst className="h-5 w-5" />;
-  if (name === "sunglasses") return <IconSunglasses className="h-5 w-5" />;
-  if (name === "shell") return <IconShell className="h-5 w-5" />;
-  if (name === "sparkle") return <IconSparkle className="h-5 w-5" />;
-  if (name === "bikini") return <IconBikini className="h-5 w-5" />;
-  return <IconFlame className="h-5 w-5" />;
-}
-
 function activityIconByType(type: ActivityType) {
   if (type === "arrivals") return <IconPalm className="h-4 w-4" />;
   if (type === "meal") return <IconShell className="h-4 w-4" />;
@@ -381,38 +320,13 @@ function activityIconByType(type: ActivityType) {
 
 export default function FrennergyPage() {
   return (
-    <main className="relative isolate overflow-hidden bg-[#FFF4EA] text-[#3D2B57]">
-      <div className="pointer-events-none absolute -left-10 top-16 -z-10 h-44 w-44 rounded-full bg-[#FFD966]/45" />
-      <div className="pointer-events-none absolute right-[-2.75rem] top-36 -z-10 h-52 w-52 rounded-full bg-[#BFECE4]/70" />
-
-      <div className="mx-auto w-full max-w-6xl px-4 pb-16 pt-6 sm:px-8 sm:pb-24 sm:pt-10">
-        <section className="relative overflow-hidden rounded-[2.4rem] border border-[#FF4FA3]/25 bg-[linear-gradient(145deg,#FFF4EA_0%,#F9DCE7_62%,#BFECE4_100%)] px-6 pb-10 pt-8 shadow-[0_18px_36px_-22px_rgba(255,122,89,0.4)] sm:px-10 sm:pb-12 sm:pt-10">
-          <div className="pointer-events-none absolute left-4 top-5 text-[#FFA552]">
-            <IconPalm className="h-7 w-7" />
-          </div>
-          <div className="pointer-events-none absolute right-6 top-6 text-[#FF4FA3]">
-            <IconSunburst className="h-7 w-7" />
-          </div>
-          <div className="pointer-events-none absolute right-4 top-20 text-[#FF7A59]">
-            <IconBikini className="h-7 w-7" />
-          </div>
-          <div className="pointer-events-none absolute left-6 bottom-7 text-[#79D9D1]">
-            <IconCocktail className="h-7 w-7" />
-          </div>
-          <div className="pointer-events-none absolute right-10 bottom-7 text-[#FF4FA3]">
-            <IconSparkle className="h-6 w-6" />
-          </div>
-          <div className="pointer-events-none absolute left-1/2 top-6 -translate-x-1/2 text-[#FF7A59]/70">
-            <IconWave className="h-8 w-8" />
-          </div>
-
-          <div className="relative mx-auto max-w-3xl text-center">
-            <div className="flex justify-center gap-2">
-              <span className="rounded-full bg-white/75 px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-[#5C3F78]">
+    <main className="bg-[#FFF4EA] text-[#3D2B57]">
+      <div className="mx-auto w-full max-w-6xl px-4 pb-20 pt-6 sm:px-8 sm:pb-28 sm:pt-10">
+        <section className="rounded-[2rem] border border-[#F9DCE7] bg-[#F9DCE7] px-6 pb-10 pt-8 shadow-[0_20px_34px_-24px_rgba(61,43,87,0.35)] sm:px-10 sm:pb-12 sm:pt-10">
+          <div className="mx-auto max-w-3xl text-center">
+            <div className="flex justify-center">
+              <span className="rounded-full bg-white/85 px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-[#5C3F78]">
                 bach mode
-              </span>
-              <span className="rounded-full bg-[#FFD966]/70 px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-[#6B490C]">
-                hot girls only
               </span>
             </div>
 
@@ -422,8 +336,7 @@ export default function FrennergyPage() {
             <h1 className="mt-3 font-[family-name:Georgia,Times,serif] text-6xl font-black leading-[0.9] tracking-tight text-[#4B2C66] sm:text-7xl lg:text-8xl">
               Hot Girl Frennergy
             </h1>
-            <p className="mt-3 inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-1 text-sm font-semibold uppercase tracking-[0.12em] text-[#5C3F78]">
-              <IconShell className="h-4 w-4 text-[#FF7A59]" />
+            <p className="mt-3 inline-flex rounded-full bg-white/80 px-4 py-1 text-sm font-semibold uppercase tracking-[0.12em] text-[#5C3F78]">
               San Juan, Puerto Rico
             </p>
             <p className="mx-auto mt-4 max-w-xl text-lg font-semibold leading-7 text-[#5A3E71]">
@@ -451,21 +364,10 @@ export default function FrennergyPage() {
           <Countdown targetDate={tripStart} label="Countdown to San Juan" />
         </section>
 
-        <section className="mt-5 sm:mt-6" aria-labelledby="music-title">
-          <div className="relative overflow-hidden rounded-[2rem] border border-[#FF4FA3]/45 bg-[#FF7A59] px-7 py-8 shadow-[0_24px_40px_-22px_rgba(255,122,89,0.65)] sm:px-9 sm:py-10">
-            <div className="pointer-events-none absolute right-4 top-4 text-[#FFD966]/90">
-              <IconSparkle className="h-6 w-6" />
-            </div>
-            <div className="pointer-events-none absolute right-12 bottom-6 text-[#FFD966]/85">
-              <IconMusic className="h-6 w-6" />
-            </div>
-
+        <section className="mt-6 sm:mt-8" aria-labelledby="music-title">
+          <div className="rounded-[2rem] border border-[#FF4FA3]/45 bg-[#FF7A59] px-7 py-9 shadow-[0_22px_34px_-20px_rgba(255,122,89,0.58)] sm:px-10 sm:py-10">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white/85">NOW PLAYING</p>
-            <h2
-              id="music-title"
-              className="mt-2 inline-flex items-center gap-2 text-3xl font-black tracking-tight text-white sm:text-4xl"
-            >
-              <IconMusic className="h-6 w-6 text-[#FFD966]" />
+            <h2 id="music-title" className="mt-2 text-3xl font-black tracking-tight text-white sm:text-4xl">
               Hot Girl Frennergy
             </h2>
 
@@ -477,7 +379,7 @@ export default function FrennergyPage() {
               href={playlistUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-7 inline-flex w-full items-center justify-center rounded-full bg-[#FF4FA3] px-6 py-4 text-base font-bold text-white shadow-[0_18px_28px_-14px_rgba(61,43,87,0.45)] transition duration-300 hover:-translate-y-1 hover:bg-[#EA3793] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#FF7A59] sm:w-auto sm:min-w-[280px]"
+              className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-[#FF4FA3] px-6 py-4 text-base font-bold text-white shadow-[0_18px_30px_-16px_rgba(61,43,87,0.48)] transition duration-300 hover:-translate-y-1 hover:bg-[#EA3793] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#FF7A59] sm:w-auto sm:min-w-[280px]"
             >
               🎧 Cue the Chaos
             </a>
@@ -498,7 +400,7 @@ export default function FrennergyPage() {
           </p>
         </section>
 
-        <section className="mt-12 rounded-[2rem] border border-white/85 bg-[#F9DCE7] p-6 shadow-[0_18px_34px_-24px_rgba(255,122,89,0.35)] sm:mt-16 sm:p-10" aria-labelledby="overview-title">
+        <section className="mt-14 rounded-[2rem] border border-white/85 bg-[#F9DCE7] p-6 shadow-[0_20px_34px_-24px_rgba(61,43,87,0.28)] sm:mt-16 sm:p-10" aria-labelledby="overview-title">
           <h2 id="overview-title" className="inline-flex items-center gap-2 text-2xl font-bold tracking-tight text-[#43285F] sm:text-3xl">
             <IconCocktail className="h-5 w-5 text-[#FF7A59]" />
             Weekend Overview
@@ -519,8 +421,8 @@ export default function FrennergyPage() {
           </div>
         </section>
 
-        <section id="itinerary" className="mt-10 sm:mt-14" aria-labelledby="itinerary-title">
-          <div className="rounded-[2rem] border border-white/85 bg-white p-6 shadow-[0_18px_34px_-24px_rgba(255,165,82,0.4)] sm:p-10">
+        <section id="itinerary" className="mt-12 sm:mt-16" aria-labelledby="itinerary-title">
+          <div className="rounded-[2rem] border border-white/85 bg-[#FFF4EA] p-6 shadow-[0_20px_34px_-24px_rgba(61,43,87,0.28)] sm:p-10">
             <h2 id="itinerary-title" className="inline-flex items-center gap-2 text-2xl font-bold tracking-tight text-[#462A62] sm:text-3xl">
               <IconPalm className="h-5 w-5 text-[#79D9D1]" />
               Day-by-Day Guide
@@ -529,11 +431,11 @@ export default function FrennergyPage() {
               itinerary flow by era
             </p>
 
-            <div className="mt-6 space-y-5 sm:mt-8">
+            <div className="mt-6 space-y-6 sm:mt-8">
               {dayPlans.map((plan) => (
                 <article
                   key={plan.day}
-                  className={`rounded-[1.5rem] border p-5 shadow-[0_12px_24px_-18px_rgba(61,43,87,0.35)] sm:p-6 ${plan.cardClass}`}
+                  className={`rounded-[1.4rem] border p-5 shadow-[0_12px_24px_-18px_rgba(61,43,87,0.28)] sm:p-6 ${plan.cardClass}`}
                 >
                   <div className="flex flex-wrap items-end justify-between gap-3">
                     <div>
@@ -549,10 +451,10 @@ export default function FrennergyPage() {
                     {plan.events.map((event) => (
                       <article
                         key={`${plan.day}-${event.time}-${event.label}`}
-                        className="rounded-2xl border border-white/90 bg-white/92 p-4 shadow-[0_10px_20px_-16px_rgba(61,43,87,0.3)]"
+                        className="rounded-[1.2rem] border border-[#F9DCE7] bg-white p-4 shadow-[0_10px_20px_-16px_rgba(61,43,87,0.25)]"
                       >
                         <div className="flex items-start gap-3">
-                          <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white text-[#FF4FA3]">
+                          <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#FFF4EA] text-[#FF4FA3]">
                             {activityIconByType(event.type)}
                           </span>
                           <div>
@@ -572,8 +474,8 @@ export default function FrennergyPage() {
           </div>
         </section>
 
-        <section className="mt-10 sm:mt-14" aria-labelledby="rules-title">
-          <div className="rounded-[2rem] border border-white/85 bg-[#FFF4EA] p-6 shadow-[0_18px_34px_-24px_rgba(255,165,82,0.4)] sm:p-10">
+        <section className="mt-12 sm:mt-16" aria-labelledby="rules-title">
+          <div className="rounded-[2rem] border border-white/85 bg-[#FFF4EA] p-6 shadow-[0_20px_34px_-24px_rgba(61,43,87,0.28)] sm:p-10">
             <h2 id="rules-title" className="inline-flex items-center gap-2 text-2xl font-bold tracking-tight text-[#40275F] sm:text-3xl">
               <IconSparkle className="h-5 w-5 text-[#FF4FA3]" />
               Weekend Rules
@@ -584,18 +486,18 @@ export default function FrennergyPage() {
             <div className="mt-6 flex flex-wrap gap-3 sm:mt-8">
               {weekendRules.map((rule) => (
                 <p
-                  key={rule.label}
-                  className={`rounded-2xl px-4 py-3 text-sm font-black uppercase tracking-[0.08em] shadow-[0_10px_18px_-14px_rgba(61,43,87,0.45)] transition duration-300 hover:-translate-y-1 sm:text-base ${rule.className}`}
+                  key={rule}
+                  className="rounded-full border border-[#FF4FA3]/25 bg-white px-4 py-3 text-sm font-black uppercase tracking-[0.08em] text-[#553873] shadow-[0_10px_18px_-14px_rgba(61,43,87,0.25)] transition duration-300 hover:-translate-y-1 sm:text-base"
                 >
-                  {rule.label}
+                  {rule}
                 </p>
               ))}
             </div>
           </div>
         </section>
 
-        <section id="details" className="mt-10 sm:mt-14" aria-labelledby="trip-details-title">
-          <div className="rounded-[2rem] border border-white/85 bg-[#FFF4EA] p-6 shadow-[0_18px_34px_-24px_rgba(121,217,209,0.45)] sm:p-10">
+        <section id="details" className="mt-12 sm:mt-16" aria-labelledby="trip-details-title">
+          <div className="rounded-[2rem] border border-white/85 bg-[#BFECE4]/35 p-6 shadow-[0_20px_34px_-24px_rgba(61,43,87,0.28)] sm:p-10">
             <h2 id="trip-details-title" className="inline-flex items-center gap-2 text-2xl font-bold tracking-tight text-[#40275F] sm:text-3xl">
               <IconShell className="h-5 w-5 text-[#FF8A3D]" />
               Trip Details
@@ -607,10 +509,9 @@ export default function FrennergyPage() {
               {tripDetails.map((detail) => (
                 <article
                   key={detail.label}
-                  className={`rounded-[1.5rem] border px-5 py-5 shadow-[0_12px_22px_-16px_rgba(61,43,87,0.35)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_16px_26px_-16px_rgba(61,43,87,0.35)] ${detail.tileClass}`}
+                  className="rounded-[1.4rem] border border-[#F9DCE7] bg-white px-5 py-5 shadow-[0_12px_22px_-16px_rgba(61,43,87,0.25)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_16px_26px_-16px_rgba(61,43,87,0.28)]"
                 >
-                  <div className="inline-flex items-center gap-2 rounded-full bg-white/75 px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-[#4A3168]">
-                    <span className="text-[#FF4FA3]">{iconByName(detail.icon)}</span>
+                  <div className="inline-flex rounded-full bg-[#FFF4EA] px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-[#4A3168]">
                     {detail.label}
                   </div>
                   <p className="mt-3 text-base leading-7 text-[#563E71]">{detail.value}</p>
@@ -620,8 +521,8 @@ export default function FrennergyPage() {
           </div>
         </section>
 
-        <section className="mt-10 sm:mt-14" aria-labelledby="extras-title">
-          <div className="rounded-[2rem] border border-white/85 bg-[#F4EDFF] p-6 shadow-[0_18px_34px_-24px_rgba(201,166,255,0.45)] sm:p-10">
+        <section className="mt-12 sm:mt-16" aria-labelledby="extras-title">
+          <div className="rounded-[2rem] border border-white/85 bg-[#F4EDFF] p-6 shadow-[0_20px_34px_-24px_rgba(61,43,87,0.28)] sm:p-10">
             <h2 id="extras-title" className="inline-flex items-center gap-2 text-2xl font-bold tracking-tight text-[#40275F] sm:text-3xl">
               <IconWave className="h-5 w-5 text-[#79D9D1]" />
               Trip Extras
@@ -633,10 +534,9 @@ export default function FrennergyPage() {
               {tripExtras.map((item) => (
                 <article
                   key={item.title}
-                  className={`rounded-[1.5rem] border px-5 py-5 shadow-[0_12px_22px_-16px_rgba(61,43,87,0.35)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_16px_26px_-16px_rgba(61,43,87,0.35)] ${item.cardClass}`}
+                  className="rounded-[1.4rem] border border-[#F9DCE7] bg-white px-5 py-5 shadow-[0_12px_22px_-16px_rgba(61,43,87,0.25)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_16px_26px_-16px_rgba(61,43,87,0.28)]"
                 >
-                  <div className="inline-flex items-center gap-2 rounded-full bg-white/75 px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-[#4A3168]">
-                    <span className="text-[#FF4FA3]">{iconByName(item.icon)}</span>
+                  <div className="inline-flex rounded-full bg-[#FFF4EA] px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-[#4A3168]">
                     {item.subtitle}
                   </div>
                   <h3 className="mt-3 text-lg font-bold text-[#3F2A58]">{item.title}</h3>
@@ -647,16 +547,9 @@ export default function FrennergyPage() {
           </div>
         </section>
 
-        <section id="photos" className="mt-12 sm:mt-16" aria-labelledby="photos-title">
-          <div className="relative overflow-hidden rounded-[2rem] border border-[#FF7A59]/35 bg-[#FFA552] px-6 py-9 text-[#4A2E63] shadow-[0_22px_42px_-24px_rgba(255,122,89,0.55)] sm:px-10 sm:py-11">
-            <div className="pointer-events-none absolute right-6 top-4 text-white/70">
-              <IconSparkle className="h-6 w-6" />
-            </div>
-            <div className="pointer-events-none absolute left-6 bottom-5 text-[#79D9D1]/70">
-              <IconCamera className="h-7 w-7" />
-            </div>
-
-            <div className="relative rounded-[1.5rem] border border-white/75 bg-[#FFF4EA] p-5 sm:p-7">
+        <section id="photos" className="mt-14 sm:mt-16" aria-labelledby="photos-title">
+          <div className="rounded-[2rem] border border-[#FF7A59]/35 bg-[#FFA552] px-6 py-9 text-[#4A2E63] shadow-[0_22px_40px_-24px_rgba(255,122,89,0.5)] sm:px-10 sm:py-11">
+            <div className="rounded-[1.4rem] border border-white/75 bg-[#FFF4EA] p-5 sm:p-7">
               <h2 id="photos-title" className="inline-flex items-center gap-2 text-3xl font-black tracking-tight sm:text-4xl">
                 <IconCamera className="h-7 w-7 text-[#FF4FA3]" />
                 Camera Roll Chaos
@@ -666,9 +559,8 @@ export default function FrennergyPage() {
               </p>
               <a
                 href="#photos"
-                className="mt-7 inline-flex items-center justify-center gap-2 rounded-full bg-[#FF4FA3] px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_24px_-12px_rgba(255,79,163,0.75)] transition duration-300 hover:-translate-y-1 hover:bg-[#E93593] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF4FA3] focus-visible:ring-offset-2"
+                className="mt-7 inline-flex items-center justify-center rounded-full bg-[#FF4FA3] px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_24px_-12px_rgba(255,79,163,0.75)] transition duration-300 hover:-translate-y-1 hover:bg-[#E93593] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF4FA3] focus-visible:ring-offset-2"
               >
-                <IconSparkle className="h-4 w-4" />
                 Add Shared Album Link
               </a>
             </div>
