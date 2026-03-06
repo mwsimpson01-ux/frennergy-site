@@ -225,6 +225,15 @@ function IconFlame({ className = "h-5 w-5" }: IconProps) {
   );
 }
 
+function IconWave({ className = "h-5 w-5" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className={className}>
+      <path d="M2 8c2.2 0 2.2 2 4.4 2s2.2-2 4.4-2 2.2 2 4.4 2 2.2-2 4.4-2 2.2 2 2.4 2" />
+      <path d="M2 14c2.2 0 2.2 2 4.4 2s2.2-2 4.4-2 2.2 2 4.4 2 2.2-2 4.4-2 2.2 2 2.4 2" />
+    </svg>
+  );
+}
+
 function iconByName(name: (typeof tripDetails)[number]["icon"]) {
   if (name === "palm") return <IconPalm className="h-5 w-5" />;
   if (name === "sun") return <IconSunburst className="h-5 w-5" />;
@@ -242,52 +251,60 @@ export default function FrennergyPage() {
       <div className="pointer-events-none absolute top-36 right-[-5rem] -z-10 h-72 w-72 rounded-full bg-[#27C7C8]/24 blur-3xl" />
 
       <div className="mx-auto w-full max-w-6xl px-4 pb-16 pt-6 sm:px-8 sm:pb-24 sm:pt-10">
-        <section className="relative overflow-hidden rounded-[2.6rem] border-2 border-white/75 bg-[linear-gradient(120deg,#FF6B4A_0%,#FFA552_32%,#FFD966_60%,#27C7C8_100%)] px-6 pb-10 pt-8 shadow-[0_30px_70px_-24px_rgba(255,107,74,0.55)] sm:px-10 sm:pb-12 sm:pt-11">
-          <div className="pointer-events-none absolute right-4 top-6 text-[#FFF4E2]/95">
-            <IconSunburst className="h-16 w-16" />
+        <section className="relative overflow-hidden rounded-[2.5rem] border border-[#FF4FA3]/25 bg-[linear-gradient(180deg,#FFF4EA_0%,#F9DCE7_100%)] px-6 pb-10 pt-8 shadow-[0_24px_48px_-28px_rgba(255,79,163,0.45)] sm:px-10 sm:pb-12 sm:pt-10">
+          <div className="pointer-events-none absolute -left-10 top-10 h-24 w-24 rounded-full bg-[#FFD966]/45" />
+          <div className="pointer-events-none absolute right-[-2.25rem] top-[-1.75rem] h-28 w-28 rounded-full bg-[#79D9D1]/35" />
+          <div className="pointer-events-none absolute bottom-[-1.5rem] left-1/2 h-20 w-20 -translate-x-1/2 rounded-full bg-[#FF7A59]/25" />
+          <div className="pointer-events-none absolute left-4 top-5 text-[#FFA552]">
+            <IconPalm className="h-7 w-7" />
           </div>
-          <div className="pointer-events-none absolute left-4 top-4 text-[#F7D8E3]/95">
-            <IconPalm className="h-8 w-8" />
+          <div className="pointer-events-none absolute right-6 top-6 text-[#FF4FA3]">
+            <IconSunburst className="h-7 w-7" />
           </div>
-          <div className="pointer-events-none absolute right-6 top-28 text-[#F8EBDD]/95">
-            <IconBikini className="h-8 w-8" />
+          <div className="pointer-events-none absolute right-4 top-20 text-[#FF7A59]">
+            <IconBikini className="h-7 w-7" />
           </div>
-          <div className="pointer-events-none absolute bottom-7 left-6 text-[#FFF5E9]">
-            <IconCocktail className="h-8 w-8" />
+          <div className="pointer-events-none absolute left-6 bottom-7 text-[#79D9D1]">
+            <IconCocktail className="h-7 w-7" />
           </div>
-          <div className="pointer-events-none absolute bottom-8 right-8 text-[#FF4FA3]">
-            <IconFlame className="h-8 w-8" />
+          <div className="pointer-events-none absolute right-10 bottom-7 text-[#FF4FA3]">
+            <IconSparkle className="h-6 w-6" />
           </div>
-          <div className="pointer-events-none absolute left-1/2 top-14 -translate-x-1/2 text-[#F8EBDD]">
-            <IconSparkle className="h-7 w-7" />
+          <div className="pointer-events-none absolute left-1/2 top-6 -translate-x-1/2 text-[#FF7A59]/70">
+            <IconWave className="h-8 w-8" />
+          </div>
+          <div className="pointer-events-none absolute right-1/3 bottom-4 text-[#FFA552]">
+            <IconShell className="h-6 w-6" />
+          </div>
+          <div className="pointer-events-none absolute left-1/4 bottom-5 text-[#FF7A59]">
+            <IconFlame className="h-6 w-6" />
           </div>
 
-          <div className="relative">
-            <div className="flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-[0.12em] text-[#4D2F6F]">
-              <span className="rounded-full bg-white/70 px-3 py-1">bach mode</span>
-              <span className="rounded-full bg-[#F7D8E3]/85 px-3 py-1">hot girls only</span>
-              <span className="rounded-full bg-[#8DE1D2]/85 px-3 py-1">spritz hour</span>
-              <span className="rounded-full bg-[#FFD966]/85 px-3 py-1">pool hair</span>
-              <span className="rounded-full bg-[#C9A6FF]/75 px-3 py-1">main character</span>
-              <span className="rounded-full bg-[#FFA552]/75 px-3 py-1">golden hour</span>
+          <div className="relative mx-auto max-w-3xl text-center">
+            <div className="flex justify-center gap-2">
+              <span className="rounded-full bg-white/75 px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-[#5C3F78]">
+                bach mode
+              </span>
+              <span className="rounded-full bg-[#FFD966]/70 px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-[#6B490C]">
+                hot girls only
+              </span>
             </div>
 
-            <p className="mt-5 inline-flex items-center gap-2 rounded-full border border-white/70 bg-white/60 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#45286A]">
-              <IconShell className="h-4 w-4" />
-              San Juan, Puerto Rico
-            </p>
-
-            <h1 className="mt-4 font-[family-name:Georgia,Times,serif] text-6xl font-black leading-[0.9] tracking-tight text-[#392456] sm:text-7xl lg:text-8xl">
-              Hot Girl Frennergy
-            </h1>
-            <p className="mt-4 text-xl font-semibold text-[#45286A] sm:text-2xl">
+            <p className="mt-5 text-sm font-semibold uppercase tracking-[0.2em] text-[#6B4A84]">
               Chelsea&apos;s Bachelorette Weekend
             </p>
-            <p className="mt-3 max-w-2xl text-lg font-semibold leading-7 text-[#472B66]">
+            <h1 className="mt-3 font-[family-name:Georgia,Times,serif] text-6xl font-black leading-[0.9] tracking-tight text-[#4B2C66] sm:text-7xl lg:text-8xl">
+              Hot Girl Frennergy
+            </h1>
+            <p className="mt-3 inline-flex items-center gap-2 rounded-full bg-white/65 px-4 py-1 text-sm font-semibold uppercase tracking-[0.12em] text-[#5C3F78]">
+              <IconShell className="h-4 w-4 text-[#FF7A59]" />
+              San Juan, Puerto Rico
+            </p>
+            <p className="mx-auto mt-4 max-w-xl text-lg font-semibold leading-7 text-[#5A3E71]">
               Bikinis, beach clubs, and bad decisions.
             </p>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
               <a
                 href="#itinerary"
                 className="inline-flex items-center justify-center rounded-full bg-[#FF4FA3] px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_26px_-12px_rgba(255,79,163,0.8)] transition duration-300 hover:-translate-y-1 hover:bg-[#EA3793] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF4FA3] focus-visible:ring-offset-2"
@@ -296,12 +313,16 @@ export default function FrennergyPage() {
               </a>
               <a
                 href="#details"
-                className="inline-flex items-center justify-center rounded-full border border-[#27C7C8]/45 bg-white/75 px-6 py-3 text-sm font-semibold text-[#215D68] shadow-[0_12px_22px_-14px_rgba(39,199,200,0.8)] transition duration-300 hover:-translate-y-1 hover:bg-[#E9FCFB] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#27C7C8] focus-visible:ring-offset-2"
+                className="inline-flex items-center justify-center rounded-full border border-[#79D9D1]/65 bg-white/75 px-6 py-3 text-sm font-semibold text-[#2B6970] shadow-[0_12px_22px_-14px_rgba(121,217,209,0.85)] transition duration-300 hover:-translate-y-1 hover:bg-[#EEFCFA] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#79D9D1] focus-visible:ring-offset-2"
               >
                 Trip Details
               </a>
             </div>
+          </div>
+        </section>
 
+        <section className="mt-4" aria-label="Countdown card">
+          <div className="rounded-[1.8rem] border border-[#FF4FA3]/20 bg-[#FFF4EA] p-3 shadow-[0_18px_30px_-24px_rgba(255,79,163,0.5)] sm:p-4">
             <Countdown targetDate={tripStart} label="Hot Girl Summer begins in..." />
           </div>
         </section>
