@@ -308,6 +308,17 @@ function IconCamera({ className = "h-5 w-5" }: IconProps) {
   );
 }
 
+function IconHeadphones({ className = "h-5 w-5" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className={className}>
+      <path d="M4 13a8 8 0 0 1 16 0" />
+      <rect x="3.5" y="12" width="4.5" height="7" rx="2" />
+      <rect x="16" y="12" width="4.5" height="7" rx="2" />
+      <path d="M8 18h8" />
+    </svg>
+  );
+}
+
 function activityIconByType(type: ActivityType) {
   if (type === "arrivals") return <IconPalm className="h-4 w-4" />;
   if (type === "meal") return <IconShell className="h-4 w-4" />;
@@ -365,7 +376,10 @@ export default function FrennergyPage() {
         </section>
 
         <section className="mt-6 sm:mt-8" aria-labelledby="music-title">
-          <div className="rounded-[2rem] border border-[#FF4FA3]/45 bg-[#FF7A59] px-7 py-9 shadow-[0_22px_34px_-20px_rgba(255,122,89,0.58)] sm:px-10 sm:py-10">
+          <div className="relative rounded-[2rem] border border-[#FF4FA3]/45 bg-[#FF7A59] px-7 py-9 pr-24 shadow-[0_22px_34px_-20px_rgba(255,122,89,0.58)] sm:px-10 sm:py-10 sm:pr-32">
+            <div className="pointer-events-none absolute -right-5 -top-6 rotate-[10deg] rounded-[1.7rem] border-4 border-white bg-[#FFD966] p-4 text-[#FF4FA3] shadow-[0_18px_28px_-14px_rgba(61,43,87,0.35)] sm:-right-6 sm:-top-7 sm:p-5">
+              <IconHeadphones className="h-16 w-16 sm:h-[4.5rem] sm:w-[4.5rem]" />
+            </div>
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white/85">NOW PLAYING</p>
             <h2 id="music-title" className="mt-2 text-3xl font-black tracking-tight text-white sm:text-4xl">
               Hot Girl Frennergy
