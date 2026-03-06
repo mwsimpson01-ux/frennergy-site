@@ -18,6 +18,10 @@ const vibeStrip = [
   "Chelsea",
 ];
 
+const playlistUrl = "https://open.spotify.com/playlist/4OkCaycgBtBoghf9mWo5l9";
+const playlistEmbedUrl =
+  "https://open.spotify.com/embed/playlist/4OkCaycgBtBoghf9mWo5l9";
+
 const overviewPills = [
   "Pool Hair",
   "Old San Juan Dinner",
@@ -158,33 +162,6 @@ const dayPlans: DayPlan[] = [
   },
 ];
 
-const dressThemes = [
-  {
-    event: "Friday Night",
-    theme: "Hot Pink",
-    note: "statement glam",
-    swatchClass: "bg-[#FF4FA3] text-white",
-  },
-  {
-    event: "Saturday Day",
-    theme: "Turquoise / tropical",
-    note: "beach club energy",
-    swatchClass: "bg-[#27C7C8] text-[#0E3D40]",
-  },
-  {
-    event: "Saturday Night",
-    theme: "Coral + gold",
-    note: "sunset sparkle",
-    swatchClass: "bg-[#FF6B4A] text-white",
-  },
-  {
-    event: "Sunday Brunch",
-    theme: "Sand / cute and effortless",
-    note: "easy but iconic",
-    swatchClass: "bg-[#F8EBDD] text-[#573B2F]",
-  },
-];
-
 const weekendRules = [
   { label: "Take the shot", className: "bg-[#FFD966] text-[#493503] rotate-[-2deg]" },
   { label: "Take the photo", className: "bg-[#FF6B4A] text-white rotate-[2deg]" },
@@ -247,13 +224,6 @@ const tripExtras = [
     copy: "Address, room split, and keypad details will be pinned in the group chat.",
     icon: "palm",
     cardClass: "bg-[#EFFBFA] border-[#27C7C8]/35",
-  },
-  {
-    title: "Spotify Playlist",
-    subtitle: "Weekend soundtrack",
-    copy: "Queue up pregame anthems, pool tracks, and late-night chaos songs.",
-    icon: "music",
-    cardClass: "bg-[#F2ECFF] border-[#C9A6FF]/45",
   },
   {
     title: "Weather",
@@ -398,7 +368,6 @@ function iconByName(name: (typeof tripDetails)[number]["icon"] | (typeof tripExt
   if (name === "shell") return <IconShell className="h-5 w-5" />;
   if (name === "sparkle") return <IconSparkle className="h-5 w-5" />;
   if (name === "bikini") return <IconBikini className="h-5 w-5" />;
-  if (name === "music") return <IconMusic className="h-5 w-5" />;
   return <IconFlame className="h-5 w-5" />;
 }
 
@@ -576,31 +545,6 @@ export default function FrennergyPage() {
           </div>
         </section>
 
-        <section className="mt-10 sm:mt-14" aria-labelledby="dress-themes-title">
-          <div className="rounded-[2rem] bg-[#EFFBFA] p-6 shadow-[0_22px_40px_-28px_rgba(39,199,200,0.55)] sm:p-10">
-            <h2 id="dress-themes-title" className="inline-flex items-center gap-2 text-2xl font-bold tracking-tight text-[#3B2A56] sm:text-3xl">
-              <IconBikini className="h-5 w-5 text-[#FF4FA3]" />
-              Dress Themes
-            </h2>
-            <p className="mt-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#4A6D73]">
-              fashion brief for every phase
-            </p>
-            <div className="mt-6 grid gap-4 sm:mt-8 sm:grid-cols-2">
-              {dressThemes.map((theme) => (
-                <article
-                  key={theme.event}
-                  className={`relative overflow-hidden rounded-[1.8rem] px-5 py-5 shadow-[0_20px_34px_-24px_rgba(61,43,87,0.55)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_26px_40px_-24px_rgba(61,43,87,0.55)] sm:px-6 sm:py-6 ${theme.swatchClass}`}
-                >
-                  <div className="pointer-events-none absolute -right-6 -top-6 h-20 w-20 rounded-full bg-white/25" />
-                  <p className="text-sm font-semibold uppercase tracking-[0.14em] opacity-90">{theme.event}</p>
-                  <p className="mt-2 text-2xl font-black tracking-tight">{theme.theme}</p>
-                  <p className="mt-1 text-sm font-semibold opacity-90">{theme.note}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section className="mt-10 sm:mt-14" aria-labelledby="rules-title">
           <div className="rounded-[2rem] bg-[#FFF6E5] p-6 shadow-[0_22px_40px_-28px_rgba(255,165,82,0.55)] sm:p-10">
             <h2 id="rules-title" className="inline-flex items-center gap-2 text-2xl font-bold tracking-tight text-[#40275F] sm:text-3xl">
@@ -672,6 +616,58 @@ export default function FrennergyPage() {
                   <p className="mt-2 text-sm leading-7 text-[#5A406F]">{item.copy}</p>
                 </article>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="mt-10 sm:mt-14" aria-labelledby="music-title">
+          <div className="relative overflow-hidden rounded-[2rem] border border-[#FF4FA3]/25 bg-[linear-gradient(120deg,#FFF4EA_0%,#F9DCE7_34%,#FFD966_68%,#79D9D1_100%)] p-6 shadow-[0_22px_44px_-26px_rgba(255,122,89,0.55)] sm:p-10">
+            <div className="pointer-events-none absolute right-4 top-4 text-[#FF4FA3]/70">
+              <IconSparkle className="h-6 w-6" />
+            </div>
+            <div className="pointer-events-none absolute left-5 bottom-4 text-[#FF7A59]/60">
+              <IconWave className="h-7 w-7" />
+            </div>
+            <div className="pointer-events-none absolute right-16 bottom-5 text-[#FFA552]/70">
+              <IconMusic className="h-6 w-6" />
+            </div>
+
+            <div className="relative">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#7B578F]">
+                Now Playing
+              </p>
+              <h2
+                id="music-title"
+                className="mt-2 inline-flex items-center gap-2 text-3xl font-black tracking-tight text-[#4A2E63] sm:text-4xl"
+              >
+                <IconMusic className="h-6 w-6 text-[#FF4FA3]" />
+                Hot Girl Frennergy
+              </h2>
+
+              <a
+                href={playlistUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center justify-center rounded-full bg-[#FF4FA3] px-6 py-3 text-sm font-semibold text-white shadow-[0_16px_26px_-14px_rgba(255,79,163,0.8)] transition duration-300 hover:-translate-y-1 hover:bg-[#EA3793] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF4FA3] focus-visible:ring-offset-2"
+              >
+                🎧 Cue the Chaos
+              </a>
+
+              <p className="mt-3 text-sm leading-7 text-[#5A3E71] sm:text-base">
+                Add your favorite songs to the weekend soundtrack.
+              </p>
+
+              <div className="mt-5">
+                <iframe
+                  title="Hot Girl Frennergy Spotify Playlist"
+                  src={playlistEmbedUrl}
+                  width="100%"
+                  height="352"
+                  loading="lazy"
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  className="w-full rounded-3xl border border-white/70 shadow-[0_14px_28px_-18px_rgba(61,43,87,0.45)]"
+                />
+              </div>
             </div>
           </div>
         </section>
