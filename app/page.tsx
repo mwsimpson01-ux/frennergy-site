@@ -384,7 +384,7 @@ export default function FrennergyPage() {
 
             <aside className="grid gap-5 border-t border-[var(--fren-line)] pt-5 lg:mb-2 lg:border-t-0 lg:pt-0">
               <div className="border-b border-[var(--fren-line)] pb-4 lg:pb-5">
-                <p className="fren-kicker">Issue No. 01</p>
+                <p className="fren-kicker">San Juan, Puerto Rico</p>
                 <p className="mt-4 max-w-md font-serif text-[2.15rem] font-semibold leading-[1.04] tracking-[-0.04em] text-[var(--fren-blue)]">
                   Mediterranean stripes, Old San Juan facades, and bridal main-character energy.
                 </p>
@@ -464,7 +464,7 @@ export default function FrennergyPage() {
 
         <section className="mt-16 grid gap-8 lg:grid-cols-[0.72fr_1.28fr]" aria-labelledby="overview-title">
           <div className="lg:pr-8">
-            <p className="fren-kicker">Editor&apos;s Note</p>
+            <p className="fren-kicker">Weekend Overview</p>
             <h2 id="overview-title" className="mt-4 font-serif text-5xl font-semibold tracking-[-0.04em] text-[var(--fren-ink)] sm:text-6xl">
               San Juan, but
               <br />
@@ -476,14 +476,14 @@ export default function FrennergyPage() {
             </p>
           </div>
           <div className="fren-section fren-section--blush grid gap-6 px-6 py-8 sm:px-8">
-            <div className="grid gap-4 sm:grid-cols-[1.2fr_0.8fr] sm:items-start">
+            <div className="grid gap-4 sm:grid-cols-[1.15fr_0.85fr] sm:items-start">
               <p className="fren-copy text-base leading-8">
                 Welcome to Chelsea&apos;s San Juan bachelorette weekend: a little Mediterranean,
                 a little island glam, and fully committed to the art of a really good girls&apos;
                 trip.
               </p>
-              <div className="border-l border-[rgba(63,103,200,0.14)] pl-4">
-                <p className="fren-kicker">Briefing</p>
+              <div className="border-l border-[var(--fren-line)] pl-4">
+                <p className="fren-kicker">Weekend Notes</p>
                 <p className="mt-3 text-sm font-semibold leading-7 text-[var(--fren-copy)]">
                   Expect polished dinners, poolside hours, and enough outfit changes to justify the
                   extra suitcase.
@@ -512,7 +512,7 @@ export default function FrennergyPage() {
         <section id="itinerary" className="mt-18 sm:mt-20" aria-labelledby="itinerary-title">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <p className="fren-kicker">Weekend Chapters</p>
+              <p className="fren-kicker">Day-by-Day Guide</p>
               <h2 id="itinerary-title" className="mt-3 font-serif text-5xl font-semibold tracking-[-0.04em] text-[var(--fren-ink)] sm:text-6xl">
                 The Day-by-Day Guide
               </h2>
@@ -525,13 +525,15 @@ export default function FrennergyPage() {
           <div className="mt-8 space-y-10">
             <article className="grid gap-6 lg:grid-cols-[0.74fr_1.26fr] lg:items-start">
               <div className="fren-section fren-section--warm px-6 py-8 sm:px-7">
-                <p className="fren-kicker">Friday</p>
+                <p className="mt-1 text-2xl font-bold uppercase tracking-[0.18em] text-[var(--fren-blue)] sm:text-[1.85rem]">
+                  Friday
+                </p>
                 <h3 className={`mt-3 font-serif text-5xl font-semibold tracking-[-0.04em] ${fridayPlan.accentClass}`}>
                   {fridayPlan.theme}
                 </h3>
                 <p className="fren-copy mt-6 max-w-sm text-base leading-8">{fridayPlan.subtitle}</p>
                 <div className="fren-editorial-rule mt-6 pt-4">
-                  <p className="fren-kicker">Friday Note</p>
+                  <p className="fren-kicker">Arrival Note</p>
                   <p className="fren-copy mt-3 max-w-xs text-sm leading-7">
                     The only agenda is getting in, getting settled, and making the rooftop feel like
                     home base.
@@ -559,7 +561,9 @@ export default function FrennergyPage() {
             <article className="fren-section fren-section--blush overflow-hidden px-6 py-8 sm:px-8">
               <div className="grid gap-8 lg:grid-cols-[0.52fr_1.48fr]">
                 <div className="border-b border-[rgba(226,61,138,0.16)] pb-6 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-8">
-                  <p className="fren-kicker">Saturday</p>
+                  <p className="mt-1 text-2xl font-bold uppercase tracking-[0.18em] text-[var(--fren-blue)] sm:text-[1.85rem]">
+                    Saturday
+                  </p>
                   <h3 className={`mt-3 font-serif text-6xl font-semibold tracking-[-0.05em] ${saturdayPlan.accentClass}`}>
                     {saturdayPlan.theme}
                   </h3>
@@ -588,7 +592,9 @@ export default function FrennergyPage() {
 
             <article className="grid gap-6 lg:grid-cols-[1.12fr_0.88fr] lg:items-start">
               <div className="fren-section fren-section--blue px-6 py-8 sm:px-8">
-                <p className="fren-kicker">Sunday</p>
+                <p className="mt-1 text-2xl font-bold uppercase tracking-[0.18em] text-[var(--fren-blue)] sm:text-[1.85rem]">
+                  Sunday
+                </p>
                 <div className="mt-4 flex flex-wrap items-end justify-between gap-5">
                   <div>
                     <h3 className={`font-serif text-5xl font-semibold tracking-[-0.05em] ${sundayPlan.accentClass}`}>
@@ -596,7 +602,6 @@ export default function FrennergyPage() {
                     </h3>
                     <p className="fren-copy mt-4 max-w-lg text-base leading-8">{sundayPlan.subtitle}</p>
                   </div>
-                  <div className="hidden h-20 w-20 rounded-full border border-[rgba(63,103,200,0.16)] bg-[rgba(143,179,231,0.14)] lg:block" />
                 </div>
                 <div className="mt-6 space-y-4">
                   {sundayPlan.events.map((event) => (
@@ -611,7 +616,7 @@ export default function FrennergyPage() {
                 </div>
               </div>
               <div className="fren-section fren-section--ivory px-5 py-6">
-                <p className="fren-kicker">Pool Club Notes</p>
+                <p className="fren-kicker">Pool Club Details</p>
                 <p className="mt-4 font-serif text-3xl font-semibold tracking-[-0.04em] text-[var(--fren-blue)]">
                   Cabana from
                   <br />
@@ -657,7 +662,7 @@ export default function FrennergyPage() {
           <div className="fren-section fren-section--ivory px-6 py-8 sm:px-8">
             <p className="fren-kicker">Trip Details</p>
             <h2 className="mt-4 font-serif text-5xl font-semibold tracking-[-0.04em] text-[var(--fren-ink)] sm:text-6xl">
-              The Useful Part.
+              Trip Details
             </h2>
             <p className="fren-copy mt-5 max-w-lg text-sm leading-7 sm:text-base">
               Addresses, arrivals, and the few logistical notes worth reading before you start
@@ -677,7 +682,7 @@ export default function FrennergyPage() {
             <div className="fren-section fren-section--blue px-6 py-8 sm:px-8">
               <p className="fren-kicker">Trip Extras</p>
               <h2 className="mt-4 font-serif text-4xl font-semibold tracking-[-0.04em] text-[var(--fren-ink)]">
-                Packing, weather, and the little things.
+                Trip Extras
               </h2>
               <p className="fren-copy mt-4 max-w-md text-sm leading-7">
                 Consider this the service page: what to bring, what to expect, and what not to
@@ -704,7 +709,7 @@ export default function FrennergyPage() {
             <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/76">
-                  Camera Roll Chaos
+                  Shared Album
                 </p>
                 <h2 id="photos-title" className="mt-4 max-w-sm font-serif text-5xl font-semibold tracking-[-0.05em] text-white sm:text-6xl">
                   A very photogenic mess.
@@ -714,7 +719,7 @@ export default function FrennergyPage() {
                   from everything after dinner.
                 </p>
               </div>
-              <div className="relative border border-[rgba(63,103,200,0.14)] bg-[rgba(248,242,232,0.95)] px-6 py-8 lg:ml-auto lg:max-w-lg">
+              <div className="relative border border-[rgba(63,103,200,0.16)] bg-[rgba(248,242,232,0.98)] px-6 py-8 lg:ml-auto lg:max-w-lg">
                 <div className="absolute right-0 top-0 h-full w-12 border-l border-[rgba(63,103,200,0.12)] bg-[repeating-linear-gradient(180deg,rgba(143,179,231,0.2)_0_10px,transparent_10px_22px)]" />
                 <p className="fren-kicker">Shared Album</p>
                 <p className="mt-4 font-serif text-3xl font-semibold tracking-[-0.04em] text-[var(--fren-ink)]">
@@ -747,8 +752,8 @@ export default function FrennergyPage() {
                 </p>
               </div>
               <div className="sm:text-right">
-                <p className="fren-kicker">Chelsea&apos;s destination weekend edit</p>
-                <p className="fren-copy mt-2 text-sm">An Old San Juan story told in dinner reservations, cabanas, and very good outfits.</p>
+                <p className="fren-kicker">San Juan, Puerto Rico</p>
+                <p className="fren-copy mt-2 text-sm">May 22 to May 24, 2026.</p>
               </div>
             </div>
           </div>

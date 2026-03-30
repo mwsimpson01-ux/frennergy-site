@@ -9,8 +9,8 @@
   --fren-pink: #e23d8a;
   --fren-coral: #ff7b5e;
   --fren-marigold: #f3b53d;
-  --fren-ink: #27437e;
-  --fren-copy: #495579;
+  --fren-ink: #3f67c8;
+  --fren-copy: rgba(63, 103, 200, 0.84);
   --fren-line: rgba(63, 103, 200, 0.18);
   --fren-line-strong: rgba(63, 103, 200, 0.26);
   --fren-shadow: 0 22px 46px -28px rgba(34, 52, 104, 0.24);
@@ -110,9 +110,9 @@ body {
 
 .fren-kicker {
   color: var(--fren-blue);
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   font-weight: 700;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
 }
 
