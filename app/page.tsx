@@ -4,7 +4,7 @@ import { Countdown } from "@/components/frennergy/Countdown";
 export const metadata: Metadata = {
   title: "Hot Girl Frennergy | San Juan Bachelorette",
   description:
-    "A playful San Juan bachelorette weekend guide with timeline plans, details, and trip extras.",
+    "A chic San Juan bachelorette weekend guide with itinerary plans, travel details, and rooftop-to-cabana energy.",
 };
 
 const tripStart = "2026-05-22T00:00:00-04:00";
@@ -42,6 +42,7 @@ type DayPlan = {
   theme: string;
   subtitle: string;
   cardClass: string;
+  accentClass: string;
   events: Array<{
     time: string;
     type: ActivityType;
@@ -55,7 +56,8 @@ const dayPlans: DayPlan[] = [
     day: "Friday",
     theme: "Girls Gone Mild",
     subtitle: "A cozy, low-key arrival night before the weekend fun begins.",
-    cardClass: "bg-[#FFF4EA] border-[#F9DCE7]",
+    cardClass: "fren-card fren-card--warm",
+    accentClass: "text-[var(--fren-coral)]",
     events: [
       {
         time: "Afternoon",
@@ -81,7 +83,8 @@ const dayPlans: DayPlan[] = [
     day: "Saturday",
     theme: "Pour Decisions",
     subtitle: "Brunch, Bacardi, and a night out - the recipe for Pour Decisions.",
-    cardClass: "bg-[#FFF4EA] border-[#F9DCE7]",
+    cardClass: "fren-card fren-card--blush",
+    accentClass: "text-[var(--fren-pink)]",
     events: [
       {
         time: "10:30 AM",
@@ -119,7 +122,8 @@ const dayPlans: DayPlan[] = [
     day: "Sunday",
     theme: "Tropic Like It's Hot",
     subtitle: "Cabana energy, cute swimsuits, and not a single sober thought.",
-    cardClass: "bg-[#FFF4EA] border-[#F9DCE7]",
+    cardClass: "fren-card fren-card--blue",
+    accentClass: "text-[var(--fren-blue)]",
     events: [
       {
         time: "11:00 AM",
@@ -201,6 +205,30 @@ const tripExtras = [
     subtitle: "Forecast vibe",
     copy: "Hot and humid all weekend. Lightweight fabrics and hydration are non-negotiable.",
   },
+] as const;
+
+const detailToneClasses = [
+  "fren-card fren-card--blue",
+  "fren-card fren-card--warm",
+  "fren-card fren-card--blush",
+  "fren-card fren-card--blue",
+  "fren-card fren-card--warm",
+  "fren-card fren-card--blush",
+] as const;
+
+const extraToneClasses = [
+  "fren-card fren-card--warm",
+  "fren-card fren-card--blue",
+  "fren-card fren-card--blush",
+] as const;
+
+const ruleToneClasses = [
+  "border-[rgba(63,103,200,0.18)] bg-white text-[var(--fren-blue)]",
+  "border-[rgba(226,61,138,0.18)] bg-[rgba(226,61,138,0.08)] text-[var(--fren-pink)]",
+  "border-[rgba(255,123,94,0.18)] bg-[rgba(255,123,94,0.08)] text-[var(--fren-coral)]",
+  "border-[rgba(243,181,61,0.22)] bg-[rgba(243,181,61,0.14)] text-[var(--fren-ink)]",
+  "border-[rgba(63,103,200,0.18)] bg-[rgba(143,179,231,0.14)] text-[var(--fren-blue)]",
+  "border-[rgba(226,61,138,0.18)] bg-white text-[var(--fren-pink)]",
 ] as const;
 
 type IconProps = {
@@ -320,69 +348,87 @@ function activityIconByType(type: ActivityType) {
 
 export default function FrennergyPage() {
   return (
-    <main className="bg-[#FFF4EA] text-[#3D2B57]">
+    <main className="fren-page font-sans">
       <div className="mx-auto w-full max-w-6xl px-4 pb-20 pt-6 sm:px-8 sm:pb-28 sm:pt-10">
-        <section className="rounded-[2rem] border border-[#F9DCE7] bg-[#F9DCE7] px-6 pb-10 pt-8 shadow-[0_20px_34px_-24px_rgba(61,43,87,0.35)] sm:px-10 sm:pb-12 sm:pt-10">
+        <section className="fren-hero relative overflow-hidden rounded-[2.2rem] px-6 pb-10 pt-8 sm:px-10 sm:pb-12 sm:pt-10">
+          <div className="fren-hero-stripe absolute inset-x-0 top-0 h-4 opacity-90" />
+          <div className="absolute right-6 top-6 hidden h-24 w-24 rounded-full border border-[rgba(226,61,138,0.18)] bg-[rgba(255,123,94,0.12)] lg:block" />
+          <div className="absolute bottom-6 left-6 hidden h-14 w-14 rounded-[1.2rem] border border-[rgba(63,103,200,0.16)] bg-[rgba(143,179,231,0.16)] lg:block" />
           <div className="mx-auto max-w-3xl text-center">
             <div className="flex justify-center">
-              <span className="rounded-full bg-white/85 px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-[#5C3F78]">
-                bach mode
+              <span className="fren-chip fren-chip--accent rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em]">
+                rooftop season
               </span>
             </div>
 
-            <p className="mt-5 text-sm font-semibold uppercase tracking-[0.2em] text-[#6B4A84]">
-              Chelsea&apos;s Bachelorette Weekend
-            </p>
-            <h1 className="mt-3 font-[family-name:Georgia,Times,serif] text-6xl font-black leading-[0.9] tracking-tight text-[#4B2C66] sm:text-7xl lg:text-8xl">
+            <p className="fren-kicker mt-6">Chelsea&apos;s Bachelorette Weekend</p>
+            <h1 className="fren-title mt-4 font-[family-name:Georgia,Times,serif] text-6xl leading-[0.88] sm:text-7xl lg:text-8xl">
               Hot Girl Frennergy
             </h1>
-            <p className="mt-3 inline-flex rounded-full bg-white/80 px-4 py-1 text-sm font-semibold uppercase tracking-[0.12em] text-[#5C3F78]">
+            <p className="mt-4 inline-flex rounded-full border border-[rgba(63,103,200,0.14)] bg-white/84 px-4 py-1 text-sm font-semibold uppercase tracking-[0.14em] text-[var(--fren-blue)]">
               San Juan, Puerto Rico
             </p>
-            <p className="mx-auto mt-4 max-w-xl text-lg font-semibold leading-7 text-[#5A3E71]">
-              Bikinis, beach clubs, and bad decisions.
+            <p className="fren-copy mx-auto mt-5 max-w-2xl text-lg font-medium leading-8 sm:text-xl">
+              Mediterranean stripes, rooftop dinners, poolside pours, and one very well-dressed
+              weekend.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
               <a
                 href="#itinerary"
-                className="inline-flex items-center justify-center rounded-full bg-[#FF4FA3] px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_26px_-12px_rgba(255,79,163,0.8)] transition duration-300 hover:-translate-y-1 hover:bg-[#EA3793] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF4FA3] focus-visible:ring-offset-2"
+                className="fren-button-primary inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition duration-300 hover:-translate-y-1 hover:brightness-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--fren-blue)] focus-visible:ring-offset-2"
               >
                 View Itinerary
               </a>
               <a
                 href="#details"
-                className="inline-flex items-center justify-center rounded-full border border-[#79D9D1]/70 bg-white/80 px-6 py-3 text-sm font-semibold text-[#2B6970] shadow-[0_12px_22px_-14px_rgba(121,217,209,0.85)] transition duration-300 hover:-translate-y-1 hover:bg-[#EEFCFA] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#79D9D1] focus-visible:ring-offset-2"
+                className="fren-button-secondary inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition duration-300 hover:-translate-y-1 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--fren-blue)] focus-visible:ring-offset-2"
               >
                 Trip Details
               </a>
             </div>
+
+            <div className="mt-8 grid gap-3 text-left sm:grid-cols-3">
+              <div className="fren-card rounded-[1.4rem] p-4">
+                <p className="fren-kicker">Stay</p>
+                <p className="mt-2 text-sm font-semibold text-[var(--fren-copy)]">Old San Juan house energy with a rooftop reset built in.</p>
+              </div>
+              <div className="fren-card rounded-[1.4rem] p-4">
+                <p className="fren-kicker">Mood</p>
+                <p className="mt-2 text-sm font-semibold text-[var(--fren-copy)]">Preppy, polished, and a little bit chaotic in the best way.</p>
+              </div>
+              <div className="fren-card rounded-[1.4rem] p-4">
+                <p className="fren-kicker">Dress Code</p>
+                <p className="mt-2 text-sm font-semibold text-[var(--fren-copy)]">Cute swimsuits, chic dinners, and strong main-character behavior.</p>
+              </div>
+            </div>
           </div>
         </section>
 
-        <section className="mt-4 rounded-[2rem] border border-[#FF4FA3]/20 bg-white p-3 shadow-[0_14px_28px_-20px_rgba(255,79,163,0.5)] sm:p-4" aria-label="Countdown card">
+        <section className="mt-5" aria-label="Countdown card">
           <Countdown targetDate={tripStart} label="Countdown to San Juan" />
         </section>
 
         <section className="mt-6 sm:mt-8" aria-labelledby="music-title">
-          <div className="relative rounded-[2rem] border border-[#FF4FA3]/45 bg-[#FF7A59] px-7 py-9 pr-24 shadow-[0_22px_34px_-20px_rgba(255,122,89,0.58)] sm:px-10 sm:py-10 sm:pr-32">
-            <div className="pointer-events-none absolute -right-5 -top-6 rotate-[10deg] rounded-[1.7rem] border-4 border-white bg-[#FFD966] p-4 text-[#FF4FA3] shadow-[0_18px_28px_-14px_rgba(61,43,87,0.35)] sm:-right-6 sm:-top-7 sm:p-5">
+          <div className="relative overflow-hidden rounded-[2rem] border border-[rgba(255,123,94,0.22)] bg-[linear-gradient(135deg,var(--fren-coral),var(--fren-marigold))] px-7 py-9 pr-24 shadow-[0_22px_34px_-20px_rgba(255,123,94,0.46)] sm:px-10 sm:py-10 sm:pr-32">
+            <div className="absolute inset-x-0 top-0 h-3 bg-[linear-gradient(90deg,var(--fren-marigold),rgba(248,242,232,0.95),var(--fren-pink))]" />
+            <div className="pointer-events-none absolute -right-5 -top-6 rotate-[10deg] rounded-[1.7rem] border-4 border-white bg-[var(--fren-marigold)] p-4 text-[var(--fren-blue)] shadow-[0_18px_28px_-14px_rgba(61,43,87,0.35)] sm:-right-6 sm:-top-7 sm:p-5">
               <IconHeadphones className="h-16 w-16 sm:h-[4.5rem] sm:w-[4.5rem]" />
             </div>
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white/85">NOW PLAYING</p>
-            <h2 id="music-title" className="mt-2 text-3xl font-black tracking-tight text-white sm:text-4xl">
+            <h2 id="music-title" className="mt-2 font-[family-name:Georgia,Times,serif] text-3xl font-black tracking-tight text-white sm:text-4xl">
               Hot Girl Frennergy
             </h2>
 
             <p className="mt-4 max-w-2xl text-sm leading-7 text-white/95 sm:text-base">
-              Add your favorite songs to the weekend soundtrack.
+              Add your favorites to the soundtrack before the first spritz gets poured.
             </p>
 
             <a
               href={playlistUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-[#FF4FA3] px-6 py-4 text-base font-bold text-white shadow-[0_18px_30px_-16px_rgba(61,43,87,0.48)] transition duration-300 hover:-translate-y-1 hover:bg-[#EA3793] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#FF7A59] sm:w-auto sm:min-w-[280px]"
+              className="fren-button-secondary mt-8 inline-flex w-full items-center justify-center rounded-full px-6 py-4 text-base font-bold transition duration-300 hover:-translate-y-1 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--fren-coral)] sm:w-auto sm:min-w-[280px]"
             >
               🎧 Cue the Chaos
             </a>
@@ -390,34 +436,32 @@ export default function FrennergyPage() {
         </section>
 
         <section
-          className="mt-5 rounded-full border border-[#FF4FA3]/25 bg-[#F9DCE7] px-4 py-3 shadow-[0_12px_22px_-18px_rgba(255,79,163,0.55)] sm:px-6"
+          className="fren-stripe-band mt-6 rounded-full border border-[rgba(63,103,200,0.12)] px-4 py-3 shadow-[0_12px_22px_-18px_rgba(63,103,200,0.24)] sm:px-6"
           aria-label="Weekend vibe strip"
         >
-          <p className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-xs font-semibold uppercase tracking-[0.15em] text-[#5A3A73] sm:text-sm">
+          <p className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-xs font-semibold uppercase tracking-[0.15em] text-[var(--fren-blue)] sm:text-sm">
             {vibeStrip.map((item, index) => (
               <span key={item} className="inline-flex items-center gap-3">
                 <span>{item}</span>
-                {index < vibeStrip.length - 1 ? <span className="text-[#FF4FA3]">/</span> : null}
+                {index < vibeStrip.length - 1 ? <span className="text-[var(--fren-pink)]">/</span> : null}
               </span>
             ))}
           </p>
         </section>
 
-        <section className="mt-14 rounded-[2rem] border border-white/85 bg-[#F9DCE7] p-6 shadow-[0_20px_34px_-24px_rgba(61,43,87,0.28)] sm:mt-16 sm:p-10" aria-labelledby="overview-title">
-          <h2 id="overview-title" className="inline-flex items-center gap-2 text-2xl font-bold tracking-tight text-[#43285F] sm:text-3xl">
-            <IconCocktail className="h-5 w-5 text-[#FF7A59]" />
+        <section className="fren-section fren-section--blush mt-14 rounded-[2rem] p-6 sm:mt-16 sm:p-10" aria-labelledby="overview-title">
+          <h2 id="overview-title" className="fren-title inline-flex items-center gap-2 text-2xl sm:text-3xl">
+            <IconCocktail className="h-5 w-5 text-[var(--fren-coral)]" />
             Weekend Overview
           </h2>
-          <p className="mt-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#7B578F]">
-            quick moodboard before the chaos starts
+          <p className="fren-kicker mt-2">old san juan, but make it very bridal</p>
+          <p className="fren-copy mt-4 max-w-3xl text-base leading-8 sm:text-lg">
+            Welcome to Chelsea&apos;s San Juan bachelorette weekend: rooftop dinners, Bacardi pours,
+            poolside cabanas, and a lot of excellent stories in very cute outfits.
           </p>
-          <p className="mt-4 text-base leading-8 text-[#5A406F] sm:text-lg">
-            Welcome to Chelsea&apos;s San Juan bachelorette weekend - beach clubs, dinner glam,
-            frozen drinks, late nights, and elite memory-making across Old San Juan.
-          </p>
-          <div className="mt-6 flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-[0.12em] text-[#4C3366]">
+          <div className="mt-6 flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-[0.12em]">
             {overviewPills.map((pill) => (
-              <span key={pill} className="rounded-full bg-white/80 px-3 py-2">
+              <span key={pill} className="fren-chip rounded-full px-3 py-2">
                 {pill}
               </span>
             ))}
@@ -425,32 +469,35 @@ export default function FrennergyPage() {
         </section>
 
         <section id="itinerary" className="mt-12 sm:mt-16" aria-labelledby="itinerary-title">
-          <div className="rounded-[2rem] border border-white/85 bg-[#FFF4EA] p-6 shadow-[0_20px_34px_-24px_rgba(61,43,87,0.28)] sm:p-10">
-            <h2 id="itinerary-title" className="inline-flex items-center gap-2 text-2xl font-bold tracking-tight text-[#462A62] sm:text-3xl">
-              <IconPalm className="h-5 w-5 text-[#79D9D1]" />
+          <div className="fren-section fren-section--ivory rounded-[2rem] p-6 sm:p-10">
+            <h2 id="itinerary-title" className="fren-title inline-flex items-center gap-2 text-2xl sm:text-3xl">
+              <IconPalm className="h-5 w-5 text-[var(--fren-blue)]" />
               Day-by-Day Guide
             </h2>
-            <p className="mt-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#7B578F]">
-              itinerary flow by era
+            <p className="fren-kicker mt-2">from rooftop reset to cabana closeout</p>
+            <p className="fren-copy mt-4 max-w-2xl text-sm leading-7 sm:text-base">
+              Every day gets its own little mood, but the energy stays the same: polished,
+              playful, and fully committed to a good time.
             </p>
 
             <div className="mt-6 space-y-6 sm:mt-8">
               {dayPlans.map((plan) => (
                 <article
                   key={plan.day}
-                  className={`rounded-[1.4rem] border p-5 shadow-[0_12px_24px_-18px_rgba(61,43,87,0.28)] sm:p-6 ${plan.cardClass}`}
+                  className={`rounded-[1.7rem] p-5 sm:p-6 ${plan.cardClass}`}
                 >
-                  <div className="flex flex-wrap items-start justify-between gap-4">
+                  <div className="flex flex-wrap items-start justify-between gap-5 border-b border-[rgba(63,103,200,0.1)] pb-5">
                     <div className="max-w-md">
-                      <h3 className="text-3xl font-black tracking-tight text-[#FF4FA3] sm:text-4xl">
+                      <p className="fren-kicker">Weekend Theme</p>
+                      <h3 className={`mt-2 font-[family-name:Georgia,Times,serif] text-3xl font-black tracking-tight sm:text-4xl ${plan.accentClass}`}>
                         {plan.theme}
                       </h3>
-                      <p className="mt-2 text-sm font-semibold uppercase tracking-[0.14em] text-[#7B578F]">
+                      <p className="mt-2 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--fren-blue)]">
                         {plan.day}
                       </p>
                     </div>
                     <div className="max-w-md sm:text-right">
-                      <p className="text-sm font-semibold text-[#5B426F]">{plan.subtitle}</p>
+                      <p className="fren-copy text-sm font-semibold leading-7">{plan.subtitle}</p>
                     </div>
                   </div>
 
@@ -458,18 +505,18 @@ export default function FrennergyPage() {
                     {plan.events.map((event) => (
                       <article
                         key={`${plan.day}-${event.time}-${event.label}`}
-                        className="rounded-[1.2rem] border border-[#F9DCE7] bg-white p-4 shadow-[0_10px_20px_-16px_rgba(61,43,87,0.25)]"
+                        className="fren-card rounded-[1.3rem] p-4"
                       >
                         <div className="flex items-start gap-3">
-                          <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#FFF4EA] text-[#FF4FA3]">
+                          <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[rgba(63,103,200,0.08)] text-[var(--fren-blue)]">
                             {activityIconByType(event.type)}
                           </span>
                           <div>
-                            <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#7B578F]">
+                            <p className="fren-kicker text-[11px]">
                               {event.time}
                             </p>
-                            <h4 className="mt-1 text-sm font-bold text-[#402E59]">{event.label}</h4>
-                            <p className="mt-1 text-sm leading-6 text-[#5A406F]">{event.detail}</p>
+                            <h4 className="mt-1 text-sm font-bold text-[var(--fren-ink)]">{event.label}</h4>
+                            <p className="fren-copy mt-1 text-sm leading-6">{event.detail}</p>
                           </div>
                         </div>
                       </article>
@@ -482,19 +529,20 @@ export default function FrennergyPage() {
         </section>
 
         <section className="mt-12 sm:mt-16" aria-labelledby="rules-title">
-          <div className="rounded-[2rem] border border-white/85 bg-[#FFF4EA] p-6 shadow-[0_20px_34px_-24px_rgba(61,43,87,0.28)] sm:p-10">
-            <h2 id="rules-title" className="inline-flex items-center gap-2 text-2xl font-bold tracking-tight text-[#40275F] sm:text-3xl">
-              <IconSparkle className="h-5 w-5 text-[#FF4FA3]" />
+          <div className="fren-section fren-section--blue rounded-[2rem] p-6 sm:p-10">
+            <h2 id="rules-title" className="fren-title inline-flex items-center gap-2 text-2xl sm:text-3xl">
+              <IconSparkle className="h-5 w-5 text-[var(--fren-pink)]" />
               Weekend Rules
             </h2>
-            <p className="mt-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#7B578F]">
-              sticker commandments
+            <p className="fren-kicker mt-2">tiny policies for a very good weekend</p>
+            <p className="fren-copy mt-4 max-w-2xl text-sm leading-7 sm:text-base">
+              The rules are simple: be cute, stay hydrated enough, and commit to the bit.
             </p>
             <div className="mt-6 flex flex-wrap gap-3 sm:mt-8">
-              {weekendRules.map((rule) => (
+              {weekendRules.map((rule, index) => (
                 <p
                   key={rule}
-                  className="rounded-full border border-[#FF4FA3]/25 bg-white px-4 py-3 text-sm font-black uppercase tracking-[0.08em] text-[#553873] shadow-[0_10px_18px_-14px_rgba(61,43,87,0.25)] transition duration-300 hover:-translate-y-1 sm:text-base"
+                  className={`rounded-full border px-4 py-3 text-sm font-black uppercase tracking-[0.08em] shadow-[0_10px_18px_-14px_rgba(61,43,87,0.18)] transition duration-300 hover:-translate-y-1 sm:text-base ${ruleToneClasses[index % ruleToneClasses.length]}`}
                 >
                   {rule}
                 </p>
@@ -504,24 +552,25 @@ export default function FrennergyPage() {
         </section>
 
         <section id="details" className="mt-12 sm:mt-16" aria-labelledby="trip-details-title">
-          <div className="rounded-[2rem] border border-white/85 bg-[#BFECE4]/35 p-6 shadow-[0_20px_34px_-24px_rgba(61,43,87,0.28)] sm:p-10">
-            <h2 id="trip-details-title" className="inline-flex items-center gap-2 text-2xl font-bold tracking-tight text-[#40275F] sm:text-3xl">
-              <IconShell className="h-5 w-5 text-[#FF8A3D]" />
+          <div className="fren-section fren-section--blue rounded-[2rem] p-6 sm:p-10">
+            <h2 id="trip-details-title" className="fren-title inline-flex items-center gap-2 text-2xl sm:text-3xl">
+              <IconShell className="h-5 w-5 text-[var(--fren-coral)]" />
               Trip Details
             </h2>
-            <p className="mt-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#7B578F]">
-              cute travel tiles
+            <p className="fren-kicker mt-2">the practical part, but prettier</p>
+            <p className="fren-copy mt-4 max-w-2xl text-sm leading-7 sm:text-base">
+              Everything you need to get in, get around, and keep up with the plan.
             </p>
             <div className="mt-6 grid gap-4 sm:mt-8 sm:grid-cols-2 lg:grid-cols-3">
-              {tripDetails.map((detail) => (
+              {tripDetails.map((detail, index) => (
                 <article
                   key={detail.label}
-                  className="rounded-[1.4rem] border border-[#F9DCE7] bg-white px-5 py-5 shadow-[0_12px_22px_-16px_rgba(61,43,87,0.25)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_16px_26px_-16px_rgba(61,43,87,0.28)]"
+                  className={`rounded-[1.5rem] px-5 py-5 transition duration-300 hover:-translate-y-1 ${detailToneClasses[index % detailToneClasses.length]}`}
                 >
-                  <div className="inline-flex rounded-full bg-[#FFF4EA] px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-[#4A3168]">
+                  <div className="fren-chip rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em]">
                     {detail.label}
                   </div>
-                  <p className="mt-3 text-base leading-7 text-[#563E71]">{detail.value}</p>
+                  <p className="fren-copy mt-3 text-base leading-7">{detail.value}</p>
                 </article>
               ))}
             </div>
@@ -529,25 +578,27 @@ export default function FrennergyPage() {
         </section>
 
         <section className="mt-12 sm:mt-16" aria-labelledby="extras-title">
-          <div className="rounded-[2rem] border border-white/85 bg-[#F4EDFF] p-6 shadow-[0_20px_34px_-24px_rgba(61,43,87,0.28)] sm:p-10">
-            <h2 id="extras-title" className="inline-flex items-center gap-2 text-2xl font-bold tracking-tight text-[#40275F] sm:text-3xl">
-              <IconWave className="h-5 w-5 text-[#79D9D1]" />
+          <div className="fren-section fren-section--ivory rounded-[2rem] p-6 sm:p-10">
+            <h2 id="extras-title" className="fren-title inline-flex items-center gap-2 text-2xl sm:text-3xl">
+              <IconWave className="h-5 w-5 text-[var(--fren-blue-soft)]" />
               Trip Extras
             </h2>
-            <p className="mt-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#67828A]">
-              helpful links and prep
+            <p className="fren-kicker mt-2">little prep notes before wheels up</p>
+            <p className="fren-copy mt-4 max-w-2xl text-sm leading-7 sm:text-base">
+              Packing notes, stay reminders, and the weather read so nobody shows up underdressed
+              or overpacked.
             </p>
             <div className="mt-6 grid gap-4 sm:mt-8 sm:grid-cols-2">
-              {tripExtras.map((item) => (
+              {tripExtras.map((item, index) => (
                 <article
                   key={item.title}
-                  className="rounded-[1.4rem] border border-[#F9DCE7] bg-white px-5 py-5 shadow-[0_12px_22px_-16px_rgba(61,43,87,0.25)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_16px_26px_-16px_rgba(61,43,87,0.28)]"
+                  className={`rounded-[1.5rem] px-5 py-5 transition duration-300 hover:-translate-y-1 ${extraToneClasses[index % extraToneClasses.length]}`}
                 >
-                  <div className="inline-flex rounded-full bg-[#FFF4EA] px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-[#4A3168]">
+                  <div className="fren-chip rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em]">
                     {item.subtitle}
                   </div>
-                  <h3 className="mt-3 text-lg font-bold text-[#3F2A58]">{item.title}</h3>
-                  <p className="mt-2 text-sm leading-7 text-[#5A406F]">{item.copy}</p>
+                  <h3 className="mt-3 text-lg font-bold text-[var(--fren-ink)]">{item.title}</h3>
+                  <p className="fren-copy mt-2 text-sm leading-7">{item.copy}</p>
                 </article>
               ))}
             </div>
@@ -555,18 +606,21 @@ export default function FrennergyPage() {
         </section>
 
         <section id="photos" className="mt-14 sm:mt-16" aria-labelledby="photos-title">
-          <div className="rounded-[2rem] border border-[#FF7A59]/35 bg-[#FFA552] px-6 py-9 text-[#4A2E63] shadow-[0_22px_40px_-24px_rgba(255,122,89,0.5)] sm:px-10 sm:py-11">
-            <div className="rounded-[1.4rem] border border-white/75 bg-[#FFF4EA] p-5 sm:p-7">
-              <h2 id="photos-title" className="inline-flex items-center gap-2 text-3xl font-black tracking-tight sm:text-4xl">
-                <IconCamera className="h-7 w-7 text-[#FF4FA3]" />
+          <div className="relative overflow-hidden rounded-[2rem] border border-[rgba(63,103,200,0.16)] bg-[linear-gradient(140deg,var(--fren-blue),var(--fren-blue-soft)_55%,rgba(248,242,232,0.96))] px-6 py-9 shadow-[0_24px_44px_-24px_rgba(63,103,200,0.42)] sm:px-10 sm:py-11">
+            <div className="absolute right-0 top-0 h-full w-1/3 opacity-20 [background-image:repeating-linear-gradient(90deg,rgba(248,242,232,0.95)_0_10px,transparent_10px_20px)]" />
+            <div className="relative rounded-[1.5rem] border border-white/75 bg-[rgba(248,242,232,0.94)] p-5 sm:p-7">
+              <p className="fren-kicker">Camera Roll Chaos</p>
+              <h2 id="photos-title" className="mt-2 inline-flex items-center gap-2 font-[family-name:Georgia,Times,serif] text-3xl font-black tracking-tight text-[var(--fren-ink)] sm:text-4xl">
+                <IconCamera className="h-7 w-7 text-[var(--fren-coral)]" />
                 Camera Roll Chaos
               </h2>
-              <p className="mt-3 max-w-2xl text-sm leading-7 text-[#5A3B74] sm:text-base">
-                Drop the chaos, the glam, and the blurry late-night evidence here.
+              <p className="fren-copy mt-3 max-w-2xl text-sm leading-7 sm:text-base">
+                Drop the chaos, the glam, the tablescapes, and the blurry late-night evidence
+                right here.
               </p>
               <a
                 href="#photos"
-                className="mt-7 inline-flex items-center justify-center rounded-full bg-[#FF4FA3] px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_24px_-12px_rgba(255,79,163,0.75)] transition duration-300 hover:-translate-y-1 hover:bg-[#E93593] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF4FA3] focus-visible:ring-offset-2"
+                className="fren-button-warm mt-7 inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition duration-300 hover:-translate-y-1 hover:brightness-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--fren-coral)] focus-visible:ring-offset-2"
               >
                 Add Shared Album Link
               </a>
@@ -574,9 +628,17 @@ export default function FrennergyPage() {
           </div>
         </section>
 
-        <footer className="pt-14 text-center text-sm text-[#684A7B] sm:pt-16">
-          <p className="font-black uppercase tracking-[0.2em] text-[#FF4FA3]">Hot Girl Frennergy</p>
-          <p className="mt-2">Made for Chelsea&apos;s San Juan weekend</p>
+        <footer className="pt-14 sm:pt-16">
+          <div className="fren-stripe-band mb-6 h-3 rounded-full border border-[rgba(63,103,200,0.1)]" />
+          <div className="flex flex-col items-center justify-between gap-3 text-center sm:flex-row sm:text-left">
+            <div>
+              <p className="font-[family-name:Georgia,Times,serif] text-2xl font-black tracking-tight text-[var(--fren-blue)]">
+                Hot Girl Frennergy
+              </p>
+              <p className="fren-copy mt-2 text-sm">Made for Chelsea&apos;s San Juan weekend.</p>
+            </div>
+            <p className="fren-kicker">Old San Juan / May 2026 / Best dressed only</p>
+          </div>
         </footer>
       </div>
     </main>

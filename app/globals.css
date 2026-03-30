@@ -3,6 +3,17 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --fren-ivory: #f8f2e8;
+  --fren-blue-soft: #8fb3e7;
+  --fren-blue: #3f67c8;
+  --fren-pink: #e23d8a;
+  --fren-coral: #ff7b5e;
+  --fren-marigold: #f3b53d;
+  --fren-ink: #27437e;
+  --fren-copy: #495579;
+  --fren-line: rgba(63, 103, 200, 0.14);
+  --fren-shadow: 0 20px 42px -28px rgba(34, 52, 104, 0.28);
+  --fren-shadow-soft: 0 14px 28px -20px rgba(34, 52, 104, 0.18);
 }
 
 @theme inline {
@@ -23,4 +34,129 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.fren-page {
+  background:
+    radial-gradient(circle at top right, rgba(226, 61, 138, 0.08), transparent 28%),
+    linear-gradient(180deg, rgba(248, 242, 232, 0.96), rgba(248, 242, 232, 1));
+  color: var(--fren-ink);
+}
+
+.fren-hero {
+  border: 1px solid rgba(63, 103, 200, 0.12);
+  background:
+    linear-gradient(135deg, rgba(248, 242, 232, 0.98), rgba(255, 255, 255, 0.8)),
+    linear-gradient(90deg, rgba(143, 179, 231, 0.1), rgba(255, 255, 255, 0));
+  box-shadow: var(--fren-shadow);
+}
+
+.fren-hero-stripe {
+  background:
+    linear-gradient(90deg, rgba(63, 103, 200, 0.12) 0, rgba(63, 103, 200, 0.12) 24%, transparent 24%, transparent 48%, rgba(63, 103, 200, 0.12) 48%, rgba(63, 103, 200, 0.12) 72%, transparent 72%, transparent 100%);
+  background-size: 160px 100%;
+}
+
+.fren-section {
+  border: 1px solid var(--fren-line);
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: var(--fren-shadow);
+  backdrop-filter: blur(4px);
+}
+
+.fren-section--ivory {
+  background: rgba(248, 242, 232, 0.92);
+}
+
+.fren-section--blush {
+  background: linear-gradient(180deg, rgba(248, 242, 232, 0.96), rgba(226, 61, 138, 0.07));
+}
+
+.fren-section--blue {
+  background: linear-gradient(180deg, rgba(248, 242, 232, 0.98), rgba(143, 179, 231, 0.14));
+}
+
+.fren-section--warm {
+  background: linear-gradient(180deg, rgba(248, 242, 232, 0.98), rgba(255, 123, 94, 0.12));
+}
+
+.fren-stripe-band {
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(143, 179, 231, 0.22) 0 12px,
+      rgba(248, 242, 232, 0.98) 12px 24px
+    );
+}
+
+.fren-card {
+  border: 1px solid rgba(63, 103, 200, 0.12);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: var(--fren-shadow-soft);
+}
+
+.fren-card--blue {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(143, 179, 231, 0.08));
+}
+
+.fren-card--blush {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(226, 61, 138, 0.07));
+}
+
+.fren-card--warm {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 123, 94, 0.08));
+}
+
+.fren-kicker {
+  color: var(--fren-blue);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.fren-chip {
+  border: 1px solid rgba(63, 103, 200, 0.1);
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--fren-blue);
+  box-shadow: var(--fren-shadow-soft);
+}
+
+.fren-chip--accent {
+  border-color: rgba(226, 61, 138, 0.2);
+  color: var(--fren-pink);
+}
+
+.fren-button-primary {
+  border: 1px solid rgba(63, 103, 200, 0.06);
+  background: var(--fren-blue);
+  color: white;
+  box-shadow: 0 16px 28px -18px rgba(63, 103, 200, 0.5);
+}
+
+.fren-button-secondary {
+  border: 1px solid rgba(63, 103, 200, 0.16);
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--fren-blue);
+  box-shadow: var(--fren-shadow-soft);
+}
+
+.fren-button-warm {
+  border: 1px solid rgba(255, 123, 94, 0.14);
+  background: var(--fren-pink);
+  color: white;
+  box-shadow: 0 16px 28px -18px rgba(226, 61, 138, 0.45);
+}
+
+.fren-title {
+  color: var(--fren-ink);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.fren-copy {
+  color: var(--fren-copy);
 }

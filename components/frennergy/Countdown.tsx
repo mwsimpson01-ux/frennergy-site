@@ -53,37 +53,43 @@ export function Countdown({ targetDate, label = "Hot Girl Summer begins in..." }
     {
       label: "Days",
       value: timeLeft.days,
-      style: "border-[#FF4FA3]/60 bg-[#FF4FA3]/20 text-[#4A2F69]",
+      style:
+        "border-[rgba(226,61,138,0.14)] bg-[rgba(226,61,138,0.08)] text-[var(--fren-pink)]",
     },
     {
       label: "Hours",
       value: timeLeft.hours,
-      style: "border-[#27C7C8]/60 bg-[#27C7C8]/20 text-[#27535A]",
+      style:
+        "border-[rgba(63,103,200,0.14)] bg-[rgba(143,179,231,0.16)] text-[var(--fren-blue)]",
     },
     {
       label: "Minutes",
       value: timeLeft.minutes,
-      style: "border-[#FFA552]/60 bg-[#FFA552]/25 text-[#5A3E2A]",
+      style:
+        "border-[rgba(243,181,61,0.18)] bg-[rgba(243,181,61,0.14)] text-[var(--fren-coral)]",
     },
   ];
 
   return (
     <section
       aria-label="Countdown to trip"
-      className="mt-8 rounded-[1.8rem] border border-white/70 bg-[linear-gradient(120deg,#FFF2F8_0%,#FFF6E7_45%,#ECFBF9_100%)] p-4 shadow-[0_18px_32px_-20px_rgba(255,79,163,0.55)] sm:p-5"
+      className="relative overflow-hidden rounded-[1.9rem] border border-[rgba(63,103,200,0.12)] bg-[rgba(248,242,232,0.88)] p-4 shadow-[0_18px_32px_-22px_rgba(34,52,104,0.2)] sm:p-5"
     >
-      <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#5D3D74]">
-        <Spark className="h-4 w-4 text-[#FF4FA3]" />
+      <div className="absolute inset-x-0 top-0 h-3 bg-[repeating-linear-gradient(90deg,rgba(143,179,231,0.24)_0_14px,rgba(248,242,232,0.98)_14px_28px)]" />
+      <p className="inline-flex items-center gap-2 pt-3 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--fren-blue)]">
+        <Spark className="h-4 w-4 text-[var(--fren-pink)]" />
         {label}
       </p>
       <div className="mt-4 grid grid-cols-3 gap-2 sm:gap-3">
         {items.map((item) => (
           <div
             key={item.label}
-            className={`rounded-2xl border px-3 py-3 text-center shadow-[0_12px_20px_-16px_rgba(61,43,87,0.45)] ${item.style}`}
+            className={`rounded-[1.25rem] border px-3 py-4 text-center shadow-[0_12px_20px_-16px_rgba(34,52,104,0.18)] ${item.style}`}
           >
-            <p className="text-2xl font-black leading-none sm:text-3xl">{item.value}</p>
-            <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.16em] sm:text-xs">
+            <p className="font-[family-name:Georgia,Times,serif] text-3xl font-black leading-none sm:text-4xl">
+              {item.value}
+            </p>
+            <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-[var(--fren-copy)] sm:text-xs">
               {item.label}
             </p>
           </div>
