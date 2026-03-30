@@ -18,7 +18,8 @@ const vibeStrip = [
   "Chelsea",
 ];
 
-const playlistUrl = "https://open.spotify.com/playlist/4OkCaycgBtBoghf9mWo5l9";
+const playlistUrl =
+  "https://open.spotify.com/playlist/4OkCaycgBtBoghf9mWo5l9?si=fk42PKmhTMGDFJiw511DAQ&pi=YHW-SyMdTW6LR&pt=d7eaf428e509d5b69b308b0fa851b88b";
 
 const overviewPills = [
   "Pool Hair",
@@ -53,108 +54,104 @@ const dayPlans: DayPlan[] = [
   {
     day: "Friday",
     era: "Arrival Era",
-    subtitle: "An easy night in before the chaos begins.",
+    subtitle: "A cozy, low-key arrival night before the weekend fun begins.",
     cardClass: "bg-[#FFF4EA] border-[#F9DCE7]",
     events: [
       {
         time: "Afternoon",
         type: "arrivals",
         label: "Everyone arrives",
-        detail: "Flights roll in and everyone settles into trip mode.",
+        detail: "Flights roll in and everyone settles into weekend mode.",
       },
       {
         time: "4:00 PM",
         type: "reservation",
-        label: "Airbnb check-in",
-        detail: "Bag drop, room claims, and cozy reset at the house.",
+        label: "Check-in at the house",
+        detail: "Bags down, room picks, and time to settle in before the weekend begins.",
       },
       {
         time: "Evening",
         type: "activity",
-        label: "Girls Go Mild",
-        detail: "Friday night theme: low-key, cute, and easy.",
+        label: "Girls Gone Mild",
+        detail: "Rooftop hangs, dinner ordered in, and a low-key night to relax before the fun starts.",
       },
       {
         time: "Night",
         type: "nightlife",
-        label: "Pajama night at the house",
-        detail: "Chill night in before the busy weekend begins.",
+        label: "Chill night at the house",
+        detail: "An easy, cozy night in to unwind, catch up, and get ready for the weekend ahead.",
       },
     ],
   },
   {
     day: "Saturday",
     era: "Main Character Day",
-    subtitle: "Beach club energy from sunrise glow to late-night chaos.",
+    subtitle: "Brunch, Bacardi, and a night out - the recipe for Pour Decisions.",
     cardClass: "bg-[#FFF4EA] border-[#F9DCE7]",
     events: [
       {
-        time: "10:00 AM",
-        type: "activity",
-        label: "Beach + pool setup",
-        detail: "Chairs, sunscreen, speaker, and turquoise look check.",
-      },
-      {
-        time: "12:30 PM",
+        time: "10:30 AM",
         type: "meal",
-        label: "Poolside lunch",
-        detail: "Fresh bowls, fries, and frozen drinks on repeat.",
+        label: "Brunch in Old San Juan",
+        detail: "Start the day with brunch in Old San Juan before the fun officially begins.",
       },
       {
         time: "1:00 PM",
         type: "drinks",
-        label: "Cocktail class at Bacardi",
-        detail: "Confirmed activity: group cocktail class at Bacardi.",
+        label: "Bacardi cocktail class",
+        detail: "Head to Bacardi for a cocktail class, good drinks, and plenty of weekend energy.",
       },
       {
-        time: "2:30 PM",
+        time: "Afternoon",
         type: "drinks",
-        label: "Cocktail o'clock",
-        detail: "Round of signature drinks for the full squad.",
+        label: "Ferry to Catano",
+        detail: "Take the ferry from San Juan to Catano and keep the day rolling.",
       },
       {
-        time: "6:00 PM",
+        time: "Late afternoon",
         type: "activity",
-        label: "Sunset photo run",
-        detail: "Golden hour content sprint before dinner glam.",
+        label: "Back to the house to get ready",
+        detail: "Head back to the house to refresh, get dressed, and get ready for the night ahead.",
       },
       {
-        time: "8:00 PM",
+        time: "Evening",
         type: "reservation",
-        label: "Dinner reservation",
-        detail: "Coral + gold fits, flash photos, and toasts.",
-      },
-      {
-        time: "10:45 PM",
-        type: "nightlife",
-        label: "Going out",
-        detail: "Dance floor, chaotic stories, and iconic group pics.",
+        label: "Dinner + bars",
+        detail: "Dinner plans are still TBD, followed by bars and a fun night out.",
       },
     ],
   },
   {
     day: "Sunday",
     era: "Recovery Glow",
-    subtitle: "Slow morning, one more pool moment, and airport hugs.",
+    subtitle: "Sun, swimsuits, and poolside energy all day long.",
     cardClass: "bg-[#FFF4EA] border-[#F9DCE7]",
     events: [
       {
-        time: "10:30 AM",
-        type: "meal",
-        label: "Recovery brunch",
-        detail: "Coffee, carbs, recap, and best-story voting.",
-      },
-      {
-        time: "12:00 PM",
+        time: "11:00 AM",
         type: "activity",
-        label: "Pool hang + reset",
-        detail: "Final dip, hydration, and suitcase regrouping.",
+        label: "Cabana + pool day",
+        detail:
+          "Meet at Condado Ocean Club, 1045 Ashford Ave, San Juan, Puerto Rico 00907, for a poolside cabana day in the sun.",
       },
       {
-        time: "2:30 PM",
-        type: "departure",
-        label: "Departures",
-        detail: "Airport rides, hugs, and post-trip group chat spam.",
+        time: "Midday",
+        type: "meal",
+        label: "Poolside lunch",
+        detail:
+          "Lunch will be ordered to the cabana so everyone can relax, snack, and stay by the pool.",
+      },
+      {
+        time: "Late afternoon",
+        type: "activity",
+        label: "Back to the house to refresh",
+        detail: "Head back to the house to reset, get ready, and transition into the evening.",
+      },
+      {
+        time: "Evening",
+        type: "reservation",
+        label: "Dinner TBD",
+        detail: "Evening plans to come, but expect something fun to close out the day.",
       },
     ],
   },
@@ -172,7 +169,7 @@ const weekendRules = [
 const tripDetails = [
   {
     label: "House",
-    value: "Villa details coming soon",
+    value: "208 Calle de la Luna, Old San Juan, 00902 San Juan",
   },
   {
     label: "Airport",
