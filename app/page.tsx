@@ -40,6 +40,7 @@ type ActivityType =
 type DayPlan = {
   day: "Friday" | "Saturday" | "Sunday";
   era: string;
+  theme: string;
   subtitle: string;
   cardClass: string;
   events: Array<{
@@ -54,6 +55,7 @@ const dayPlans: DayPlan[] = [
   {
     day: "Friday",
     era: "Arrival Era",
+    theme: "Girls Gone Mild",
     subtitle: "A cozy, low-key arrival night before the weekend fun begins.",
     cardClass: "bg-[#FFF4EA] border-[#F9DCE7]",
     events: [
@@ -67,25 +69,20 @@ const dayPlans: DayPlan[] = [
         time: "4:00 PM",
         type: "reservation",
         label: "Check-in at the house",
-        detail: "Bags down, room picks, and time to settle in before the weekend begins.",
+        detail: "Bags down, room picks, and time to settle in.",
       },
       {
         time: "Evening",
         type: "activity",
-        label: "Girls Gone Mild",
-        detail: "Rooftop hangs, dinner ordered in, and a low-key night to relax before the fun starts.",
-      },
-      {
-        time: "Night",
-        type: "nightlife",
-        label: "Chill night at the house",
-        detail: "An easy, cozy night in to unwind, catch up, and get ready for the weekend ahead.",
+        label: "Rooftop + dinner in",
+        detail: "Rooftop hangs, takeout, and a cozy night in.",
       },
     ],
   },
   {
     day: "Saturday",
     era: "Main Character Day",
+    theme: "Pour Decisions",
     subtitle: "Brunch, Bacardi, and a night out - the recipe for Pour Decisions.",
     cardClass: "bg-[#FFF4EA] border-[#F9DCE7]",
     events: [
@@ -93,65 +90,64 @@ const dayPlans: DayPlan[] = [
         time: "10:30 AM",
         type: "meal",
         label: "Brunch in Old San Juan",
-        detail: "Start the day with brunch in Old San Juan before the fun officially begins.",
+        detail: "A chic little brunch moment before the chaos begins.",
       },
       {
         time: "1:00 PM",
         type: "drinks",
         label: "Bacardi cocktail class",
-        detail: "Head to Bacardi for a cocktail class, good drinks, and plenty of weekend energy.",
-      },
-      {
-        time: "Afternoon",
-        type: "drinks",
-        label: "Ferry to Catano",
-        detail: "Take the ferry from San Juan to Catano and keep the day rolling.",
+        detail: "Ferry over to Bacardi for cocktails and questionable choices.",
       },
       {
         time: "Late afternoon",
         type: "activity",
         label: "Back to the house to get ready",
-        detail: "Head back to the house to refresh, get dressed, and get ready for the night ahead.",
+        detail: "Quick outfit change and glam reset.",
       },
       {
         time: "Evening",
         type: "reservation",
-        label: "Dinner + bars",
-        detail: "Dinner plans are still TBD, followed by bars and a fun night out.",
+        label: "Dinner",
+        detail: "Plans coming soon.",
+      },
+      {
+        time: "Night",
+        type: "nightlife",
+        label: "Night out on the town",
+        detail: "Details coming soon.",
       },
     ],
   },
   {
     day: "Sunday",
     era: "Recovery Glow",
-    subtitle: "Sun, swimsuits, and poolside energy all day long.",
+    theme: "Tropic Like It's Hot",
+    subtitle: "Cabana energy, cute swimsuits, and not a single sober thought.",
     cardClass: "bg-[#FFF4EA] border-[#F9DCE7]",
     events: [
       {
         time: "11:00 AM",
         type: "activity",
         label: "Cabana + pool day",
-        detail:
-          "Meet at Condado Ocean Club, 1045 Ashford Ave, San Juan, Puerto Rico 00907, for a poolside cabana day in the sun.",
+        detail: "Poolside, sun-soaked, and fully in vacation mode.",
       },
       {
         time: "Midday",
         type: "meal",
         label: "Poolside lunch",
-        detail:
-          "Lunch will be ordered to the cabana so everyone can relax, snack, and stay by the pool.",
+        detail: "Lunch, drinks, and cabana hangs.",
       },
       {
         time: "Late afternoon",
         type: "activity",
         label: "Back to the house to refresh",
-        detail: "Head back to the house to reset, get ready, and transition into the evening.",
+        detail: "Quick reset before the evening.",
       },
       {
         time: "Evening",
         type: "reservation",
         label: "Dinner TBD",
-        detail: "Evening plans to come, but expect something fun to close out the day.",
+        detail: "Plans to come.",
       },
     ],
   },
@@ -448,14 +444,17 @@ export default function FrennergyPage() {
                   key={plan.day}
                   className={`rounded-[1.4rem] border p-5 shadow-[0_12px_24px_-18px_rgba(61,43,87,0.28)] sm:p-6 ${plan.cardClass}`}
                 >
-                  <div className="flex flex-wrap items-end justify-between gap-3">
+                  <div className="flex flex-wrap items-start justify-between gap-4">
                     <div>
                       <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#FF4FA3]">
                         {plan.era}
                       </p>
                       <h3 className="mt-1 text-2xl font-bold text-[#3D2B57]">{plan.day}</h3>
                     </div>
-                    <p className="text-sm font-semibold text-[#5B426F]">{plan.subtitle}</p>
+                    <div className="max-w-md sm:text-right">
+                      <p className="text-lg font-black tracking-tight text-[#FF4FA3]">{plan.theme}</p>
+                      <p className="mt-1 text-sm font-semibold text-[#5B426F]">{plan.subtitle}</p>
+                    </div>
                   </div>
 
                   <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
