@@ -39,7 +39,6 @@ type ActivityType =
 
 type DayPlan = {
   day: "Friday" | "Saturday" | "Sunday";
-  era: string;
   theme: string;
   subtitle: string;
   cardClass: string;
@@ -54,7 +53,6 @@ type DayPlan = {
 const dayPlans: DayPlan[] = [
   {
     day: "Friday",
-    era: "Arrival Era",
     theme: "Girls Gone Mild",
     subtitle: "A cozy, low-key arrival night before the weekend fun begins.",
     cardClass: "bg-[#FFF4EA] border-[#F9DCE7]",
@@ -81,7 +79,6 @@ const dayPlans: DayPlan[] = [
   },
   {
     day: "Saturday",
-    era: "Main Character Day",
     theme: "Pour Decisions",
     subtitle: "Brunch, Bacardi, and a night out - the recipe for Pour Decisions.",
     cardClass: "bg-[#FFF4EA] border-[#F9DCE7]",
@@ -120,7 +117,6 @@ const dayPlans: DayPlan[] = [
   },
   {
     day: "Sunday",
-    era: "Recovery Glow",
     theme: "Tropic Like It's Hot",
     subtitle: "Cabana energy, cute swimsuits, and not a single sober thought.",
     cardClass: "bg-[#FFF4EA] border-[#F9DCE7]",
@@ -445,15 +441,16 @@ export default function FrennergyPage() {
                   className={`rounded-[1.4rem] border p-5 shadow-[0_12px_24px_-18px_rgba(61,43,87,0.28)] sm:p-6 ${plan.cardClass}`}
                 >
                   <div className="flex flex-wrap items-start justify-between gap-4">
-                    <div>
-                      <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#FF4FA3]">
-                        {plan.era}
+                    <div className="max-w-md">
+                      <h3 className="text-3xl font-black tracking-tight text-[#FF4FA3] sm:text-4xl">
+                        {plan.theme}
+                      </h3>
+                      <p className="mt-2 text-sm font-semibold uppercase tracking-[0.14em] text-[#7B578F]">
+                        {plan.day}
                       </p>
-                      <h3 className="mt-1 text-2xl font-bold text-[#3D2B57]">{plan.day}</h3>
                     </div>
                     <div className="max-w-md sm:text-right">
-                      <p className="text-lg font-black tracking-tight text-[#FF4FA3]">{plan.theme}</p>
-                      <p className="mt-1 text-sm font-semibold text-[#5B426F]">{plan.subtitle}</p>
+                      <p className="text-sm font-semibold text-[#5B426F]">{plan.subtitle}</p>
                     </div>
                   </div>
 
