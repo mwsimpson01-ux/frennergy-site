@@ -19,7 +19,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-fren-sans);
+  --font-serif: var(--font-fren-serif);
   --font-mono: var(--font-geist-mono);
 }
 
@@ -33,22 +34,20 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-fren-sans), Arial, Helvetica, sans-serif;
 }
 
 .fren-page {
   background:
-    radial-gradient(circle at top right, rgba(226, 61, 138, 0.08), transparent 28%),
-    linear-gradient(180deg, rgba(248, 242, 232, 0.96), rgba(248, 242, 232, 1));
+    linear-gradient(180deg, rgba(248, 242, 232, 0.98), rgba(248, 242, 232, 1));
   color: var(--fren-ink);
 }
 
 .fren-hero {
   border: 1px solid rgba(63, 103, 200, 0.12);
   background:
-    linear-gradient(135deg, rgba(248, 242, 232, 0.98), rgba(255, 255, 255, 0.8)),
-    linear-gradient(90deg, rgba(143, 179, 231, 0.1), rgba(255, 255, 255, 0));
-  box-shadow: var(--fren-shadow);
+    linear-gradient(135deg, rgba(248, 242, 232, 0.98), rgba(255, 255, 255, 0.82));
+  box-shadow: 0 28px 54px -34px rgba(34, 52, 104, 0.26);
 }
 
 .fren-hero-stripe {
@@ -59,25 +58,23 @@ body {
 
 .fren-section {
   border: 1px solid var(--fren-line);
-  background: rgba(255, 255, 255, 0.65);
   box-shadow: var(--fren-shadow);
-  backdrop-filter: blur(4px);
 }
 
 .fren-section--ivory {
-  background: rgba(248, 242, 232, 0.92);
+  background: rgba(248, 242, 232, 0.96);
 }
 
 .fren-section--blush {
-  background: linear-gradient(180deg, rgba(248, 242, 232, 0.96), rgba(226, 61, 138, 0.07));
+  background: linear-gradient(180deg, rgba(248, 242, 232, 0.98), rgba(226, 61, 138, 0.05));
 }
 
 .fren-section--blue {
-  background: linear-gradient(180deg, rgba(248, 242, 232, 0.98), rgba(143, 179, 231, 0.14));
+  background: linear-gradient(180deg, rgba(248, 242, 232, 0.98), rgba(143, 179, 231, 0.1));
 }
 
 .fren-section--warm {
-  background: linear-gradient(180deg, rgba(248, 242, 232, 0.98), rgba(255, 123, 94, 0.12));
+  background: linear-gradient(180deg, rgba(248, 242, 232, 0.98), rgba(255, 123, 94, 0.08));
 }
 
 .fren-stripe-band {
@@ -159,4 +156,36 @@ body {
 
 .fren-copy {
   color: var(--fren-copy);
+}
+
+.fren-editorial-rule {
+  border-top: 1px solid rgba(63, 103, 200, 0.16);
+}
+
+.fren-editorial-frame {
+  position: relative;
+}
+
+.fren-editorial-frame::before,
+.fren-editorial-frame::after {
+  content: "";
+  position: absolute;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-color: rgba(63, 103, 200, 0.18);
+  pointer-events: none;
+}
+
+.fren-editorial-frame::before {
+  top: 1rem;
+  left: 1rem;
+  border-left: 1px solid rgba(63, 103, 200, 0.18);
+  border-top: 1px solid rgba(63, 103, 200, 0.18);
+}
+
+.fren-editorial-frame::after {
+  right: 1rem;
+  bottom: 1rem;
+  border-right: 1px solid rgba(63, 103, 200, 0.18);
+  border-bottom: 1px solid rgba(63, 103, 200, 0.18);
 }

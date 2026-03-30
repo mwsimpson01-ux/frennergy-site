@@ -53,38 +53,41 @@ export function Countdown({ targetDate, label = "Hot Girl Summer begins in..." }
     {
       label: "Days",
       value: timeLeft.days,
-      style:
-        "border-[rgba(226,61,138,0.14)] bg-[rgba(226,61,138,0.08)] text-[var(--fren-pink)]",
+      style: "bg-[rgba(226,61,138,0.08)] text-[var(--fren-pink)]",
     },
     {
       label: "Hours",
       value: timeLeft.hours,
-      style:
-        "border-[rgba(63,103,200,0.14)] bg-[rgba(143,179,231,0.16)] text-[var(--fren-blue)]",
+      style: "bg-[rgba(143,179,231,0.16)] text-[var(--fren-blue)]",
     },
     {
       label: "Minutes",
       value: timeLeft.minutes,
-      style:
-        "border-[rgba(243,181,61,0.18)] bg-[rgba(243,181,61,0.14)] text-[var(--fren-coral)]",
+      style: "bg-[rgba(243,181,61,0.14)] text-[var(--fren-coral)]",
     },
   ];
 
   return (
     <section
       aria-label="Countdown to trip"
-      className="relative overflow-hidden rounded-[1.9rem] border border-[rgba(63,103,200,0.12)] bg-[rgba(248,242,232,0.88)] p-4 shadow-[0_18px_32px_-22px_rgba(34,52,104,0.2)] sm:p-5"
+      className="overflow-hidden border border-[rgba(63,103,200,0.14)] bg-[rgba(248,242,232,0.96)] shadow-[0_18px_32px_-22px_rgba(34,52,104,0.14)]"
     >
-      <div className="absolute inset-x-0 top-0 h-3 bg-[repeating-linear-gradient(90deg,rgba(143,179,231,0.24)_0_14px,rgba(248,242,232,0.98)_14px_28px)]" />
-      <p className="inline-flex items-center gap-2 pt-3 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--fren-blue)]">
-        <Spark className="h-4 w-4 text-[var(--fren-pink)]" />
-        {label}
-      </p>
-      <div className="mt-4 grid grid-cols-3 gap-2 sm:gap-3">
+      <div className="h-3 bg-[repeating-linear-gradient(90deg,rgba(143,179,231,0.24)_0_14px,rgba(248,242,232,0.98)_14px_28px)]" />
+      <div className="grid gap-5 px-5 py-5 sm:grid-cols-[0.9fr_1.1fr] sm:items-end sm:px-6 sm:py-6">
+        <div>
+          <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--fren-blue)]">
+            <Spark className="h-4 w-4 text-[var(--fren-pink)]" />
+            {label}
+          </p>
+          <p className="mt-3 font-serif text-3xl font-semibold tracking-[-0.04em] text-[var(--fren-ink)] sm:text-4xl">
+            Departure in sight.
+          </p>
+        </div>
+        <div className="grid grid-cols-3 border-t border-[rgba(63,103,200,0.12)] pt-4 sm:border-t-0 sm:pt-0">
         {items.map((item) => (
           <div
             key={item.label}
-            className={`rounded-[1.25rem] border px-3 py-4 text-center shadow-[0_12px_20px_-16px_rgba(34,52,104,0.18)] ${item.style}`}
+            className={`border-l px-3 py-1 text-center first:border-l-0 sm:px-4 ${item.style}`}
           >
             <p className="font-[family-name:Georgia,Times,serif] text-3xl font-black leading-none sm:text-4xl">
               {item.value}
@@ -94,6 +97,7 @@ export function Countdown({ targetDate, label = "Hot Girl Summer begins in..." }
             </p>
           </div>
         ))}
+        </div>
       </div>
     </section>
   );
