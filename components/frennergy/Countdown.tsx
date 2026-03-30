@@ -70,26 +70,26 @@ export function Countdown({ targetDate, label = "Hot Girl Summer begins in..." }
   return (
     <section
       aria-label="Countdown to trip"
-      className="overflow-hidden border border-[rgba(63,103,200,0.14)] bg-[rgba(248,242,232,0.96)] shadow-[0_18px_32px_-22px_rgba(34,52,104,0.14)]"
+      className="overflow-hidden border border-[rgba(63,103,200,0.16)] bg-[rgba(248,242,232,0.98)] shadow-[0_18px_32px_-22px_rgba(34,52,104,0.12)]"
     >
       <div className="h-3 bg-[repeating-linear-gradient(90deg,rgba(143,179,231,0.24)_0_14px,rgba(248,242,232,0.98)_14px_28px)]" />
-      <div className="grid gap-5 px-5 py-5 sm:grid-cols-[0.9fr_1.1fr] sm:items-end sm:px-6 sm:py-6">
+      <div className="grid gap-6 px-5 py-5 sm:grid-cols-[0.82fr_1.18fr] sm:items-end sm:px-6 sm:py-6">
         <div>
           <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--fren-blue)]">
             <Spark className="h-4 w-4 text-[var(--fren-pink)]" />
             {label}
           </p>
-          <p className="mt-3 font-serif text-3xl font-semibold tracking-[-0.04em] text-[var(--fren-ink)] sm:text-4xl">
+          <p className="mt-3 max-w-xs font-serif text-[2.35rem] font-semibold leading-[0.95] tracking-[-0.05em] text-[var(--fren-ink)] sm:text-[2.75rem]">
             Departure in sight.
           </p>
         </div>
-        <div className="grid grid-cols-3 border-t border-[rgba(63,103,200,0.12)] pt-4 sm:border-t-0 sm:pt-0">
+        <div className="grid grid-cols-3 border-t border-[rgba(63,103,200,0.14)] pt-4 sm:border-t-0 sm:pt-0">
         {items.map((item) => (
           <div
             key={item.label}
-            className={`border-l px-3 py-1 text-center first:border-l-0 sm:px-4 ${item.style}`}
+            className={`border-l border-[rgba(63,103,200,0.14)] px-3 py-2 text-center first:border-l-0 sm:px-4 ${item.style}`}
           >
-            <p className="font-[family-name:Georgia,Times,serif] text-3xl font-black leading-none sm:text-4xl">
+            <p className="font-serif text-[2.65rem] font-semibold leading-none tracking-[-0.05em] sm:text-[3.25rem]">
               {item.value}
             </p>
             <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-[var(--fren-copy)] sm:text-xs">

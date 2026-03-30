@@ -11,9 +11,10 @@
   --fren-marigold: #f3b53d;
   --fren-ink: #27437e;
   --fren-copy: #495579;
-  --fren-line: rgba(63, 103, 200, 0.14);
-  --fren-shadow: 0 20px 42px -28px rgba(34, 52, 104, 0.28);
-  --fren-shadow-soft: 0 14px 28px -20px rgba(34, 52, 104, 0.18);
+  --fren-line: rgba(63, 103, 200, 0.18);
+  --fren-line-strong: rgba(63, 103, 200, 0.26);
+  --fren-shadow: 0 22px 46px -28px rgba(34, 52, 104, 0.24);
+  --fren-shadow-soft: 0 16px 30px -22px rgba(34, 52, 104, 0.15);
 }
 
 @theme inline {
@@ -39,15 +40,15 @@ body {
 
 .fren-page {
   background:
-    linear-gradient(180deg, rgba(248, 242, 232, 0.98), rgba(248, 242, 232, 1));
+    linear-gradient(180deg, rgba(248, 242, 232, 0.99), rgba(248, 242, 232, 1));
   color: var(--fren-ink);
 }
 
 .fren-hero {
-  border: 1px solid rgba(63, 103, 200, 0.12);
+  border: 1px solid var(--fren-line);
   background:
     linear-gradient(135deg, rgba(248, 242, 232, 0.98), rgba(255, 255, 255, 0.82));
-  box-shadow: 0 28px 54px -34px rgba(34, 52, 104, 0.26);
+  box-shadow: 0 30px 60px -38px rgba(34, 52, 104, 0.24);
 }
 
 .fren-hero-stripe {
@@ -159,7 +160,7 @@ body {
 }
 
 .fren-editorial-rule {
-  border-top: 1px solid rgba(63, 103, 200, 0.16);
+  border-top: 1px solid var(--fren-line-strong);
 }
 
 .fren-editorial-frame {
@@ -172,20 +173,20 @@ body {
   position: absolute;
   width: 2.75rem;
   height: 2.75rem;
-  border-color: rgba(63, 103, 200, 0.18);
+  border-color: var(--fren-line-strong);
   pointer-events: none;
 }
 
 .fren-editorial-frame::before {
   top: 1rem;
   left: 1rem;
-  border-left: 1px solid rgba(63, 103, 200, 0.18);
-  border-top: 1px solid rgba(63, 103, 200, 0.18);
+  border-left: 1px solid var(--fren-line-strong);
+  border-top: 1px solid var(--fren-line-strong);
 }
 
 .fren-editorial-frame::after {
   right: 1rem;
   bottom: 1rem;
-  border-right: 1px solid rgba(63, 103, 200, 0.18);
-  border-bottom: 1px solid rgba(63, 103, 200, 0.18);
+  border-right: 1px solid var(--fren-line-strong);
+  border-bottom: 1px solid var(--fren-line-strong);
 }
