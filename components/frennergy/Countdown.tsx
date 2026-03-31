@@ -53,17 +53,17 @@ export function Countdown({ targetDate, label = "Hot Girl Summer begins in..." }
     {
       label: "Days",
       value: timeLeft.days,
-      style: "bg-[rgba(226,61,138,0.08)] text-[var(--fren-pink)]",
+      style: "bg-transparent text-[var(--fren-pink)]",
     },
     {
       label: "Hours",
       value: timeLeft.hours,
-      style: "bg-[rgba(143,179,231,0.16)] text-[var(--fren-blue)]",
+      style: "bg-transparent text-[var(--fren-blue)]",
     },
     {
       label: "Minutes",
       value: timeLeft.minutes,
-      style: "bg-[rgba(243,181,61,0.14)] text-[var(--fren-coral)]",
+      style: "bg-transparent text-[var(--fren-coral)]",
     },
   ];
 
@@ -72,14 +72,14 @@ export function Countdown({ targetDate, label = "Hot Girl Summer begins in..." }
       aria-label="Countdown to trip"
       className="overflow-hidden border border-[rgba(63,103,200,0.18)] bg-[rgba(248,242,232,0.98)] shadow-[0_18px_32px_-22px_rgba(63,103,200,0.16)]"
     >
-      <div className="h-3 bg-[repeating-linear-gradient(90deg,rgba(143,179,231,0.24)_0_14px,rgba(248,242,232,0.98)_14px_28px)]" />
-      <div className="grid gap-6 px-5 py-5 sm:grid-cols-[0.82fr_1.18fr] sm:items-end sm:px-6 sm:py-6">
+      <div className="h-2 bg-[repeating-linear-gradient(90deg,rgba(143,179,231,0.18)_0_16px,rgba(248,242,232,0.98)_16px_32px)]" />
+      <div className="grid gap-6 px-5 py-6 sm:grid-cols-[0.84fr_1.16fr] sm:items-end sm:px-6 sm:py-7">
         <div>
           <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--fren-blue)]">
             <Spark className="h-4 w-4 text-[var(--fren-pink)]" />
             {label}
           </p>
-          <p className="mt-3 max-w-xs font-serif text-[2.35rem] font-semibold leading-[0.95] tracking-[-0.05em] text-[var(--fren-ink)] sm:text-[2.75rem]">
+          <p className="mt-3 max-w-[13rem] font-serif text-[2.2rem] font-semibold leading-[0.95] tracking-[-0.05em] text-[var(--fren-ink)] sm:text-[2.6rem]">
             Weekend begins soon.
           </p>
         </div>

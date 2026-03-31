@@ -345,37 +345,32 @@ export default function FrennergyPage() {
       <div className="mx-auto w-full max-w-7xl px-4 pb-24 pt-6 sm:px-8 sm:pb-32 sm:pt-10">
         <section className="fren-hero relative overflow-hidden rounded-[2.4rem] px-6 pb-9 pt-8 sm:px-10 sm:pb-12 sm:pt-10">
           <div className="fren-hero-stripe absolute inset-x-0 top-0 h-3 opacity-80" />
-          <div className="grid gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:items-end">
-            <div className="max-w-3xl lg:pr-6">
+          <div className="grid gap-10 lg:grid-cols-[1.14fr_0.86fr] lg:items-end">
+            <div className="max-w-[42rem] lg:pr-8">
               <p className="fren-kicker">Chelsea&apos;s Bachelorette Weekend</p>
-              <div className="mt-7 flex items-start gap-5">
-                <span className="hidden h-24 w-px bg-[var(--fren-line-strong)] lg:block" />
-                <div>
-                  <p className="inline-flex rounded-full border border-[rgba(63,103,200,0.16)] bg-[rgba(248,242,232,0.94)] px-4 py-1 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--fren-blue)]">
-                    San Juan, Puerto Rico
-                  </p>
-                  <h1 className="mt-6 font-serif text-[4.6rem] font-semibold leading-[0.82] tracking-[-0.055em] text-[var(--fren-ink)] sm:text-[5.8rem] lg:text-[7.1rem]">
-                    Hot Girl
-                    <br />
-                    Frennergy
-                  </h1>
-                </div>
-              </div>
-              <p className="fren-copy mt-7 max-w-xl text-lg leading-8 sm:text-[1.35rem]">
+              <p className="mt-6 inline-flex rounded-full border border-[rgba(63,103,200,0.16)] bg-[rgba(248,242,232,0.94)] px-4 py-1 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--fren-blue)]">
+                San Juan, Puerto Rico
+              </p>
+              <h1 className="mt-6 max-w-[10ch] font-serif text-[4.25rem] font-semibold leading-[0.84] tracking-[-0.055em] text-[var(--fren-ink)] sm:text-[5.3rem] lg:text-[6.35rem]">
+                Hot Girl
+                <br />
+                Frennergy
+              </h1>
+              <p className="fren-copy mt-6 max-w-lg text-[1.02rem] leading-8 sm:text-[1.18rem]">
                 A destination-weekend edit for rooftop dinners, pool-club afternoons, and one
                 very polished kind of chaos.
               </p>
 
-              <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-10 flex flex-col gap-3 sm:flex-row">
                 <a
                   href="#itinerary"
-                  className="fren-button-primary inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition duration-300 hover:-translate-y-1 hover:brightness-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--fren-blue)] focus-visible:ring-offset-2"
+                  className="fren-button-primary inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-[0.12em] transition duration-300 hover:-translate-y-1 hover:brightness-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--fren-blue)] focus-visible:ring-offset-2"
                 >
                   View Itinerary
                 </a>
                 <a
                   href="#details"
-                  className="fren-button-secondary inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition duration-300 hover:-translate-y-1 hover:bg-[rgba(248,242,232,1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--fren-blue)] focus-visible:ring-offset-2"
+                  className="fren-button-secondary inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-[0.12em] transition duration-300 hover:-translate-y-1 hover:bg-[rgba(248,242,232,1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--fren-blue)] focus-visible:ring-offset-2"
                 >
                   Trip Details
                 </a>
@@ -385,25 +380,25 @@ export default function FrennergyPage() {
             <aside className="grid gap-5 border-t border-[var(--fren-line)] pt-5 lg:mb-2 lg:border-t-0 lg:pt-0">
               <div className="border-b border-[var(--fren-line)] pb-4 lg:pb-5">
                 <p className="fren-kicker">San Juan, Puerto Rico</p>
-                <p className="mt-4 max-w-md font-serif text-[2.15rem] font-semibold leading-[1.04] tracking-[-0.04em] text-[var(--fren-blue)]">
+                <p className="mt-4 max-w-sm font-serif text-[1.95rem] font-semibold leading-[1.05] tracking-[-0.04em] text-[var(--fren-blue)]">
                   Mediterranean stripes, Old San Juan facades, and bridal main-character energy.
                 </p>
               </div>
               <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
-                <div className="border-l-2 border-[var(--fren-coral)] bg-[rgba(248,242,232,0.72)] px-4 py-4">
-                  <p className="fren-kicker">Stay</p>
+                <div className="border-t border-[rgba(255,123,94,0.26)] pt-4">
+                  <p className="fren-meta">Stay</p>
                   <p className="fren-copy mt-3 max-w-xs text-sm leading-7">
                     Historic house in Old San Juan, rooftop included.
                   </p>
                 </div>
-                <div className="border-l-2 border-[var(--fren-blue)] bg-[rgba(248,242,232,0.72)] px-4 py-4">
-                  <p className="fren-kicker">Mood</p>
+                <div className="border-t border-[rgba(63,103,200,0.24)] pt-4">
+                  <p className="fren-meta">Mood</p>
                   <p className="fren-copy mt-3 max-w-xs text-sm leading-7">
                     Fashion weekend, destination dinner party, just enough chaos.
                   </p>
                 </div>
-                <div className="border-l-2 border-[var(--fren-pink)] bg-[rgba(248,242,232,0.72)] px-4 py-4">
-                  <p className="fren-kicker">Pack For</p>
+                <div className="border-t border-[rgba(226,61,138,0.24)] pt-4">
+                  <p className="fren-meta">Pack For</p>
                   <p className="fren-copy mt-3 max-w-xs text-sm leading-7">
                     Cute swimsuits, dinner glam, and very intentional accessories.
                   </p>
@@ -419,20 +414,20 @@ export default function FrennergyPage() {
           </div>
 
           <section aria-labelledby="music-title">
-            <div className="relative flex h-full min-h-[100%] flex-col overflow-hidden border border-[rgba(255,123,94,0.22)] bg-[rgba(255,123,94,0.94)] px-7 py-8 shadow-[0_22px_34px_-20px_rgba(255,123,94,0.34)]">
-              <div className="absolute inset-x-0 top-0 h-3 bg-[linear-gradient(90deg,rgba(243,181,61,0.9),rgba(248,242,232,0.95),rgba(226,61,138,0.84))]" />
-              <div className="pointer-events-none absolute right-6 top-6 text-[rgba(248,242,232,0.88)]">
+            <div className="relative flex h-full min-h-[100%] flex-col overflow-hidden border border-[rgba(255,123,94,0.2)] bg-[linear-gradient(180deg,rgba(248,242,232,0.98),rgba(255,123,94,0.08))] px-7 py-8 shadow-[0_22px_34px_-22px_rgba(63,103,200,0.16)]">
+              <div className="absolute inset-x-0 top-0 h-2 bg-[linear-gradient(90deg,rgba(255,123,94,0.84),rgba(243,181,61,0.46))]" />
+              <div className="pointer-events-none absolute right-6 top-6 text-[rgba(255,123,94,0.7)]">
                 <IconHeadphones className="h-14 w-14 rotate-[8deg]" />
               </div>
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[rgba(248,242,232,0.88)]">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--fren-coral)]">
                 Now Playing
               </p>
-              <h2 id="music-title" className="mt-4 max-w-xs font-serif text-[2.6rem] font-semibold leading-[0.92] tracking-[-0.04em] text-[var(--fren-ivory)]">
+              <h2 id="music-title" className="mt-4 max-w-xs font-serif text-[2.35rem] font-semibold leading-[0.94] tracking-[-0.04em] text-[var(--fren-ink)]">
                 Hot Girl
                 <br />
                 Frennergy
               </h2>
-              <p className="mt-4 max-w-sm text-sm leading-7 text-[rgba(248,242,232,0.92)]">
+              <p className="fren-copy mt-4 max-w-sm text-sm leading-7">
                 Add your favorites before the first pour, the first ferry, and the first blurry
                 dinner flash photo.
               </p>
@@ -440,7 +435,7 @@ export default function FrennergyPage() {
                 href={playlistUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-8 inline-flex items-center justify-center self-start border border-[rgba(248,242,232,0.86)] bg-[rgba(248,242,232,0.96)] px-6 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-[var(--fren-blue)] transition duration-300 hover:-translate-y-1 hover:bg-[rgba(248,242,232,1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--fren-ivory)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--fren-coral)]"
+                className="fren-button-warm mt-8 inline-flex items-center justify-center self-start rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-[0.12em] transition duration-300 hover:-translate-y-1 hover:brightness-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--fren-coral)] focus-visible:ring-offset-2"
               >
                 Cue the Chaos
               </a>
@@ -449,10 +444,10 @@ export default function FrennergyPage() {
         </section>
 
         <section
-          className="fren-stripe-band mt-6 rounded-full border border-[rgba(63,103,200,0.12)] px-4 py-3 shadow-[0_12px_22px_-18px_rgba(63,103,200,0.22)] sm:px-6"
+          className="fren-stripe-band mt-6 rounded-full border border-[rgba(63,103,200,0.12)] px-4 py-2.5 shadow-[0_12px_22px_-20px_rgba(63,103,200,0.16)] sm:px-6"
           aria-label="Weekend vibe strip"
         >
-          <p className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-xs font-semibold uppercase tracking-[0.15em] text-[var(--fren-blue)] sm:text-sm">
+          <p className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--fren-blue)] sm:text-xs">
             {vibeStrip.map((item, index) => (
               <span key={item} className="inline-flex items-center gap-3">
                 <span>{item}</span>
@@ -465,24 +460,24 @@ export default function FrennergyPage() {
         <section className="mt-16 grid gap-8 lg:grid-cols-[0.72fr_1.28fr]" aria-labelledby="overview-title">
           <div className="lg:pr-8">
             <p className="fren-kicker">Weekend Overview</p>
-            <h2 id="overview-title" className="mt-4 font-serif text-5xl font-semibold tracking-[-0.04em] text-[var(--fren-ink)] sm:text-6xl">
+            <h2 id="overview-title" className="mt-4 font-serif text-[2.9rem] font-semibold tracking-[-0.04em] text-[var(--fren-ink)] sm:text-[3.7rem]">
               San Juan, but
               <br />
               dressed up.
             </h2>
-            <p className="fren-copy mt-5 max-w-md text-base leading-8 sm:text-lg">
+            <p className="fren-copy mt-5 max-w-md text-base leading-8 sm:text-[1.05rem]">
               A long weekend built around rooftop resets, Old San Juan dinners, pool-club energy,
               and the kind of itinerary that looks very good in photos.
             </p>
           </div>
           <div className="fren-section fren-section--blush grid gap-6 px-6 py-8 sm:px-8">
             <div className="grid gap-4 sm:grid-cols-[1.15fr_0.85fr] sm:items-start">
-              <p className="fren-copy text-base leading-8">
+              <p className="fren-copy max-w-xl text-base leading-8">
                 Welcome to Chelsea&apos;s San Juan bachelorette weekend: a little Mediterranean,
                 a little island glam, and fully committed to the art of a really good girls&apos;
                 trip.
               </p>
-              <div className="border-l border-[var(--fren-line)] pl-4">
+              <div className="border-l border-[var(--fren-line)] pl-4 sm:pl-5">
                 <p className="fren-kicker">Weekend Notes</p>
                 <p className="mt-3 text-sm font-semibold leading-7 text-[var(--fren-copy)]">
                   Expect polished dinners, poolside hours, and enough outfit changes to justify the
@@ -491,11 +486,11 @@ export default function FrennergyPage() {
               </div>
             </div>
             <div className="fren-editorial-rule pt-5">
-              <div className="flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-[0.14em]">
+              <div className="flex flex-wrap gap-2.5 text-[11px] font-semibold uppercase tracking-[0.13em] sm:text-xs">
                 {overviewPills.map((pill, index) => (
                   <span
                     key={pill}
-                    className={`rounded-full px-3 py-2 ${
+                    className={`rounded-full px-3 py-1.5 ${
                       index % 2 === 0
                         ? "border border-[rgba(63,103,200,0.16)] bg-[rgba(248,242,232,0.98)] text-[var(--fren-blue)]"
                         : "border border-[rgba(226,61,138,0.16)] bg-[rgba(226,61,138,0.08)] text-[var(--fren-pink)]"
@@ -513,7 +508,7 @@ export default function FrennergyPage() {
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
               <p className="fren-kicker">Day-by-Day Guide</p>
-              <h2 id="itinerary-title" className="mt-3 font-serif text-5xl font-semibold tracking-[-0.04em] text-[var(--fren-ink)] sm:text-6xl">
+              <h2 id="itinerary-title" className="mt-3 font-serif text-[2.9rem] font-semibold tracking-[-0.04em] text-[var(--fren-ink)] sm:text-[3.7rem]">
                 Day-by-Day Guide
               </h2>
             </div>
@@ -523,12 +518,12 @@ export default function FrennergyPage() {
           </div>
 
           <div className="mt-8 space-y-10">
-            <article className="grid gap-6 lg:grid-cols-[0.74fr_1.26fr] lg:items-start">
+            <article className="grid gap-6 lg:grid-cols-[0.76fr_1.24fr] lg:items-start">
               <div className="fren-section fren-section--warm px-6 py-8 sm:px-7">
-                <p className="mt-1 text-[2.1rem] font-bold uppercase tracking-[0.18em] text-[var(--fren-blue)] sm:text-[2.3rem]">
+                <p className="mt-1 text-[2.15rem] font-bold uppercase tracking-[0.18em] text-[var(--fren-blue)] sm:text-[2.35rem]">
                   Friday
                 </p>
-                <h3 className={`mt-3 font-serif text-5xl font-semibold tracking-[-0.04em] ${fridayPlan.accentClass}`}>
+                <h3 className={`mt-3 font-serif text-[2.85rem] font-semibold tracking-[-0.04em] ${fridayPlan.accentClass} sm:text-[3.35rem]`}>
                   {fridayPlan.theme}
                 </h3>
                 <p className="fren-copy mt-6 max-w-sm text-base leading-8">{fridayPlan.subtitle}</p>
@@ -540,14 +535,14 @@ export default function FrennergyPage() {
                   </p>
                 </div>
               </div>
-              <div className="grid gap-4 sm:grid-cols-[1.05fr_0.95fr_0.95fr]">
+              <div className="grid gap-4 sm:grid-cols-[1.02fr_0.99fr_0.99fr]">
                 {fridayPlan.events.map((event, index) => (
                   <article
                     key={`${fridayPlan.day}-${event.time}`}
                     className={`border-t px-5 py-6 ${
                       index === 0
                         ? "border-[rgba(255,123,94,0.26)] bg-[rgba(255,123,94,0.08)]"
-                        : "border-[rgba(63,103,200,0.16)] bg-[rgba(248,242,232,0.94)]"
+                        : "border-[rgba(63,103,200,0.16)] bg-[rgba(248,242,232,0.78)]"
                     }`}
                   >
                     <p className="fren-kicker text-[11px]">{event.time}</p>
@@ -561,10 +556,10 @@ export default function FrennergyPage() {
             <article className="fren-section fren-section--blush overflow-hidden px-6 py-8 sm:px-8">
               <div className="grid gap-8 lg:grid-cols-[0.52fr_1.48fr]">
                 <div className="border-b border-[rgba(226,61,138,0.16)] pb-6 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-8">
-                  <p className="mt-1 text-[2.1rem] font-bold uppercase tracking-[0.18em] text-[var(--fren-blue)] sm:text-[2.3rem]">
+                  <p className="mt-1 text-[2.15rem] font-bold uppercase tracking-[0.18em] text-[var(--fren-blue)] sm:text-[2.35rem]">
                     Saturday
                   </p>
-                  <h3 className={`mt-3 font-serif text-5xl font-semibold tracking-[-0.05em] ${saturdayPlan.accentClass} sm:text-[3.85rem]`}>
+                  <h3 className={`mt-3 font-serif text-[2.95rem] font-semibold tracking-[-0.05em] ${saturdayPlan.accentClass} sm:text-[3.5rem]`}>
                     {saturdayPlan.theme}
                   </h3>
                   <p className="fren-copy mt-5 text-base leading-8">{saturdayPlan.subtitle}</p>
@@ -575,10 +570,10 @@ export default function FrennergyPage() {
                       key={`${saturdayPlan.day}-${event.time}`}
                       className={`px-5 py-6 ${
                         index === 1
-                          ? "bg-[rgba(226,61,138,0.08)] border-t-2 border-[var(--fren-pink)] xl:translate-y-2"
+                          ? "bg-[rgba(226,61,138,0.06)] border-t-2 border-[var(--fren-pink)] xl:translate-y-1"
                           : index >= 3
-                            ? "bg-[rgba(248,242,232,0.92)] border-t border-[rgba(63,103,200,0.16)]"
-                          : "bg-[rgba(248,242,232,0.96)] border-t border-[rgba(63,103,200,0.16)]"
+                            ? "bg-[rgba(248,242,232,0.78)] border-t border-[rgba(63,103,200,0.16)]"
+                          : "bg-[rgba(248,242,232,0.84)] border-t border-[rgba(63,103,200,0.16)]"
                       }`}
                     >
                       <p className="fren-kicker text-[11px]">{event.time}</p>
@@ -592,12 +587,12 @@ export default function FrennergyPage() {
 
             <article className="grid gap-6 lg:grid-cols-[1.12fr_0.88fr] lg:items-start">
               <div className="fren-section fren-section--blue px-6 py-8 sm:px-8">
-                <p className="mt-1 text-[2.1rem] font-bold uppercase tracking-[0.18em] text-[var(--fren-blue)] sm:text-[2.3rem]">
+                <p className="mt-1 text-[2.15rem] font-bold uppercase tracking-[0.18em] text-[var(--fren-blue)] sm:text-[2.35rem]">
                   Sunday
                 </p>
                 <div className="mt-4 flex flex-wrap items-end justify-between gap-5">
                   <div>
-                    <h3 className={`font-serif text-5xl font-semibold tracking-[-0.05em] ${sundayPlan.accentClass}`}>
+                    <h3 className={`font-serif text-[2.85rem] font-semibold tracking-[-0.05em] ${sundayPlan.accentClass} sm:text-[3.3rem]`}>
                       {sundayPlan.theme}
                     </h3>
                     <p className="fren-copy mt-4 max-w-lg text-base leading-8">{sundayPlan.subtitle}</p>
@@ -615,9 +610,9 @@ export default function FrennergyPage() {
                   ))}
                 </div>
               </div>
-              <div className="fren-section fren-section--ivory px-5 py-6">
+              <div className="fren-section fren-section--ivory px-6 py-7">
                 <p className="fren-kicker">Pool Notes</p>
-                <p className="mt-4 font-serif text-3xl font-semibold tracking-[-0.04em] text-[var(--fren-blue)]">
+                <p className="mt-4 max-w-[13rem] font-serif text-[2.2rem] font-semibold leading-[1.02] tracking-[-0.04em] text-[var(--fren-blue)]">
                   Cabana from
                   <br />
                   11 to 6.
@@ -639,18 +634,18 @@ export default function FrennergyPage() {
         <section className="mt-18 grid gap-8 lg:grid-cols-[0.74fr_1.26fr] lg:items-start">
           <div className="lg:pr-8">
             <p className="fren-kicker">Weekend Rules</p>
-            <h2 className="mt-4 font-serif text-5xl font-semibold tracking-[-0.04em] text-[var(--fren-ink)] sm:text-6xl">
+            <h2 className="mt-4 font-serif text-[2.9rem] font-semibold tracking-[-0.04em] text-[var(--fren-ink)] sm:text-[3.7rem]">
               A Few House Policies.
             </h2>
             <p className="fren-copy mt-5 max-w-md text-base leading-8">
               Playful, simple, and not especially difficult to follow.
             </p>
           </div>
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="flex flex-wrap gap-3 pt-1">
             {weekendRules.map((rule, index) => (
               <p
                 key={rule}
-                className={`border px-4 py-3.5 text-sm font-semibold uppercase tracking-[0.12em] ${ruleToneClasses[index % ruleToneClasses.length]}`}
+                className={`border px-4 py-3 text-sm font-semibold uppercase tracking-[0.12em] ${ruleToneClasses[index % ruleToneClasses.length]}`}
               >
                 {rule}
               </p>
@@ -661,7 +656,7 @@ export default function FrennergyPage() {
         <section id="details" className="mt-18 grid gap-8 lg:grid-cols-[1.02fr_0.98fr]">
           <div className="fren-section fren-section--ivory px-6 py-8 sm:px-8">
             <p className="fren-kicker">Trip Details</p>
-            <h2 className="mt-4 font-serif text-5xl font-semibold tracking-[-0.04em] text-[var(--fren-ink)] sm:text-6xl">
+            <h2 className="mt-4 font-serif text-[2.9rem] font-semibold tracking-[-0.04em] text-[var(--fren-ink)] sm:text-[3.7rem]">
               Trip Details
             </h2>
             <p className="fren-copy mt-5 max-w-lg text-sm leading-7 sm:text-base">
@@ -670,8 +665,8 @@ export default function FrennergyPage() {
             </p>
             <div className="mt-8 space-y-5">
               {tripDetails.map((detail) => (
-                <div key={detail.label} className="grid gap-2 border-t border-[var(--fren-line)] pt-4 sm:grid-cols-[150px_1fr]">
-                  <p className="fren-kicker text-[11px]">{detail.label}</p>
+                <div key={detail.label} className="grid gap-2 border-t border-[var(--fren-line)] pt-5 sm:grid-cols-[150px_1fr]">
+                  <p className="fren-meta">{detail.label}</p>
                   <p className="fren-copy text-sm leading-7 sm:text-base">{detail.value}</p>
                 </div>
               ))}
@@ -681,7 +676,7 @@ export default function FrennergyPage() {
           <div className="grid gap-5">
             <div className="fren-section fren-section--blue px-6 py-8 sm:px-8">
               <p className="fren-kicker">Trip Extras</p>
-              <h2 className="mt-4 font-serif text-4xl font-semibold tracking-[-0.04em] text-[var(--fren-ink)]">
+              <h2 className="mt-4 font-serif text-[2.45rem] font-semibold tracking-[-0.04em] text-[var(--fren-ink)] sm:text-[2.9rem]">
                 Trip Extras
               </h2>
               <p className="fren-copy mt-4 max-w-md text-sm leading-7">
@@ -689,13 +684,13 @@ export default function FrennergyPage() {
                 forget.
               </p>
             </div>
-            <div className="grid gap-4">
+            <div className="grid gap-3.5">
               {tripExtras.map((item, index) => (
                 <article
                   key={item.title}
                   className={`border px-5 py-5 ${extraToneClasses[index % extraToneClasses.length]}`}
                 >
-                  <p className="fren-kicker text-[11px]">{item.subtitle}</p>
+                  <p className="fren-meta">{item.subtitle}</p>
                   <h3 className="mt-3 text-lg font-bold text-[var(--fren-ink)]">{item.title}</h3>
                   <p className="fren-copy mt-3 text-sm leading-7">{item.copy}</p>
                 </article>
@@ -705,13 +700,13 @@ export default function FrennergyPage() {
         </section>
 
         <section id="photos" className="mt-20" aria-labelledby="photos-title">
-          <div className="relative overflow-hidden border border-[rgba(63,103,200,0.18)] bg-[var(--fren-blue)] px-6 py-11 shadow-[0_26px_46px_-26px_rgba(63,103,200,0.3)] sm:px-10 sm:py-14">
-            <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[rgba(248,242,232,0.84)]">
+          <div className="relative overflow-hidden border border-[rgba(63,103,200,0.18)] bg-[linear-gradient(135deg,rgba(63,103,200,0.94),rgba(63,103,200,0.88))] px-6 py-11 shadow-[0_26px_46px_-26px_rgba(63,103,200,0.24)] sm:px-10 sm:py-14">
+            <div className="grid gap-8 lg:grid-cols-[0.86fr_1.14fr] lg:items-center">
+              <div className="max-w-md">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[rgba(248,242,232,0.82)]">
                   Shared Album
                 </p>
-                <h2 id="photos-title" className="mt-4 max-w-sm font-serif text-5xl font-semibold tracking-[-0.05em] text-[var(--fren-ivory)] sm:text-6xl">
+                <h2 id="photos-title" className="mt-4 max-w-sm font-serif text-[3.1rem] font-semibold leading-[0.96] tracking-[-0.05em] text-[var(--fren-ivory)] sm:text-[3.95rem]">
                   A very photogenic mess.
                 </h2>
                 <p className="mt-6 max-w-md text-sm leading-7 text-[rgba(248,242,232,0.9)] sm:text-base">
@@ -719,8 +714,7 @@ export default function FrennergyPage() {
                   from everything after dinner.
                 </p>
               </div>
-              <div className="relative border border-[rgba(63,103,200,0.16)] bg-[rgba(248,242,232,0.98)] px-6 py-8 lg:ml-auto lg:max-w-lg">
-                <div className="absolute right-0 top-0 h-full w-12 border-l border-[rgba(63,103,200,0.12)] bg-[repeating-linear-gradient(180deg,rgba(143,179,231,0.2)_0_10px,transparent_10px_22px)]" />
+              <div className="relative border border-[rgba(248,242,232,0.22)] bg-[rgba(248,242,232,0.98)] px-7 py-8 lg:ml-auto lg:max-w-xl">
                 <p className="fren-kicker">Shared Album</p>
                 <p className="mt-4 font-serif text-3xl font-semibold tracking-[-0.04em] text-[var(--fren-ink)]">
                   The post-weekend archive starts here.
@@ -731,7 +725,7 @@ export default function FrennergyPage() {
                 </p>
                 <a
                   href="#photos"
-                  className="fren-button-warm mt-7 inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition duration-300 hover:-translate-y-1 hover:brightness-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--fren-coral)] focus-visible:ring-offset-2"
+                  className="fren-button-warm mt-7 inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-[0.12em] transition duration-300 hover:-translate-y-1 hover:brightness-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--fren-coral)] focus-visible:ring-offset-2"
                 >
                   Add Shared Album Link
                 </a>

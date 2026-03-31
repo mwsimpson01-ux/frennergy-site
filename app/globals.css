@@ -39,7 +39,7 @@ body {
 
 .fren-hero {
   border: 1px solid var(--fren-line);
-  background: linear-gradient(135deg, rgba(248, 242, 232, 0.98), rgba(143, 179, 231, 0.08));
+  background: linear-gradient(135deg, rgba(248, 242, 232, 0.98), rgba(143, 179, 231, 0.05));
   box-shadow: 0 30px 60px -38px rgba(63, 103, 200, 0.18);
 }
 
@@ -74,7 +74,7 @@ body {
   background:
     repeating-linear-gradient(
       90deg,
-      rgba(143, 179, 231, 0.22) 0 12px,
+      rgba(143, 179, 231, 0.14) 0 12px,
       rgba(248, 242, 232, 0.98) 12px 24px
     );
 }
@@ -102,6 +102,14 @@ body {
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.fren-meta {
+  color: rgba(63, 103, 200, 0.74);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
 }
 
