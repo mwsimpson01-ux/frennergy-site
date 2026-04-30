@@ -10,25 +10,8 @@ export const metadata: Metadata = {
 
 const tripStart = "2026-05-22T00:00:00-04:00";
 
-const vibeStrip = [
-  "Bikinis",
-  "Beach Clubs",
-  "Spritzes",
-  "Sunsets",
-  "Chaos",
-  "Chelsea",
-];
-
 const playlistUrl =
   "https://open.spotify.com/playlist/4OkCaycgBtBoghf9mWo5l9?si=fk42PKmhTMGDFJiw511DAQ&pi=YHW-SyMdTW6LR&pt=d7eaf428e509d5b69b308b0fa851b88b";
-
-const overviewPills = [
-  "Pool Hair",
-  "Old San Juan Dinner",
-  "Spritz Hour",
-  "Golden Hour Photos",
-  "Chelsea",
-];
 
 type DayPlan = {
   day: "Friday" | "Saturday" | "Sunday";
@@ -221,7 +204,7 @@ export default function FrennergyPage() {
           </div>
         </section>
 
-        <section className="mt-8 grid gap-5 lg:grid-cols-[1.14fr_0.86fr] lg:items-stretch">
+        <section className="mt-8 grid gap-5 lg:grid-cols-[1.08fr_0.92fr] lg:items-stretch">
           <div>
             <Countdown targetDate={tripStart} label="Countdown to San Juan" />
           </div>
@@ -229,23 +212,25 @@ export default function FrennergyPage() {
           <section aria-labelledby="music-title">
             <div className="relative flex h-full min-h-[100%] flex-col overflow-hidden rounded-[1.8rem] border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)] px-7 py-8 shadow-[0_24px_30px_-18px_rgba(225,59,134,0.45)]">
               <div className="fren-tile-band absolute inset-x-0 top-0 h-3" />
+              <div className="absolute -left-7 top-14 h-24 w-24 rounded-2xl border-2 border-[var(--fren-blue)] bg-[var(--fren-coral)] opacity-70" />
+              <div className="absolute -right-8 bottom-6 h-28 w-28 rounded-full border-2 border-[var(--fren-blue)] bg-[var(--fren-yellow)] opacity-70" />
               <div className="pointer-events-none absolute right-6 top-6 text-[rgba(255,123,94,0.7)]">
-                <IconHeadphones className="h-14 w-14 rotate-[8deg]" />
+                <IconHeadphones className="h-16 w-16 rotate-[8deg]" />
               </div>
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--fren-pink)]">
                 Now Playing
               </p>
-              <h2 id="music-title" className="mt-3 max-w-sm font-serif text-[2.75rem] font-semibold leading-[0.9] tracking-[-0.04em] text-[var(--fren-ink)]">
+              <h2 id="music-title" className="mt-3 max-w-sm font-serif text-[3rem] font-semibold leading-[0.9] tracking-[-0.04em] text-[var(--fren-ink)]">
                 Weekend Playlist
               </h2>
-              <p className="fren-copy mt-4 max-w-sm text-sm leading-7">
+              <p className="fren-copy mt-4 max-w-md text-base leading-8">
                 Add your favorites for the pregame, the ferry, and every getting-ready moment.
               </p>
               <a
                 href={playlistUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="fren-button-warm mt-6 inline-flex items-center justify-center self-start rounded-full px-7 py-3.5 text-sm font-semibold uppercase tracking-[0.12em] transition duration-300 hover:-translate-y-1 hover:brightness-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--fren-coral)] focus-visible:ring-offset-2"
+                className="fren-button-warm mt-7 inline-flex items-center justify-center self-start rounded-full px-8 py-4 text-base font-semibold uppercase tracking-[0.12em] transition duration-300 hover:-translate-y-1 hover:brightness-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--fren-coral)] focus-visible:ring-offset-2"
               >
                 Cue the Playlist
               </a>
@@ -253,67 +238,7 @@ export default function FrennergyPage() {
           </section>
         </section>
 
-        <section
-          className="fren-stripe-band mt-6 rounded-full border border-[rgba(63,103,200,0.12)] px-4 py-2.5 shadow-[0_12px_22px_-20px_rgba(63,103,200,0.16)] sm:px-6"
-          aria-label="Weekend vibe strip"
-        >
-          <p className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--fren-blue)] sm:text-xs">
-            {vibeStrip.map((item, index) => (
-              <span key={item} className="inline-flex items-center gap-3">
-                <span>{item}</span>
-                {index < vibeStrip.length - 1 ? <span className="text-[var(--fren-pink)]">/</span> : null}
-              </span>
-            ))}
-          </p>
-        </section>
-
-        <section className="mt-14 grid gap-8 lg:grid-cols-[0.72fr_1.28fr]" aria-labelledby="overview-title">
-          <div className="lg:pr-8">
-            <p className="fren-kicker">Weekend Overview</p>
-            <h2 id="overview-title" className="mt-4 font-serif text-[2.9rem] font-semibold tracking-[-0.04em] text-[var(--fren-ink)] sm:text-[3.7rem]">
-              San Juan,
-              <br />
-              dressed up.
-            </h2>
-            <p className="fren-copy mt-5 max-w-md text-base leading-8 sm:text-[1.05rem]">
-              Three days of rooftop hangs, Old San Juan dinners, pool time, and celebrating
-              Chelsea.
-            </p>
-          </div>
-          <div className="fren-section fren-section--blush relative grid gap-5 overflow-hidden border-2 px-6 py-7 sm:px-8">
-            <div className="fren-tile-band absolute inset-x-0 top-0 h-2" />
-            <div className="grid gap-4 sm:grid-cols-[1.15fr_0.85fr] sm:items-start">
-              <p className="fren-copy max-w-xl text-base leading-8">
-                A San Juan weekend for Chelsea - rooftop dinners, pool days, spritzes, and one
-                very well-dressed itinerary.
-              </p>
-              <div className="border-l-2 border-[var(--fren-blue)] pl-4 sm:pl-5">
-                <p className="fren-kicker">Weekend Notes</p>
-                <p className="mt-3 text-sm font-semibold leading-7 text-[var(--fren-copy)]">
-                  Pack the outfits, save the photos, and be ready for a very cute weekend.
-                </p>
-              </div>
-            </div>
-            <div className="fren-editorial-rule pt-4">
-              <div className="flex flex-wrap gap-2 text-[11px] font-semibold uppercase tracking-[0.13em] sm:text-xs">
-                {overviewPills.map((pill, index) => (
-                  <span
-                    key={pill}
-                    className={`rounded-full px-3 py-1.5 ${
-                      index % 2 === 0
-                        ? "border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)] text-[var(--fren-blue)]"
-                        : "border-2 border-[var(--fren-pink)] bg-[rgba(225,59,134,0.12)] text-[var(--fren-pink)]"
-                    }`}
-                  >
-                    {pill}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="itinerary" className="mt-16 sm:mt-18" aria-labelledby="itinerary-title">
+        <section id="itinerary" className="mt-12 sm:mt-14" aria-labelledby="itinerary-title">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
               <p className="fren-kicker">Day-by-Day Guide</p>
@@ -399,49 +324,7 @@ export default function FrennergyPage() {
           </div>
         </section>
 
-        <section id="photos" className="mt-16" aria-labelledby="photos-title">
-          <div className="relative overflow-hidden rounded-[2rem] border-2 border-[var(--fren-blue)] bg-[var(--fren-blue)] px-6 py-11 shadow-[0_26px_38px_-20px_rgba(66,104,201,0.56)] sm:px-10 sm:py-14">
-            <div className="fren-tile-band absolute inset-x-0 top-0 h-3" />
-            <div className="grid gap-8 lg:grid-cols-[0.86fr_1.14fr] lg:items-center">
-              <div className="relative max-w-md">
-                <div className="pointer-events-none absolute -left-3 top-24 h-12 w-12 rounded-lg border-2 border-[var(--fren-ivory)] bg-[rgba(255,255,255,0.08)]" />
-                <div className="pointer-events-none absolute left-10 top-36 h-10 w-10 rounded-lg border-2 border-[var(--fren-yellow)] bg-[rgba(255,255,255,0.08)]" />
-                <div className="pointer-events-none absolute left-24 top-20 h-8 w-8 rounded-lg border-2 border-[var(--fren-coral)] bg-[rgba(255,255,255,0.08)]" />
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[rgba(248,242,232,0.82)]">
-                  Shared Album
-                </p>
-                <h2 id="photos-title" className="mt-4 max-w-sm font-serif text-[3.1rem] font-semibold leading-[0.96] tracking-[-0.05em] text-[var(--fren-ivory)] sm:text-[3.95rem]">
-                  Shared Album
-                </h2>
-                <p className="mt-6 max-w-md text-sm leading-7 text-[rgba(248,242,232,0.9)] sm:text-base">
-                  Drop the good photos here — glam shots, pool pics, dinner moments, and the ones
-                  we&apos;ll laugh about later.
-                </p>
-              </div>
-              <div className="relative -mt-3 border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)] px-7 py-8 lg:ml-auto lg:max-w-xl">
-                <div className="absolute -right-4 -top-4 rounded-full border-2 border-[var(--fren-blue)] bg-[var(--fren-yellow)] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[var(--fren-blue)]">
-                  Photo Drop
-                </div>
-                <p className="fren-kicker">Shared Album</p>
-                <p className="mt-4 font-serif text-3xl font-semibold tracking-[-0.04em] text-[var(--fren-ink)]">
-                  Add your best shots.
-                </p>
-                <p className="fren-copy mt-4 max-w-sm text-sm leading-7">
-                  Drop the good photos here — glam shots, pool pics, dinner moments, and the ones
-                  we&apos;ll laugh about later.
-                </p>
-                <a
-                  href="#photos"
-                  className="fren-button-warm mt-7 inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-[0.12em] transition duration-300 hover:-translate-y-1 hover:brightness-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--fren-coral)] focus-visible:ring-offset-2"
-                >
-                  Add Album Link
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <footer className="mt-16 pb-4">
+        <footer className="mt-14 pb-4">
           <div className="fren-editorial-rule pt-8">
             <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
               <div>
