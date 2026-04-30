@@ -142,7 +142,7 @@ export default function FrennergyPage() {
           <div className="grid gap-6 sm:gap-8 lg:grid-cols-[0.96fr_1.04fr] lg:items-center">
             <div className="order-1 max-w-[42rem] lg:pr-6">
               <p className="fren-kicker">Chelsea&apos;s Bachelorette Weekend</p>
-              <div className="mt-2 flex flex-wrap items-center gap-1.5 sm:mt-4 sm:gap-2">
+              <div className="mt-2 flex flex-wrap items-center justify-center gap-1.5 sm:mt-4 sm:justify-start sm:gap-2">
                 <p className="inline-flex rounded-full border border-[var(--fren-blue)]/55 bg-[var(--fren-ivory)] px-3 py-0.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--fren-blue)] sm:px-4 sm:py-1 sm:text-sm sm:tracking-[0.16em]">
                   San Juan, Puerto Rico
                 </p>
@@ -154,8 +154,8 @@ export default function FrennergyPage() {
               <div className="relative mt-4 sm:mt-5">
                 <h1 className="relative z-10">
                   <span className="sr-only">Hot Girl Frennergy</span>
-                  <span className="relative block w-fit">
-                    <span className="mb-0.5 flex items-end gap-1.5 pl-0.5 sm:mb-2 sm:gap-2.5 sm:pl-1">
+                  <span className="relative block w-fit sm:w-fit">
+                    <span className="mb-0.5 flex items-end justify-center gap-1.5 pl-0 sm:mb-2 sm:justify-start sm:gap-2.5 sm:pl-1">
                       <span className="-rotate-[6deg] rounded-[0.65rem] bg-[var(--fren-pink)] px-2.5 py-0.5 font-sans text-[1.7rem] font-black uppercase leading-none tracking-[0.11em] text-[var(--fren-ivory)] shadow-[0_8px_14px_-10px_rgba(225,59,134,0.8)] sm:rounded-[0.7rem] sm:px-4 sm:py-1.5 sm:text-[2.35rem]">
                         Hot
                       </span>
@@ -163,8 +163,22 @@ export default function FrennergyPage() {
                         Girl
                       </span>
                     </span>
-                    <span className="relative block font-serif text-[3.9rem] font-semibold leading-[0.88] tracking-[-0.06em] text-[var(--fren-blue)] [text-shadow:0_2px_0_#f8f1e7,2px_0_0_#f8f1e7,-2px_0_0_#f8f1e7,0_-2px_0_#f8f1e7,0_7px_0_rgba(255,118,94,0.34)] sm:text-[6.65rem] lg:text-[7.2rem]">
+                    <span className="pointer-events-none absolute -left-4 top-10 text-[var(--fren-yellow)] sm:-left-6 sm:top-12">
+                      <IconSparkle className="h-5 w-5 sm:h-7 sm:w-7" />
+                    </span>
+                    <span className="pointer-events-none absolute -right-3 top-1 text-[var(--fren-yellow)] sm:-right-7 sm:top-4">
+                      <IconSparkle className="h-4 w-4 sm:h-6 sm:w-6" />
+                    </span>
+                    <span className="relative block -rotate-[3deg] font-serif text-[3.9rem] font-semibold leading-[0.88] tracking-[-0.06em] text-[var(--fren-blue)] [text-shadow:0_2px_0_#f8f1e7,2px_0_0_#f8f1e7,-2px_0_0_#f8f1e7,0_-2px_0_#f8f1e7,0_7px_0_rgba(255,118,94,0.34)] sm:text-[6.65rem] lg:text-[7.2rem]">
                       Frennergy
+                      <span className="absolute -bottom-1 left-[8%] h-1 w-[60%] rotate-[1deg] rounded-full bg-[rgba(225,59,134,0.8)] sm:-bottom-2 sm:h-1.5" />
+                      <span className="absolute -bottom-4 right-[12%] h-1 w-[46%] -rotate-[3deg] rounded-full bg-[rgba(225,59,134,0.65)] sm:-bottom-6 sm:h-1.5" />
+                    </span>
+                    <span className="pointer-events-none absolute -right-2 -bottom-12 hidden text-[var(--fren-blue)] sm:block">
+                      <svg viewBox="0 0 88 28" className="h-7 w-24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 8c5 0 5-6 10-6s5 6 10 6 5-6 10-6 5 6 10 6 5-6 10-6 5 6 10 6 5-6 10-6" />
+                        <path d="M2 22c5 0 5-6 10-6s5 6 10 6 5-6 10-6 5 6 10 6 5-6 10-6 5 6 10 6 5-6 10-6" />
+                      </svg>
                     </span>
                   </span>
                 </h1>
