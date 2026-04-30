@@ -145,13 +145,13 @@ export default function FrennergyPage() {
               <p className="mt-3 inline-flex rounded-full border border-[var(--fren-blue)]/60 bg-[var(--fren-ivory)] px-3.5 py-1 text-[13px] font-semibold uppercase tracking-[0.13em] text-[var(--fren-blue)] sm:mt-4 sm:px-4 sm:text-sm sm:tracking-[0.16em]">
                 San Juan, Puerto Rico
               </p>
-              <h1 className="mt-4 max-w-[9.4ch] leading-[0.86] sm:mt-5 sm:max-w-[10ch]">
-                <span className="block font-sans text-[1.05rem] font-semibold uppercase tracking-[0.2em] text-[var(--fren-pink)] sm:text-[1.25rem]">
+              <h1 className="mt-4 max-w-[9.2ch] leading-[0.82] sm:mt-5 sm:max-w-[10ch]">
+                <span className="block font-sans text-[1.15rem] font-bold uppercase tracking-[0.23em] text-[var(--fren-pink)] sm:text-[1.32rem]">
                   Hot Girl
                 </span>
-                <span className="relative block font-serif text-[3.5rem] font-semibold tracking-[-0.05em] text-[var(--fren-ink)] sm:text-[5.4rem] lg:text-[6.35rem]">
+                <span className="relative block font-serif text-[3.85rem] font-semibold tracking-[-0.055em] text-[var(--fren-ink)] sm:text-[5.95rem] lg:text-[6.75rem]">
                   Frennergy
-                  <span className="pointer-events-none absolute -bottom-2 left-1/2 h-2.5 w-[72%] -translate-x-1/2 rounded-full bg-[rgba(255,118,94,0.36)] blur-[1px]" />
+                  <span className="pointer-events-none absolute -bottom-2 left-1/2 h-2.5 w-[74%] -translate-x-1/2 rounded-full bg-[rgba(255,118,94,0.4)] blur-[1px]" />
                 </span>
               </h1>
               <p className="fren-copy mt-4 max-w-xl text-[1rem] leading-7 sm:mt-6 sm:max-w-2xl sm:text-[1.13rem] sm:leading-8">
@@ -248,8 +248,9 @@ export default function FrennergyPage() {
         <section id="itinerary" className="mt-11 sm:mt-14" aria-labelledby="itinerary-title">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <h2 id="itinerary-title" className="mt-2 font-serif text-[2.45rem] font-semibold tracking-[-0.04em] text-[var(--fren-ink)] sm:mt-3 sm:text-[3.7rem]">
-                Weekend Plans
+              <p className="fren-kicker text-[var(--fren-pink)]">Weekend Lineup</p>
+              <h2 id="itinerary-title" className="mt-1.5 font-serif text-[2.7rem] font-semibold tracking-[-0.045em] text-[var(--fren-ink)] sm:mt-2 sm:text-[4rem]">
+                Agenda
               </h2>
             </div>
             <p className="fren-copy max-w-md text-base leading-7 sm:text-base sm:text-right">
@@ -278,8 +279,19 @@ export default function FrennergyPage() {
                         : "bg-[linear-gradient(90deg,var(--fren-blue-soft),var(--fren-yellow))]"
                   }`}
                 />
-                <p className="fren-kicker">{plan.day}</p>
-                <h3 className="mt-1.5 font-serif text-[1.75rem] font-semibold tracking-[-0.04em] text-[var(--fren-ink)] sm:mt-2 sm:text-[2.3rem]">
+                <p className="fren-kicker text-[var(--fren-pink)]">Day</p>
+                <p className="mt-1 inline-flex w-fit rounded-full bg-[rgba(66,104,201,0.12)] px-2.5 py-0.5 text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[var(--fren-blue)] sm:text-[0.72rem]">
+                  {plan.day}
+                </p>
+                <h3
+                  className={`mt-2 font-serif text-[1.9rem] font-semibold tracking-[-0.045em] sm:text-[2.5rem] ${
+                    planIndex === 0
+                      ? "text-[color:rgba(66,104,201,0.98)]"
+                      : planIndex === 1
+                        ? "text-[color:rgba(58,96,194,0.98)]"
+                        : "text-[color:rgba(59,97,194,0.95)]"
+                  }`}
+                >
                   {plan.theme}
                 </h3>
                 <p className="fren-copy mt-2 text-sm leading-6 sm:text-[0.98rem] sm:leading-7">
