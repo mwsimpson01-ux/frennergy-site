@@ -142,25 +142,46 @@ export default function FrennergyPage() {
           <div className="grid gap-6 sm:gap-8 lg:grid-cols-[0.96fr_1.04fr] lg:items-center">
             <div className="order-1 max-w-[42rem] lg:pr-6">
               <p className="fren-kicker">Chelsea&apos;s Bachelorette Weekend</p>
-              <p className="mt-3 inline-flex rounded-full border border-[var(--fren-blue)]/60 bg-[var(--fren-ivory)] px-3.5 py-1 text-[13px] font-semibold uppercase tracking-[0.13em] text-[var(--fren-blue)] sm:mt-4 sm:px-4 sm:text-sm sm:tracking-[0.16em]">
-                San Juan, Puerto Rico
-              </p>
-              <h1 className="mt-3 sm:mt-5">
-                <span className="sr-only">Hot Girl Frennergy</span>
-                <span className="relative block w-fit">
-                  <span className="mb-0.5 flex items-end gap-1.5 pl-0.5 sm:mb-2 sm:gap-2.5 sm:pl-1">
-                    <span className="-rotate-[6deg] rounded-[0.65rem] bg-[var(--fren-pink)] px-2.5 py-0.5 font-sans text-[1.7rem] font-black uppercase leading-none tracking-[0.11em] text-[var(--fren-ivory)] shadow-[0_8px_14px_-10px_rgba(225,59,134,0.8)] sm:rounded-[0.7rem] sm:px-4 sm:py-1.5 sm:text-[2.35rem]">
-                      Hot
+              <div className="mt-3 flex flex-wrap items-center gap-2 sm:mt-4">
+                <p className="inline-flex rounded-full border border-[var(--fren-blue)]/60 bg-[var(--fren-ivory)] px-3.5 py-1 text-[13px] font-semibold uppercase tracking-[0.13em] text-[var(--fren-blue)] sm:px-4 sm:text-sm sm:tracking-[0.16em]">
+                  San Juan, Puerto Rico
+                </p>
+                <p className="inline-flex rounded-full bg-[var(--fren-yellow)] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-[var(--fren-blue)] sm:hidden">
+                  May 22-24
+                </p>
+              </div>
+
+              <div className="relative mt-3 sm:mt-5">
+                <h1 className="relative z-10">
+                  <span className="sr-only">Hot Girl Frennergy</span>
+                  <span className="relative block w-fit">
+                    <span className="mb-0.5 flex items-end gap-1.5 pl-0.5 sm:mb-2 sm:gap-2.5 sm:pl-1">
+                      <span className="-rotate-[6deg] rounded-[0.65rem] bg-[var(--fren-pink)] px-2.5 py-0.5 font-sans text-[1.7rem] font-black uppercase leading-none tracking-[0.11em] text-[var(--fren-ivory)] shadow-[0_8px_14px_-10px_rgba(225,59,134,0.8)] sm:rounded-[0.7rem] sm:px-4 sm:py-1.5 sm:text-[2.35rem]">
+                        Hot
+                      </span>
+                      <span className="rotate-[3deg] rounded-[0.65rem] bg-[var(--fren-yellow)] px-2.5 py-0.5 font-sans text-[1.7rem] font-black uppercase leading-none tracking-[0.11em] text-[var(--fren-ivory)] shadow-[0_8px_14px_-10px_rgba(244,183,63,0.8)] sm:rounded-[0.7rem] sm:px-4 sm:py-1.5 sm:text-[2.35rem]">
+                        Girl
+                      </span>
                     </span>
-                    <span className="rotate-[3deg] rounded-[0.65rem] bg-[var(--fren-yellow)] px-2.5 py-0.5 font-sans text-[1.7rem] font-black uppercase leading-none tracking-[0.11em] text-[var(--fren-ivory)] shadow-[0_8px_14px_-10px_rgba(244,183,63,0.8)] sm:rounded-[0.7rem] sm:px-4 sm:py-1.5 sm:text-[2.35rem]">
-                      Girl
+                    <span className="relative block font-serif text-[3.9rem] font-semibold leading-[0.88] tracking-[-0.06em] text-[var(--fren-blue)] [text-shadow:0_2px_0_#f8f1e7,2px_0_0_#f8f1e7,-2px_0_0_#f8f1e7,0_-2px_0_#f8f1e7,0_7px_0_rgba(255,118,94,0.34)] sm:text-[6.65rem] lg:text-[7.2rem]">
+                      Frennergy
                     </span>
                   </span>
-                  <span className="relative block font-serif text-[3.9rem] font-semibold leading-[0.88] tracking-[-0.06em] text-[var(--fren-blue)] [text-shadow:0_2px_0_#f8f1e7,2px_0_0_#f8f1e7,-2px_0_0_#f8f1e7,0_-2px_0_#f8f1e7,0_7px_0_rgba(255,118,94,0.34)] sm:text-[6.65rem] lg:text-[7.2rem]">
-                    Frennergy
-                  </span>
-                </span>
-              </h1>
+                </h1>
+
+                <div className="relative z-0 -mt-4 mr-0 ml-auto w-[78%] max-w-[16rem] sm:hidden">
+                  <div className="relative aspect-square overflow-hidden rounded-full border-2 border-[var(--fren-blue)] bg-[#f8d5de] shadow-[0_18px_28px_-16px_rgba(66,104,201,0.45)]">
+                    <Image
+                      src="/chelsea-hero-circle-v2.png"
+                      alt="Chelsea in pink against a sparkly pink backdrop"
+                      fill
+                      className="object-cover object-center"
+                      sizes="100vw"
+                      priority
+                    />
+                  </div>
+                </div>
+              </div>
               <p className="fren-copy mt-4 max-w-xl text-[1rem] leading-7 sm:mt-6 sm:max-w-2xl sm:text-[1.13rem] sm:leading-8">
                 Chelsea&apos;s San Juan weekend: rooftop dinners, poolside glam, spritzes, and
                 nonstop main-character energy.
@@ -182,7 +203,7 @@ export default function FrennergyPage() {
               </div>
             </div>
 
-            <aside className="order-2 mt-1 lg:mt-0 lg:order-2 lg:pt-2">
+            <aside className="order-2 mt-1 hidden lg:mt-0 lg:order-2 lg:block lg:pt-2">
               <div className="relative mx-auto max-w-[18.5rem] sm:max-w-[23rem] lg:ml-auto lg:max-w-[35rem]">
                 <div className="absolute -left-1 top-2 z-20 rounded-full border border-[var(--fren-blue)] bg-[var(--fren-yellow)] px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.12em] text-[var(--fren-blue)] shadow-[0_12px_20px_-14px_rgba(66,104,201,0.5)] sm:-left-2 sm:top-3 sm:px-4 sm:py-2 sm:text-[11px] sm:tracking-[0.14em]">
                   Chelsea Edition
