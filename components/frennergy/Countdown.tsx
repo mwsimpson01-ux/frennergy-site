@@ -51,17 +51,17 @@ export function Countdown({ targetDate, label = "Hot Girl Summer begins in..." }
     {
       label: "Days",
       value: timeLeft.days,
-      style: "bg-transparent text-[var(--fren-pink)]",
+      style: "bg-[var(--fren-ivory)] text-[var(--fren-blue)]",
     },
     {
       label: "Hours",
       value: timeLeft.hours,
-      style: "bg-transparent text-[var(--fren-blue)]",
+      style: "bg-[var(--fren-ivory)] text-[var(--fren-blue)]",
     },
     {
       label: "Minutes",
       value: timeLeft.minutes,
-      style: "bg-transparent text-[var(--fren-coral)]",
+      style: "bg-[var(--fren-ivory)] text-[var(--fren-blue)]",
     },
   ];
 
@@ -78,19 +78,19 @@ export function Countdown({ targetDate, label = "Hot Girl Summer begins in..." }
             {label}
           </p>
           <p className="mt-2 max-w-[13rem] font-serif text-[2.05rem] font-semibold leading-[0.94] tracking-[-0.04em] text-[var(--fren-ivory)] sm:mt-3 sm:max-w-[14rem] sm:text-[2.9rem] sm:tracking-[-0.05em]">
-            Weekend begins soon.
+            It&apos;s almost go time.
           </p>
         </div>
         <div className="grid grid-cols-3 gap-2 border-t border-[rgba(248,242,232,0.3)] pt-3 sm:border-t-0 sm:pt-0">
         {items.map((item) => (
           <div
             key={item.label}
-            className={`rounded-[0.85rem] border-2 border-[var(--fren-ivory)] bg-[rgba(248,242,232,0.16)] px-2 py-2.5 text-center sm:rounded-[0.95rem] sm:px-4 sm:py-3 ${item.style}`}
+            className={`rounded-[0.85rem] border-2 border-[var(--fren-ivory)] px-2 py-2.5 text-center sm:rounded-[0.95rem] sm:px-4 sm:py-3 ${item.style}`}
           >
-            <p className="font-serif text-[2.15rem] font-semibold leading-none tracking-[-0.04em] text-[var(--fren-ivory)] sm:text-[3.4rem] sm:tracking-[-0.05em]">
+            <p className="font-serif text-[2.15rem] font-semibold leading-none tracking-[-0.04em] text-[var(--fren-blue)] sm:text-[3.4rem] sm:tracking-[-0.05em]">
               {item.value}
             </p>
-            <p className="mt-1.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-[rgba(248,242,232,0.92)] sm:mt-2 sm:text-xs sm:tracking-[0.16em]">
+            <p className="mt-1.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--fren-blue)] sm:mt-2 sm:text-xs sm:tracking-[0.16em]">
               {item.label}
             </p>
           </div>

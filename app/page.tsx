@@ -16,6 +16,7 @@ const playlistUrl =
 type DayPlan = {
   day: "Friday" | "Saturday" | "Sunday";
   theme: string;
+  blurb: string;
   events: Array<{
     time: string;
     label: string;
@@ -26,6 +27,7 @@ const dayPlans: DayPlan[] = [
   {
     day: "Friday",
     theme: "Girls Gone Mild",
+    blurb: "Arrival day energy: cute PJs, reset mode, and a fun night in before the chaos.",
     events: [
       {
         time: "Afternoon",
@@ -44,6 +46,7 @@ const dayPlans: DayPlan[] = [
   {
     day: "Saturday",
     theme: "Pour Decisions",
+    blurb: "Big night loading: brunch, Bacardi cocktails, glam reset, dinner at La O, then out on the town.",
     events: [
       {
         time: "10:30 AM",
@@ -70,6 +73,7 @@ const dayPlans: DayPlan[] = [
   {
     day: "Sunday",
     theme: "Tropic Like It's Hot",
+    blurb: "Cabana-core Sunday: poolside sun, lunch, refresh, and rooftop dinner to close it out.",
     events: [
       {
         time: "11:00 AM",
@@ -134,11 +138,11 @@ export default function FrennergyPage() {
 
   return (
     <main className="fren-page font-sans">
-      <div className="mx-auto w-full max-w-7xl px-4 pb-20 pt-4 sm:px-8 sm:pb-28 sm:pt-10">
-        <section className="fren-hero relative overflow-hidden rounded-[2.1rem] px-4 pb-6 pt-5 sm:rounded-[2.4rem] sm:px-10 sm:pb-10 sm:pt-9">
+      <div className="mx-auto w-full max-w-7xl px-4 pb-20 pt-6 sm:px-8 sm:pb-28 sm:pt-10">
+        <section className="fren-hero relative mt-1 overflow-hidden rounded-[2.1rem] px-4 pb-6 pt-5 sm:mt-0 sm:rounded-[2.4rem] sm:px-10 sm:pb-10 sm:pt-9">
           <div className="fren-hero-stripe absolute inset-x-0 top-0 h-3" />
           <div className="grid gap-4 sm:gap-5 lg:grid-cols-[1.03fr_0.97fr] lg:items-center">
-            <div className="order-2 max-w-[42rem] lg:order-1 lg:pr-6">
+            <div className="order-1 max-w-[42rem] lg:order-1 lg:pr-6">
               <p className="fren-kicker">Chelsea&apos;s Bachelorette Weekend</p>
               <p className="mt-3 inline-flex rounded-full border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)] px-3.5 py-1 text-[13px] font-semibold uppercase tracking-[0.13em] text-[var(--fren-blue)] sm:mt-5 sm:px-4 sm:text-sm sm:tracking-[0.16em]">
                 San Juan, Puerto Rico
@@ -149,8 +153,8 @@ export default function FrennergyPage() {
                 Frennergy
               </h1>
               <p className="fren-copy mt-4 max-w-xl text-[1rem] leading-7 sm:mt-6 sm:max-w-2xl sm:text-[1.18rem] sm:leading-8">
-                A San Juan weekend for Chelsea — rooftop dinners, pool days, spritzes, and one
-                very well-dressed itinerary.
+                Chelsea&apos;s San Juan weekend: rooftop dinners, poolside glam, spritzes, and
+                nonstop main-character energy.
               </p>
 
               <div className="mt-6 flex flex-col gap-2.5 sm:mt-8 sm:flex-row sm:gap-3">
@@ -169,13 +173,13 @@ export default function FrennergyPage() {
               </div>
             </div>
 
-            <aside className="order-1 lg:order-2 lg:pt-2">
+            <aside className="order-2 lg:order-2 lg:pt-2">
               <div className="relative mx-auto max-w-[26.5rem] lg:ml-auto lg:max-w-[30rem]">
                 <div className="absolute -left-2 -top-3 z-20 rounded-full border-2 border-[var(--fren-blue)] bg-[var(--fren-yellow)] px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.12em] text-[var(--fren-blue)] shadow-[0_14px_20px_-12px_rgba(66,104,201,0.5)] sm:-left-4 sm:-top-4 sm:px-4 sm:py-2 sm:text-[11px] sm:tracking-[0.14em]">
                   Chelsea Edition
                 </div>
-                <div className="absolute -right-1 top-8 z-0 h-full w-full rounded-[1.7rem] bg-[var(--fren-coral)] sm:top-12 sm:rounded-[2.1rem]" />
-                <div className="absolute -right-2 -bottom-1 z-0 h-full w-full rounded-[1.7rem] border-2 border-dashed border-[var(--fren-blue)] bg-[var(--fren-pink)] sm:-right-3 sm:-bottom-2 sm:rounded-[2.1rem]" />
+                <div className="absolute -right-0.5 top-6 z-0 h-full w-full rounded-[1.7rem] bg-[var(--fren-coral)] sm:top-12 sm:rounded-[2.1rem]" />
+                <div className="absolute -right-1 -bottom-0.5 z-0 h-full w-full rounded-[1.7rem] border-2 border-dashed border-[var(--fren-blue)] bg-[var(--fren-pink)] sm:-right-3 sm:-bottom-2 sm:rounded-[2.1rem]" />
                 <div className="relative z-10 overflow-hidden rounded-[1.7rem] border-4 border-[var(--fren-blue)] bg-[var(--fren-ivory)] p-1.5 shadow-[0_30px_36px_-18px_rgba(66,104,201,0.5)] sm:rounded-[2.1rem] sm:p-2">
                   <div className="fren-tile-band mb-2 h-3 rounded-full" />
                   <div className="relative aspect-square overflow-hidden rounded-[1rem] border-2 border-[var(--fren-blue)] bg-[#f8d5de] p-1 sm:rounded-[1.2rem]">
@@ -209,7 +213,7 @@ export default function FrennergyPage() {
         </section>
 
         <section className="mt-4 sm:mt-5" aria-labelledby="music-title">
-          <div className="relative overflow-hidden rounded-[1.6rem] border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)] px-5 py-6 shadow-[0_24px_30px_-18px_rgba(225,59,134,0.45)] sm:rounded-[1.8rem] sm:px-9 sm:py-9">
+          <div className="relative max-w-[24rem] overflow-hidden rounded-[1.6rem] border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)] px-5 py-5 shadow-[0_24px_30px_-18px_rgba(225,59,134,0.45)] sm:max-w-none sm:rounded-[1.8rem] sm:px-9 sm:py-9">
             <div className="fren-tile-band absolute inset-x-0 top-0 h-3" />
             <div className="pointer-events-none absolute right-4 top-4 text-[rgba(255,123,94,0.9)] sm:right-7 sm:top-7">
               <IconHeadphones className="h-12 w-12 rotate-[8deg] sm:h-16 sm:w-16" />
@@ -222,7 +226,7 @@ export default function FrennergyPage() {
                 Weekend Playlist
               </h2>
               <p className="fren-copy mt-3 max-w-[20rem] text-[1.03rem] leading-7 sm:mt-4 sm:max-w-2xl sm:text-lg sm:leading-8">
-                Add your favorites for the pregame, the ferry, and every getting-ready moment.
+                Queue the songs for glam, spritz hour, and the night-out pregame.
               </p>
               <a
                 href={playlistUrl}
@@ -239,9 +243,8 @@ export default function FrennergyPage() {
         <section id="itinerary" className="mt-10 sm:mt-14" aria-labelledby="itinerary-title">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <p className="fren-kicker">Day-by-Day Guide</p>
               <h2 id="itinerary-title" className="mt-2 font-serif text-[2.45rem] font-semibold tracking-[-0.04em] text-[var(--fren-ink)] sm:mt-3 sm:text-[3.7rem]">
-                Day-by-Day Guide
+                Weekend Plans
               </h2>
             </div>
             <p className="fren-copy max-w-md text-base leading-7 sm:text-base sm:text-right">
@@ -274,6 +277,9 @@ export default function FrennergyPage() {
                 <h3 className="mt-1.5 font-serif text-[1.75rem] font-semibold tracking-[-0.04em] text-[var(--fren-ink)] sm:mt-2 sm:text-[2.3rem]">
                   {plan.theme}
                 </h3>
+                <p className="fren-copy mt-2 text-sm leading-6 sm:text-[0.98rem] sm:leading-7">
+                  {plan.blurb}
+                </p>
                 <div className="mt-3 space-y-1.5 sm:mt-6 sm:space-y-2.5">
                   {plan.events.map((event) => (
                     <article
