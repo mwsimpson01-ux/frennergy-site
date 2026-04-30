@@ -78,7 +78,7 @@ export function Countdown({ targetDate, label = "Hot Girl Summer begins in..." }
             {label}
           </p>
           <p className="mt-2 max-w-[13rem] font-serif text-[2.05rem] font-semibold leading-[0.94] tracking-[-0.04em] text-[var(--fren-ivory)] sm:mt-3 sm:max-w-[15rem] sm:text-[2.95rem] sm:tracking-[-0.05em]">
-            It&apos;s almost go time.
+            It&apos;s almost go time!
           </p>
         </div>
         <div className="grid grid-cols-3 gap-2 border-t border-[rgba(248,242,232,0.28)] pt-3 sm:border-t-0 sm:pt-0">
