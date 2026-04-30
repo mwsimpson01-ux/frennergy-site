@@ -42,8 +42,6 @@ export function Countdown({ targetDate, label = "Hot Girl Summer begins in..." }
       setTimeLeft(getTimeLeft(targetDate));
     }, 60_000);
 
-    setTimeLeft(getTimeLeft(targetDate));
-
     return () => {
       window.clearInterval(timer);
     };
@@ -70,29 +68,31 @@ export function Countdown({ targetDate, label = "Hot Girl Summer begins in..." }
   return (
     <section
       aria-label="Countdown to trip"
-      className="overflow-hidden border border-[rgba(63,103,200,0.18)] bg-[rgba(248,242,232,0.98)] shadow-[0_18px_32px_-22px_rgba(63,103,200,0.16)]"
+      className="relative overflow-hidden rounded-[1.9rem] border border-[rgba(63,103,200,0.22)] bg-[linear-gradient(140deg,rgba(63,103,200,0.88),rgba(143,179,231,0.8)_46%,rgba(248,242,232,0.98)_100%)] shadow-[0_30px_52px_-28px_rgba(63,103,200,0.42)]"
     >
-      <div className="h-2 bg-[repeating-linear-gradient(90deg,rgba(143,179,231,0.18)_0_16px,rgba(248,242,232,0.98)_16px_32px)]" />
-      <div className="grid gap-6 px-5 py-6 sm:grid-cols-[0.84fr_1.16fr] sm:items-end sm:px-6 sm:py-7">
+      <div className="absolute -right-10 top-10 h-40 w-40 rounded-full bg-[rgba(226,61,138,0.28)] blur-2xl" />
+      <div className="absolute -left-6 bottom-6 h-28 w-28 rounded-full bg-[rgba(243,181,61,0.35)] blur-2xl" />
+      <div className="h-2 bg-[repeating-linear-gradient(90deg,rgba(248,242,232,0.54)_0_16px,rgba(255,123,94,0.44)_16px_32px)]" />
+      <div className="relative grid gap-6 px-5 py-6 sm:grid-cols-[0.84fr_1.16fr] sm:items-end sm:px-6 sm:py-8">
         <div>
-          <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--fren-blue)]">
-            <Spark className="h-4 w-4 text-[var(--fren-pink)]" />
+          <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-[rgba(248,242,232,0.92)]">
+            <Spark className="h-4 w-4 text-[var(--fren-marigold)]" />
             {label}
           </p>
-          <p className="mt-3 max-w-[13rem] font-serif text-[2.2rem] font-semibold leading-[0.95] tracking-[-0.05em] text-[var(--fren-ink)] sm:text-[2.6rem]">
+          <p className="mt-3 max-w-[14rem] font-serif text-[2.35rem] font-semibold leading-[0.92] tracking-[-0.05em] text-[var(--fren-ivory)] sm:text-[2.9rem]">
             Weekend begins soon.
           </p>
         </div>
-        <div className="grid grid-cols-3 border-t border-[rgba(63,103,200,0.14)] pt-4 sm:border-t-0 sm:pt-0">
+        <div className="grid grid-cols-3 gap-2 border-t border-[rgba(248,242,232,0.3)] pt-4 sm:border-t-0 sm:pt-0">
         {items.map((item) => (
           <div
             key={item.label}
-            className={`border-l border-[rgba(63,103,200,0.14)] px-3 py-2 text-center first:border-l-0 sm:px-4 ${item.style}`}
+            className={`rounded-[0.95rem] border border-[rgba(248,242,232,0.28)] bg-[rgba(248,242,232,0.18)] px-2 py-3 text-center backdrop-blur-[2px] sm:px-4 ${item.style}`}
           >
-            <p className="font-serif text-[2.8rem] font-semibold leading-none tracking-[-0.05em] text-[var(--fren-ink)] sm:text-[3.35rem]">
+            <p className="font-serif text-[2.5rem] font-semibold leading-none tracking-[-0.05em] text-[var(--fren-ivory)] sm:text-[3.35rem]">
               {item.value}
             </p>
-            <p className="mt-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-[var(--fren-blue)] sm:text-xs">
+            <p className="mt-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-[rgba(248,242,232,0.92)] sm:text-xs">
               {item.label}
             </p>
           </div>
