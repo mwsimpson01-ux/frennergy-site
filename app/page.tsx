@@ -207,42 +207,46 @@ export default function FrennergyPage() {
         </section>
 
         <section className="mt-6 sm:mt-8">
-          <Countdown targetDate={tripStart} label="Countdown to San Juan" />
-        </section>
-
-        <section className="mt-4 sm:mt-5" aria-labelledby="music-title">
-          <div className="relative max-w-[24rem] overflow-hidden rounded-[1.6rem] border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)] px-5 py-5 shadow-[0_24px_30px_-18px_rgba(225,59,134,0.45)] sm:max-w-none sm:rounded-[1.8rem] sm:px-9 sm:py-9">
-            <div className="fren-tile-band absolute inset-x-0 top-0 h-3" />
-            <div className="pointer-events-none absolute -right-6 top-12 h-24 w-24 rounded-full border-2 border-[var(--fren-blue)] bg-[var(--fren-yellow)] opacity-80 sm:-right-8 sm:h-28 sm:w-28" />
-            <div className="pointer-events-none absolute right-8 top-16 h-10 w-10 rounded-full border-2 border-[var(--fren-blue)] bg-[var(--fren-coral)] opacity-90 sm:right-12" />
-            <div className="pointer-events-none absolute -left-7 bottom-10 h-20 w-20 rotate-12 rounded-2xl border-2 border-[var(--fren-blue)] bg-[rgba(225,59,134,0.18)]" />
-            <div className="max-w-3xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--fren-pink)]">
-                Now Playing
-              </p>
-              <div className="mt-2 inline-flex items-center gap-2 rounded-full border-2 border-[var(--fren-blue)] bg-[rgba(225,59,134,0.12)] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[var(--fren-blue)]">
-                <IconSparkle className="h-3.5 w-3.5 text-[var(--fren-coral)]" />
-                Weekend Soundtrack
-              </div>
-              <h2 id="music-title" className="mt-2 font-serif text-[2.55rem] font-semibold leading-[0.9] tracking-[-0.04em] text-[var(--fren-ink)] sm:mt-3 sm:text-[3.5rem]">
-                Weekend Playlist
-              </h2>
-              <p className="fren-copy mt-3 max-w-[20rem] text-[1.03rem] leading-7 sm:mt-4 sm:max-w-2xl sm:text-lg sm:leading-8">
-                Queue the songs for glam, spritz hour, and the night-out pregame.
-              </p>
-              <a
-                href={playlistUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="fren-button-warm mt-5 inline-flex items-center justify-center rounded-full px-7 py-3.5 text-[1.05rem] font-semibold uppercase tracking-[0.11em] transition duration-300 hover:-translate-y-1 hover:brightness-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--fren-coral)] focus-visible:ring-offset-2 sm:mt-7 sm:px-8 sm:py-4 sm:text-base sm:tracking-[0.12em]"
-              >
-                Cue the Playlist
-              </a>
+          <div className="grid items-stretch gap-4 lg:grid-cols-[1.08fr_0.92fr]">
+            <div className="h-full">
+              <Countdown targetDate={tripStart} label="Countdown to San Juan" />
             </div>
+
+            <section aria-labelledby="music-title" className="h-full">
+              <div className="relative flex h-full flex-col overflow-hidden rounded-[1.6rem] border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)] px-5 py-5 shadow-[0_24px_30px_-18px_rgba(225,59,134,0.45)] sm:rounded-[1.8rem] sm:px-8 sm:py-8">
+                <div className="fren-tile-band absolute inset-x-0 top-0 h-3" />
+                <div className="absolute -right-2 -top-2 z-0 h-full w-full rounded-[1.5rem] border-2 border-dashed border-[var(--fren-pink)] bg-[rgba(225,59,134,0.08)] sm:rounded-[1.8rem]" />
+                <div className="relative z-10">
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--fren-pink)]">
+                    Now Playing
+                  </p>
+                  <div className="mt-2 inline-flex items-center gap-2 rounded-full border-2 border-[var(--fren-blue)] bg-[rgba(244,183,63,0.2)] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[var(--fren-blue)]">
+                    <IconSparkle className="h-3.5 w-3.5 text-[var(--fren-coral)]" />
+                    Weekend Soundtrack
+                  </div>
+                  <h2 id="music-title" className="mt-2 font-serif text-[2.55rem] font-semibold leading-[0.9] tracking-[-0.04em] text-[var(--fren-ink)] sm:mt-3 sm:text-[3.2rem]">
+                    Weekend Playlist
+                  </h2>
+                  <p className="fren-copy mt-3 max-w-[24rem] text-[1.03rem] leading-7 sm:mt-4 sm:text-[1.1rem] sm:leading-8">
+                    Queue the songs for glam, spritz hour, and the night-out pregame.
+                  </p>
+                </div>
+                <div className="mt-auto pt-5 sm:pt-6">
+                  <a
+                    href={playlistUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="fren-button-warm inline-flex items-center justify-center rounded-full px-7 py-3.5 text-[1.05rem] font-semibold uppercase tracking-[0.11em] transition duration-300 hover:-translate-y-1 hover:brightness-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--fren-coral)] focus-visible:ring-offset-2 sm:px-8 sm:py-4 sm:text-base sm:tracking-[0.12em]"
+                  >
+                    Cue the Playlist
+                  </a>
+                </div>
+              </div>
+            </section>
           </div>
         </section>
 
-        <section id="itinerary" className="mt-10 sm:mt-14" aria-labelledby="itinerary-title">
+        <section id="itinerary" className="mt-8 sm:mt-12" aria-labelledby="itinerary-title">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
               <h2 id="itinerary-title" className="mt-2 font-serif text-[2.45rem] font-semibold tracking-[-0.04em] text-[var(--fren-ink)] sm:mt-3 sm:text-[3.7rem]">
