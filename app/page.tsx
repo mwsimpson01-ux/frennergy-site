@@ -142,13 +142,17 @@ export default function FrennergyPage() {
           <div className="grid gap-6 sm:gap-8 lg:grid-cols-[0.96fr_1.04fr] lg:items-center">
             <div className="order-1 max-w-[42rem] lg:pr-6">
               <p className="fren-kicker">Chelsea&apos;s Bachelorette Weekend</p>
-              <div className="mt-2 flex flex-wrap items-center justify-center gap-1.5 sm:mt-4 sm:justify-start sm:gap-2">
+              <div className="mt-2 flex flex-col items-center gap-1.5 sm:mt-4 sm:items-start sm:gap-2">
                 <p className="inline-flex rounded-full border border-[var(--fren-blue)]/55 bg-[var(--fren-ivory)] px-3 py-0.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--fren-blue)] sm:px-4 sm:py-1 sm:text-sm sm:tracking-[0.16em]">
                   San Juan, Puerto Rico
                 </p>
-                <p className="inline-flex rounded-full bg-[var(--fren-yellow)] px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-[0.13em] text-[var(--fren-blue)] sm:hidden">
-                  May 22-24
-                </p>
+                <div className="flex items-center gap-3 sm:hidden">
+                  <span className="h-px w-8 bg-[rgba(66,104,201,0.34)]" />
+                  <p className="inline-flex rounded-full bg-[var(--fren-yellow)] px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-[0.13em] text-[var(--fren-blue)]">
+                    May 22-24
+                  </p>
+                  <span className="h-px w-8 bg-[rgba(66,104,201,0.34)]" />
+                </div>
               </div>
 
               <div className="relative mt-4 sm:mt-5">
@@ -169,10 +173,10 @@ export default function FrennergyPage() {
                     <span className="pointer-events-none absolute -right-3 top-1 text-[var(--fren-yellow)] sm:-right-7 sm:top-4">
                       <IconSparkle className="h-4 w-4 sm:h-6 sm:w-6" />
                     </span>
-                    <span className="relative block -rotate-[3deg] font-serif text-[3.9rem] font-semibold leading-[0.88] tracking-[-0.06em] text-[var(--fren-blue)] [text-shadow:0_2px_0_#f8f1e7,2px_0_0_#f8f1e7,-2px_0_0_#f8f1e7,0_-2px_0_#f8f1e7,0_7px_0_rgba(255,118,94,0.34)] sm:text-[6.65rem] lg:text-[7.2rem]">
+                    <span className="relative block -rotate-[2deg] font-serif text-[3.9rem] font-semibold leading-[0.88] tracking-[-0.06em] text-[var(--fren-blue)] [text-shadow:0_2px_0_#f8f1e7,2px_0_0_#f8f1e7,-2px_0_0_#f8f1e7,0_-2px_0_#f8f1e7,0_7px_0_rgba(255,118,94,0.34)] sm:text-[6.65rem] lg:text-[7.2rem]">
                       Frennergy
-                      <span className="absolute -bottom-1 left-[8%] h-1 w-[60%] rotate-[1deg] rounded-full bg-[rgba(225,59,134,0.8)] sm:-bottom-2 sm:h-1.5" />
-                      <span className="absolute -bottom-4 right-[12%] h-1 w-[46%] -rotate-[3deg] rounded-full bg-[rgba(225,59,134,0.65)] sm:-bottom-6 sm:h-1.5" />
+                      <span className="absolute -bottom-1 left-[10%] h-1 w-[58%] rotate-[1deg] rounded-full bg-[rgba(225,59,134,0.82)] sm:-bottom-2 sm:h-1.5" />
+                      <span className="absolute -bottom-4 right-[11%] h-1 w-[44%] -rotate-[3deg] rounded-full bg-[rgba(225,59,134,0.68)] sm:-bottom-6 sm:h-1.5" />
                     </span>
                     <span className="pointer-events-none absolute -right-2 -bottom-12 hidden text-[var(--fren-blue)] sm:block">
                       <svg viewBox="0 0 88 28" className="h-7 w-24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -183,7 +187,7 @@ export default function FrennergyPage() {
                   </span>
                 </h1>
 
-                <div className="relative z-0 -mt-2 mr-0 ml-auto w-[72%] max-w-[14.75rem] translate-y-1 sm:hidden">
+                <div className="relative z-0 mt-2 mr-0 ml-auto w-[74%] max-w-[15.25rem] sm:hidden">
                   <div className="relative aspect-square overflow-hidden rounded-full border-2 border-[var(--fren-blue)] bg-[#f8d5de] shadow-[0_18px_28px_-16px_rgba(66,104,201,0.45)]">
                     <Image
                       src="/chelsea-hero-circle-v2.png"
