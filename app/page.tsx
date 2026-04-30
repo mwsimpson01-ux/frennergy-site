@@ -180,8 +180,7 @@ export default function FrennergyPage() {
                 <div className="absolute -left-1 top-2 z-20 rounded-full border border-[var(--fren-blue)] bg-[var(--fren-yellow)] px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.12em] text-[var(--fren-blue)] shadow-[0_12px_20px_-14px_rgba(66,104,201,0.5)] sm:-left-2 sm:top-3 sm:px-4 sm:py-2 sm:text-[11px] sm:tracking-[0.14em]">
                   Chelsea Edition
                 </div>
-                <div className="absolute -left-2 top-8 z-0 h-[78%] w-[92%] rounded-[2rem] bg-[rgba(255,118,94,0.24)] sm:-left-4 sm:top-9" />
-                <div className="absolute right-2 top-4 z-0 h-[76%] w-[84%] rounded-[2rem] bg-[rgba(225,59,134,0.14)] sm:right-3 sm:top-3" />
+                <div className="absolute -left-2 top-8 z-0 h-[78%] w-[92%] rounded-[2rem] bg-[rgba(255,118,94,0.2)] sm:-left-4 sm:top-9" />
                 <div className="relative z-10 px-4 pb-4 pt-8 sm:px-6 sm:pb-6 sm:pt-10">
                   <div className="relative aspect-square overflow-hidden rounded-full border-2 border-[var(--fren-blue)] bg-[#f8d5de] shadow-[0_24px_35px_-16px_rgba(66,104,201,0.45)]">
                     <Image
@@ -215,8 +214,7 @@ export default function FrennergyPage() {
 
             <section aria-labelledby="music-title" className="h-full">
               <div className="relative flex h-full flex-col overflow-hidden rounded-[1.7rem] bg-[linear-gradient(150deg,#ffe2d9_0%,#ffd8eb_40%,#fff4ed_100%)] px-5 py-5 shadow-[0_26px_30px_-18px_rgba(225,59,134,0.45)] sm:rounded-[1.9rem] sm:px-8 sm:py-7">
-                <div className="absolute right-0 top-0 h-28 w-28 -translate-y-9 translate-x-8 rounded-full bg-[rgba(244,183,63,0.65)]" />
-                <div className="absolute left-0 top-0 h-20 w-20 -translate-x-6 -translate-y-6 rounded-full border border-[rgba(66,104,201,0.5)] bg-[rgba(66,104,201,0.12)]" />
+                <div className="absolute right-0 top-0 h-24 w-24 -translate-y-8 translate-x-7 rounded-full bg-[rgba(244,183,63,0.58)]" />
                 <div className="relative z-10">
                   <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--fren-pink)]">
                     Now Playing
@@ -247,7 +245,7 @@ export default function FrennergyPage() {
           </div>
         </section>
 
-        <section id="itinerary" className="mt-10 sm:mt-14" aria-labelledby="itinerary-title">
+        <section id="itinerary" className="mt-11 sm:mt-14" aria-labelledby="itinerary-title">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
               <h2 id="itinerary-title" className="mt-2 font-serif text-[2.45rem] font-semibold tracking-[-0.04em] text-[var(--fren-ink)] sm:mt-3 sm:text-[3.7rem]">
@@ -263,7 +261,7 @@ export default function FrennergyPage() {
             {[fridayPlan, saturdayPlan, sundayPlan].map((plan, planIndex) => (
               <article
                 key={plan.day}
-                className={`relative overflow-hidden rounded-[1.45rem] px-4 py-5 shadow-[0_20px_28px_-20px_rgba(66,104,201,0.3)] sm:rounded-[1.7rem] sm:px-7 sm:py-7 ${
+                className={`relative overflow-hidden rounded-[1.45rem] px-4 py-5 shadow-[0_16px_24px_-20px_rgba(66,104,201,0.26)] sm:rounded-[1.7rem] sm:px-7 sm:py-7 ${
                   planIndex === 0
                     ? "bg-[rgba(255,118,94,0.11)]"
                     : planIndex === 1
@@ -272,7 +270,7 @@ export default function FrennergyPage() {
                 }`}
               >
                 <div
-                  className={`-mx-4 -mt-5 mb-4 h-1.5 rounded-full sm:-mx-7 sm:-mt-7 ${
+                  className={`-mx-4 -mt-5 mb-4 h-1 rounded-full sm:-mx-7 sm:-mt-7 ${
                     planIndex === 0
                       ? "bg-[linear-gradient(90deg,var(--fren-coral),var(--fren-pink))]"
                       : planIndex === 1
@@ -287,7 +285,7 @@ export default function FrennergyPage() {
                 <p className="fren-copy mt-2 text-sm leading-6 sm:text-[0.98rem] sm:leading-7">
                   {plan.blurb}
                 </p>
-                <div className="mt-4 divide-y divide-[rgba(66,104,201,0.2)] rounded-[1rem] bg-[rgba(248,241,231,0.8)] px-3 sm:mt-6 sm:px-4">
+                <div className="mt-4 divide-y divide-[rgba(66,104,201,0.16)] rounded-[1rem] bg-[rgba(248,241,231,0.78)] px-3 sm:mt-6 sm:px-4">
                   {plan.events.map((event) => (
                     <article
                       key={`${plan.day}-${event.time}`}
@@ -308,7 +306,7 @@ export default function FrennergyPage() {
         </section>
 
         <section id="details" className="mt-12 sm:mt-16">
-          <div className="rounded-[1.6rem] bg-[rgba(248,241,231,0.92)] px-4 py-6 shadow-[0_20px_28px_-22px_rgba(66,104,201,0.35)] sm:rounded-[1.9rem] sm:px-8 sm:py-9">
+          <div className="rounded-[1.6rem] border border-[rgba(66,104,201,0.3)] bg-[rgba(248,241,231,0.92)] px-4 py-6 shadow-[0_18px_24px_-22px_rgba(66,104,201,0.3)] sm:rounded-[1.9rem] sm:px-8 sm:py-9">
             <p className="fren-kicker">Trip Details</p>
             <h2 className="mt-2 font-serif text-[2.45rem] font-semibold tracking-[-0.04em] text-[var(--fren-ink)] sm:mt-4 sm:text-[3.7rem]">
               Trip Details
@@ -321,7 +319,7 @@ export default function FrennergyPage() {
               {tripDetails.map((detail) => (
                 <div
                   key={detail.label}
-                  className="grid gap-1.5 rounded-[0.9rem] bg-[rgba(255,255,255,0.62)] px-3 py-3 sm:grid-cols-[150px_1fr] sm:items-center sm:px-4"
+                  className="grid gap-1.5 rounded-[0.9rem] border border-[rgba(66,104,201,0.2)] bg-[rgba(255,255,255,0.62)] px-3 py-3 sm:grid-cols-[150px_1fr] sm:items-center sm:px-4"
                 >
                   <p className="fren-meta flex items-center gap-2 text-[var(--fren-blue)]">
                     <span className="h-1.5 w-1.5 rounded-full bg-[var(--fren-coral)]" />
