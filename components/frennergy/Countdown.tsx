@@ -68,24 +68,24 @@ export function Countdown({ targetDate, label = "Hot Girl Summer begins in..." }
   return (
     <section
       aria-label="Countdown to trip"
-      className="relative overflow-hidden rounded-[1.6rem] border-2 border-[var(--fren-blue)] bg-[var(--fren-blue)] shadow-[0_28px_34px_-16px_rgba(66,104,201,0.5)] sm:rounded-[1.9rem]"
+      className="relative overflow-hidden rounded-[1.6rem] bg-[var(--fren-blue)] shadow-[0_28px_34px_-16px_rgba(66,104,201,0.5)] sm:rounded-[1.9rem]"
     >
       <div className="h-3 bg-[repeating-linear-gradient(90deg,var(--fren-yellow)_0_14px,var(--fren-coral)_14px_28px,var(--fren-pink)_28px_42px,var(--fren-ivory)_42px_56px)]" />
-      <div className="relative grid gap-4 px-4 py-4 sm:grid-cols-[0.84fr_1.16fr] sm:items-end sm:gap-6 sm:px-6 sm:py-8">
+      <div className="relative grid gap-4 px-4 py-4 sm:grid-cols-[0.86fr_1.14fr] sm:items-end sm:gap-6 sm:px-6 sm:py-8">
         <div>
           <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-[rgba(248,242,232,0.92)]">
             <Spark className="h-4 w-4 text-[var(--fren-yellow)]" />
             {label}
           </p>
-          <p className="mt-2 max-w-[13rem] font-serif text-[2.05rem] font-semibold leading-[0.94] tracking-[-0.04em] text-[var(--fren-ivory)] sm:mt-3 sm:max-w-[14rem] sm:text-[2.9rem] sm:tracking-[-0.05em]">
+          <p className="mt-2 max-w-[13rem] font-serif text-[2.05rem] font-semibold leading-[0.94] tracking-[-0.04em] text-[var(--fren-ivory)] sm:mt-3 sm:max-w-[15rem] sm:text-[2.95rem] sm:tracking-[-0.05em]">
             It&apos;s almost go time.
           </p>
         </div>
-        <div className="grid grid-cols-3 gap-2 border-t border-[rgba(248,242,232,0.3)] pt-3 sm:border-t-0 sm:pt-0">
+        <div className="grid grid-cols-3 gap-2 border-t border-[rgba(248,242,232,0.28)] pt-3 sm:border-t-0 sm:pt-0">
         {items.map((item) => (
           <div
             key={item.label}
-            className={`rounded-[0.85rem] border-2 border-[var(--fren-ivory)] px-2 py-2.5 text-center sm:rounded-[0.95rem] sm:px-4 sm:py-3 ${item.style}`}
+            className={`rounded-[0.85rem] border border-[rgba(66,104,201,0.15)] px-2 py-2.5 text-center shadow-[inset_0_0_0_1px_rgba(255,255,255,0.28)] sm:rounded-[0.95rem] sm:px-4 sm:py-3 ${item.style}`}
           >
             <p className="font-serif text-[2.15rem] font-semibold leading-none tracking-[-0.04em] text-[var(--fren-blue)] sm:text-[3.4rem] sm:tracking-[-0.05em]">
               {item.value}

@@ -38,15 +38,9 @@ body {
 }
 
 .fren-hero {
-  border: 2px solid var(--fren-blue);
-  background:
-    linear-gradient(var(--fren-ivory), var(--fren-ivory)),
-    repeating-linear-gradient(
-      90deg,
-      rgba(66, 104, 201, 0.16) 0 10px,
-      rgba(248, 241, 231, 0.98) 10px 20px
-    );
-  box-shadow: 0 24px 34px -16px rgba(66, 104, 201, 0.28);
+  border: 1px solid rgba(66, 104, 201, 0.46);
+  background: linear-gradient(165deg, #fff8ef 0%, #f8f1e7 62%, #f9efe4 100%);
+  box-shadow: 0 24px 34px -20px rgba(66, 104, 201, 0.28);
 }
 
 .fren-hero-stripe {
@@ -138,21 +132,21 @@ body {
 }
 
 .fren-button-primary {
-  border: 2px solid var(--fren-blue);
+  border: 1px solid var(--fren-blue);
   background: var(--fren-blue);
   color: var(--fren-ivory);
   box-shadow: 0 18px 24px -14px rgba(66, 104, 201, 0.52);
 }
 
 .fren-button-secondary {
-  border: 2px solid var(--fren-blue);
+  border: 1px solid rgba(66, 104, 201, 0.7);
   background: var(--fren-ivory);
   color: var(--fren-blue);
   box-shadow: var(--fren-shadow-soft);
 }
 
 .fren-button-warm {
-  border: 2px solid var(--fren-blue);
+  border: 1px solid rgba(66, 104, 201, 0.7);
   background: var(--fren-coral);
   color: var(--fren-ivory);
   box-shadow: 0 18px 24px -14px rgba(225, 59, 134, 0.5);
