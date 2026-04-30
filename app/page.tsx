@@ -141,11 +141,16 @@ export default function FrennergyPage() {
           <div className="fren-hero-stripe absolute inset-x-0 top-0 h-3" />
           <div className="grid gap-6 sm:gap-8 lg:grid-cols-[0.96fr_1.04fr] lg:items-center">
             <div className="order-1 max-w-[42rem] lg:pr-6">
-              <p className="fren-kicker">Chelsea&apos;s Bachelorette Weekend</p>
-              <div className="mt-2 flex flex-col items-center gap-1.5 sm:mt-4 sm:items-start sm:gap-2">
-                <p className="inline-flex rounded-full border border-[var(--fren-blue)]/55 bg-[var(--fren-ivory)] px-3 py-0.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--fren-blue)] sm:px-4 sm:py-1 sm:text-sm sm:tracking-[0.16em]">
+              <p className="fren-kicker text-center sm:text-left lg:text-right">Chelsea&apos;s Bachelorette Weekend</p>
+              <div className="mt-2 flex flex-col items-center gap-1.5 sm:mt-4 sm:items-start sm:gap-2 lg:items-end">
+                <div className="flex items-center gap-2.5">
+                  <p className="inline-flex rounded-full border border-[var(--fren-blue)]/55 bg-[var(--fren-ivory)] px-3 py-0.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--fren-blue)] sm:px-4 sm:py-1 sm:text-sm sm:tracking-[0.16em]">
                   San Juan, Puerto Rico
-                </p>
+                  </p>
+                  <p className="hidden text-[0.98rem] font-semibold uppercase tracking-[0.12em] text-[var(--fren-blue)] lg:inline">
+                    May 22-24
+                  </p>
+                </div>
                 <div className="flex items-center gap-3 sm:hidden">
                   <span className="h-px w-8 bg-[rgba(66,104,201,0.34)]" />
                   <p className="inline-flex rounded-full bg-[var(--fren-yellow)] px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-[0.13em] text-[var(--fren-blue)]">
@@ -175,28 +180,28 @@ export default function FrennergyPage() {
                     </span>
                     <span className="relative block -rotate-[2deg] font-serif text-[3.9rem] font-semibold leading-[0.88] tracking-[-0.06em] text-[var(--fren-blue)] [text-shadow:0_2px_0_#f8f1e7,2px_0_0_#f8f1e7,-2px_0_0_#f8f1e7,0_-2px_0_#f8f1e7,0_7px_0_rgba(255,118,94,0.34)] sm:text-[6.65rem] lg:text-[7.2rem]">
                       Frennergy
-                      <span className="pointer-events-none absolute -bottom-5 left-[10%] h-5 w-[62%] sm:-bottom-8 sm:h-7">
+                      <span className="pointer-events-none absolute -bottom-7 left-[10%] h-6 w-[62%] sm:-bottom-11 sm:h-8">
                         <svg viewBox="0 0 220 28" className="h-full w-full" fill="none">
                           <path
-                            d="M6 20 C52 8, 108 8, 164 18"
+                            d="M8 20 C58 5, 116 5, 170 19"
                             stroke="rgba(225,59,134,0.82)"
-                            strokeWidth="6"
-                            strokeLinecap="round"
-                          />
-                        </svg>
-                      </span>
-                      <span className="pointer-events-none absolute -bottom-7 right-[8%] h-4 w-[40%] sm:-bottom-12 sm:h-6">
-                        <svg viewBox="0 0 170 24" className="h-full w-full" fill="none">
-                          <path
-                            d="M8 16 C46 6, 88 6, 132 14"
-                            stroke="rgba(225,59,134,0.68)"
                             strokeWidth="5"
                             strokeLinecap="round"
                           />
                         </svg>
                       </span>
+                      <span className="pointer-events-none absolute -bottom-10 right-[8%] h-5 w-[40%] sm:-bottom-15 sm:h-7">
+                        <svg viewBox="0 0 170 24" className="h-full w-full" fill="none">
+                          <path
+                            d="M8 17 C48 4, 92 4, 136 14"
+                            stroke="rgba(225,59,134,0.68)"
+                            strokeWidth="4"
+                            strokeLinecap="round"
+                          />
+                        </svg>
+                      </span>
                     </span>
-                    <span className="pointer-events-none absolute -right-2 -bottom-16 hidden text-[var(--fren-blue)] sm:block">
+                    <span className="pointer-events-none absolute -right-7 -bottom-24 hidden text-[var(--fren-blue)] lg:block">
                       <svg viewBox="0 0 88 28" className="h-7 w-24" fill="none" stroke="currentColor" strokeWidth="2">
                         <path d="M2 8c5 0 5-6 10-6s5 6 10 6 5-6 10-6 5 6 10 6 5-6 10-6 5 6 10 6 5-6 10-6" />
                         <path d="M2 22c5 0 5-6 10-6s5 6 10 6 5-6 10-6 5 6 10 6 5-6 10-6 5 6 10 6 5-6 10-6" />
