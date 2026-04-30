@@ -122,13 +122,11 @@ type IconProps = {
   className?: string;
 };
 
-function IconHeadphones({ className = "h-5 w-5" }: IconProps) {
+function IconSparkle({ className = "h-5 w-5" }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className={className}>
-      <path d="M4 13a8 8 0 0 1 16 0" />
-      <rect x="3.5" y="12" width="4.5" height="7" rx="2" />
-      <rect x="16" y="12" width="4.5" height="7" rx="2" />
-      <path d="M8 18h8" />
+      <path d="M12 3 13.8 8.2 19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z" />
+      <path d="M5 4 5.8 6.2 8 7l-2.2.8L5 10 4.2 7.8 2 7l2.2-.8L5 4Z" />
     </svg>
   );
 }
@@ -215,13 +213,17 @@ export default function FrennergyPage() {
         <section className="mt-4 sm:mt-5" aria-labelledby="music-title">
           <div className="relative max-w-[24rem] overflow-hidden rounded-[1.6rem] border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)] px-5 py-5 shadow-[0_24px_30px_-18px_rgba(225,59,134,0.45)] sm:max-w-none sm:rounded-[1.8rem] sm:px-9 sm:py-9">
             <div className="fren-tile-band absolute inset-x-0 top-0 h-3" />
-            <div className="pointer-events-none absolute right-4 top-4 text-[rgba(255,123,94,0.9)] sm:right-7 sm:top-7">
-              <IconHeadphones className="h-12 w-12 rotate-[8deg] sm:h-16 sm:w-16" />
-            </div>
-            <div className="max-w-3xl pr-10 sm:pr-0">
+            <div className="pointer-events-none absolute -right-6 top-12 h-24 w-24 rounded-full border-2 border-[var(--fren-blue)] bg-[var(--fren-yellow)] opacity-80 sm:-right-8 sm:h-28 sm:w-28" />
+            <div className="pointer-events-none absolute right-8 top-16 h-10 w-10 rounded-full border-2 border-[var(--fren-blue)] bg-[var(--fren-coral)] opacity-90 sm:right-12" />
+            <div className="pointer-events-none absolute -left-7 bottom-10 h-20 w-20 rotate-12 rounded-2xl border-2 border-[var(--fren-blue)] bg-[rgba(225,59,134,0.18)]" />
+            <div className="max-w-3xl">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--fren-pink)]">
                 Now Playing
               </p>
+              <div className="mt-2 inline-flex items-center gap-2 rounded-full border-2 border-[var(--fren-blue)] bg-[rgba(225,59,134,0.12)] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[var(--fren-blue)]">
+                <IconSparkle className="h-3.5 w-3.5 text-[var(--fren-coral)]" />
+                Weekend Soundtrack
+              </div>
               <h2 id="music-title" className="mt-2 font-serif text-[2.55rem] font-semibold leading-[0.9] tracking-[-0.04em] text-[var(--fren-ink)] sm:mt-3 sm:text-[3.5rem]">
                 Weekend Playlist
               </h2>
