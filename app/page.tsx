@@ -27,6 +27,7 @@ const overviewPills = [
   "Old San Juan Dinner",
   "Spritz Hour",
   "Golden Hour Photos",
+  "Chelsea",
 ];
 
 type DayPlan = {
@@ -151,35 +152,21 @@ export default function FrennergyPage() {
   return (
     <main className="fren-page font-sans">
       <div className="mx-auto w-full max-w-7xl px-4 pb-24 pt-6 sm:px-8 sm:pb-32 sm:pt-10">
-        <section className="fren-hero relative overflow-hidden rounded-[2.4rem] px-6 pb-9 pt-8 sm:px-10 sm:pb-12 sm:pt-10">
-          <div className="fren-hero-stripe absolute inset-x-0 top-0 h-3 opacity-80" />
-          <div className="pointer-events-none absolute -right-16 top-24 h-44 w-44 rounded-full bg-[rgba(226,61,138,0.16)] blur-2xl sm:h-56 sm:w-56" />
-          <div className="pointer-events-none absolute -left-10 bottom-10 h-40 w-40 rounded-full bg-[rgba(243,181,61,0.2)] blur-2xl sm:h-52 sm:w-52" />
-          <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
-            <div className="max-w-[42rem] lg:pr-8">
-              <div className="fren-hero-photo-wrap mb-7 sm:mb-8">
-                <div className="fren-hero-photo">
-                  <Image
-                    src="/chelsea-hero.png"
-                    alt="Chelsea smiling in a pink top"
-                    fill
-                    className="object-cover object-[56%_35%]"
-                    sizes="(min-width: 1024px) 36vw, 100vw"
-                    priority
-                  />
-                </div>
-              </div>
+        <section className="fren-hero relative overflow-hidden rounded-[2.4rem] px-6 pb-8 pt-7 sm:px-10 sm:pb-10 sm:pt-9">
+          <div className="fren-hero-stripe absolute inset-x-0 top-0 h-3" />
+          <div className="grid gap-8 lg:grid-cols-[1.03fr_0.97fr] lg:items-center">
+            <div className="order-2 max-w-[42rem] lg:order-1 lg:pr-6">
               <p className="fren-kicker">Chelsea&apos;s Bachelorette Weekend</p>
-              <p className="mt-6 inline-flex rounded-full border border-[rgba(63,103,200,0.16)] bg-[rgba(248,242,232,0.94)] px-4 py-1 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--fren-blue)]">
+              <p className="mt-5 inline-flex rounded-full border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)] px-4 py-1 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--fren-blue)]">
                 San Juan, Puerto Rico
               </p>
-              <h1 className="mt-6 max-w-[10ch] font-serif text-[4.25rem] font-semibold leading-[0.84] tracking-[-0.055em] text-[var(--fren-ink)] sm:text-[5.3rem] lg:text-[6.35rem]">
+              <h1 className="mt-5 max-w-[10ch] font-serif text-[4rem] font-semibold leading-[0.84] tracking-[-0.055em] text-[var(--fren-ink)] sm:text-[5.2rem] lg:text-[6.1rem]">
                 Hot Girl
                 <br />
                 Frennergy
               </h1>
               <p className="fren-copy mt-6 max-w-2xl text-[1.02rem] leading-8 sm:text-[1.18rem]">
-                A San Juan weekend for Chelsea - rooftop dinners, pool days, spritzes, and one
+                A San Juan weekend for Chelsea — rooftop dinners, pool days, spritzes, and one
                 very well-dressed itinerary.
               </p>
 
@@ -199,31 +186,33 @@ export default function FrennergyPage() {
               </div>
             </div>
 
-            <aside className="fren-hero-art relative grid gap-6 overflow-hidden rounded-[2rem] border border-[rgba(63,103,200,0.14)] px-6 py-7 sm:px-7 sm:py-8">
-              <div className="fren-hero-art-stripe absolute inset-x-0 top-0 h-2" />
-              <div className="relative z-10">
-                <p className="fren-kicker">Weekend Energy</p>
-                <div className="mt-4 flex flex-wrap gap-2.5 text-[11px] font-semibold uppercase tracking-[0.13em] sm:text-xs">
-                  <span className="fren-chip rounded-full px-3 py-1.5">Old San Juan</span>
-                  <span className="fren-chip fren-chip--accent rounded-full px-3 py-1.5">Rooftop Nights</span>
-                  <span className="fren-chip rounded-full px-3 py-1.5">Pool Day</span>
-                  <span className="fren-chip rounded-full px-3 py-1.5">Spritz Hour</span>
-                  <span className="fren-chip fren-chip--accent rounded-full px-3 py-1.5">Girls Trip</span>
+            <aside className="order-1 lg:order-2">
+              <div className="relative mx-auto max-w-[30rem] lg:ml-auto">
+                <div className="absolute -left-4 -top-4 z-20 rounded-full border-2 border-[var(--fren-blue)] bg-[var(--fren-yellow)] px-4 py-2 text-[11px] font-bold uppercase tracking-[0.14em] text-[var(--fren-blue)] shadow-[0_14px_20px_-12px_rgba(66,104,201,0.5)]">
+                  Chelsea Edition
                 </div>
-              </div>
-              <div className="relative z-10 grid grid-cols-3 gap-3 pt-2">
-                <div className="h-28 rounded-t-[4rem] rounded-b-[1.25rem] bg-[linear-gradient(180deg,rgba(63,103,200,0.9),rgba(143,179,231,0.65))]" />
-                <div className="h-28 rounded-t-[1.25rem] rounded-b-[4rem] bg-[linear-gradient(180deg,rgba(226,61,138,0.84),rgba(255,123,94,0.72))]" />
-                <div className="h-28 rounded-t-[4rem] rounded-b-[1.25rem] bg-[linear-gradient(180deg,rgba(243,181,61,0.9),rgba(255,123,94,0.55))]" />
-              </div>
-              <div className="relative z-10 grid gap-3 sm:grid-cols-2">
-                <div className="rounded-[1.1rem] border border-[rgba(63,103,200,0.15)] bg-[rgba(248,242,232,0.72)] px-4 py-3 backdrop-blur-sm">
-                  <p className="fren-kicker text-[10px]">May 22-24</p>
-                  <p className="mt-2 text-sm font-semibold text-[var(--fren-ink)]">San Juan weekend</p>
-                </div>
-                <div className="rounded-[1.1rem] border border-[rgba(63,103,200,0.15)] bg-[rgba(248,242,232,0.72)] px-4 py-3 backdrop-blur-sm">
-                  <p className="fren-kicker text-[10px]">Chelsea Edition</p>
-                  <p className="mt-2 text-sm font-semibold text-[var(--fren-ink)]">Best dressed only</p>
+                <div className="absolute -right-3 top-14 z-0 h-full w-full rounded-[2.1rem] bg-[var(--fren-coral)]" />
+                <div className="absolute -right-6 -bottom-5 z-0 h-full w-full rounded-[2.1rem] border-2 border-dashed border-[var(--fren-blue)] bg-[var(--fren-pink)]" />
+                <div className="relative z-10 overflow-hidden rounded-[2.1rem] border-4 border-[var(--fren-blue)] bg-[var(--fren-ivory)] p-3 shadow-[0_30px_36px_-18px_rgba(66,104,201,0.5)]">
+                  <div className="fren-tile-band mb-3 h-3 rounded-full" />
+                  <div className="relative aspect-square overflow-hidden rounded-[1.4rem] border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)]">
+                    <Image
+                      src="/chelsea-hero-circle.png"
+                      alt="Chelsea in pink against a sparkly pink backdrop"
+                      fill
+                      className="object-cover object-center"
+                      sizes="(min-width: 1024px) 42vw, 100vw"
+                      priority
+                    />
+                  </div>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    <span className="rounded-full border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[var(--fren-blue)]">
+                      San Juan Weekend
+                    </span>
+                    <span className="rounded-full border-2 border-[var(--fren-blue)] bg-[var(--fren-yellow)] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[var(--fren-blue)]">
+                      May 22-24
+                    </span>
+                  </div>
                 </div>
               </div>
             </aside>
@@ -236,9 +225,8 @@ export default function FrennergyPage() {
           </div>
 
           <section aria-labelledby="music-title">
-            <div className="relative flex h-full min-h-[100%] flex-col overflow-hidden rounded-[1.8rem] border border-[rgba(226,61,138,0.24)] bg-[linear-gradient(135deg,rgba(226,61,138,0.14),rgba(255,123,94,0.22)_42%,rgba(243,181,61,0.26))] px-7 py-8 shadow-[0_26px_44px_-24px_rgba(226,61,138,0.28)]">
-              <div className="absolute inset-x-0 top-0 h-2 bg-[linear-gradient(90deg,rgba(226,61,138,0.94),rgba(255,123,94,0.88),rgba(243,181,61,0.7))]" />
-              <div className="absolute -bottom-10 -left-8 h-36 w-36 rounded-full bg-[rgba(63,103,200,0.22)] blur-2xl" />
+            <div className="relative flex h-full min-h-[100%] flex-col overflow-hidden rounded-[1.8rem] border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)] px-7 py-8 shadow-[0_24px_30px_-18px_rgba(225,59,134,0.45)]">
+              <div className="fren-tile-band absolute inset-x-0 top-0 h-3" />
               <div className="pointer-events-none absolute right-6 top-6 text-[rgba(255,123,94,0.7)]">
                 <IconHeadphones className="h-14 w-14 rotate-[8deg]" />
               </div>
@@ -290,15 +278,14 @@ export default function FrennergyPage() {
               Chelsea.
             </p>
           </div>
-          <div className="fren-section fren-section--blush relative grid gap-6 overflow-hidden px-6 py-8 sm:px-8">
-            <div className="pointer-events-none absolute -right-8 -top-8 h-28 w-28 rounded-full bg-[rgba(226,61,138,0.12)] blur-xl" />
-            <div className="pointer-events-none absolute -bottom-6 left-8 h-20 w-20 rounded-full bg-[rgba(243,181,61,0.2)] blur-xl" />
+          <div className="fren-section fren-section--blush relative grid gap-6 overflow-hidden border-2 px-6 py-8 sm:px-8">
+            <div className="fren-tile-band absolute inset-x-0 top-0 h-2" />
             <div className="grid gap-4 sm:grid-cols-[1.15fr_0.85fr] sm:items-start">
               <p className="fren-copy max-w-xl text-base leading-8">
                 A San Juan weekend for Chelsea - rooftop dinners, pool days, spritzes, and one
                 very well-dressed itinerary.
               </p>
-              <div className="border-l border-[var(--fren-line)] pl-4 sm:pl-5">
+              <div className="border-l-2 border-[var(--fren-blue)] pl-4 sm:pl-5">
                 <p className="fren-kicker">Weekend Notes</p>
                 <p className="mt-3 text-sm font-semibold leading-7 text-[var(--fren-copy)]">
                   Pack the outfits, save the photos, and be ready for a very cute weekend.
@@ -312,8 +299,8 @@ export default function FrennergyPage() {
                     key={pill}
                     className={`rounded-full px-3 py-1.5 ${
                       index % 2 === 0
-                        ? "border border-[rgba(63,103,200,0.16)] bg-[rgba(248,242,232,0.98)] text-[var(--fren-blue)]"
-                        : "border border-[rgba(226,61,138,0.16)] bg-[rgba(226,61,138,0.08)] text-[var(--fren-pink)]"
+                        ? "border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)] text-[var(--fren-blue)]"
+                        : "border-2 border-[var(--fren-pink)] bg-[rgba(225,59,134,0.12)] text-[var(--fren-pink)]"
                     }`}
                   >
                     {pill}
@@ -341,7 +328,7 @@ export default function FrennergyPage() {
             {[fridayPlan, saturdayPlan, sundayPlan].map((plan, planIndex) => (
               <article
                 key={plan.day}
-                className={`fren-section relative overflow-hidden px-4 py-5 sm:px-6 sm:py-7 ${
+                className={`fren-section relative overflow-hidden border-2 px-4 py-5 sm:px-6 sm:py-7 ${
                   planIndex === 0
                     ? "fren-section--warm"
                     : planIndex === 1
@@ -357,7 +344,7 @@ export default function FrennergyPage() {
                   {plan.events.map((event) => (
                     <article
                       key={`${plan.day}-${event.time}`}
-                      className="grid gap-1.5 rounded-[0.95rem] border border-[rgba(63,103,200,0.15)] bg-[rgba(248,242,232,0.95)] px-3.5 py-3 sm:grid-cols-[118px_1fr] sm:items-center sm:gap-2 sm:px-4 sm:py-3.5"
+                      className="grid gap-1.5 rounded-[0.95rem] border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)] px-3.5 py-3 sm:grid-cols-[118px_1fr] sm:items-center sm:gap-2 sm:px-4 sm:py-3.5"
                     >
                       <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[var(--fren-blue)] sm:text-[11px] sm:tracking-[0.16em]">
                         {event.time}
@@ -374,7 +361,8 @@ export default function FrennergyPage() {
         </section>
 
         <section id="details" className="mt-18">
-          <div className="fren-section fren-section--ivory px-6 py-8 sm:px-8">
+          <div className="fren-section fren-section--ivory border-2 px-6 py-8 sm:px-8">
+            <div className="fren-tile-band mb-5 h-2 rounded-full" />
             <p className="fren-kicker">Trip Details</p>
             <h2 className="mt-4 font-serif text-[2.9rem] font-semibold tracking-[-0.04em] text-[var(--fren-ink)] sm:text-[3.7rem]">
               Trip Details
@@ -383,10 +371,13 @@ export default function FrennergyPage() {
               The essentials: where we&apos;re staying, how we&apos;re getting around, and what to
               know before the first spritz.
             </p>
-            <div className="mt-8 space-y-5">
+            <div className="mt-6 space-y-3">
               {tripDetails.map((detail) => (
-                <div key={detail.label} className="grid gap-2 border-t border-[var(--fren-line)] pt-5 sm:grid-cols-[150px_1fr]">
-                  <p className="fren-meta">{detail.label}</p>
+                <div
+                  key={detail.label}
+                  className="grid gap-2 rounded-[1rem] border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)] px-4 py-3 sm:grid-cols-[150px_1fr] sm:items-center"
+                >
+                  <p className="fren-meta text-[var(--fren-pink)]">{detail.label}</p>
                   <p className="fren-copy text-sm leading-7 sm:text-base">{detail.value}</p>
                 </div>
               ))}
@@ -395,7 +386,8 @@ export default function FrennergyPage() {
         </section>
 
         <section id="photos" className="mt-20" aria-labelledby="photos-title">
-          <div className="relative overflow-hidden border border-[rgba(63,103,200,0.18)] bg-[linear-gradient(135deg,rgba(63,103,200,0.94),rgba(63,103,200,0.88))] px-6 py-11 shadow-[0_26px_46px_-26px_rgba(63,103,200,0.24)] sm:px-10 sm:py-14">
+          <div className="relative overflow-hidden rounded-[2rem] border-2 border-[var(--fren-blue)] bg-[var(--fren-blue)] px-6 py-11 shadow-[0_26px_38px_-20px_rgba(66,104,201,0.56)] sm:px-10 sm:py-14">
+            <div className="fren-tile-band absolute inset-x-0 top-0 h-3" />
             <div className="grid gap-8 lg:grid-cols-[0.86fr_1.14fr] lg:items-center">
               <div className="max-w-md">
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[rgba(248,242,232,0.82)]">
@@ -409,7 +401,10 @@ export default function FrennergyPage() {
                   we&apos;ll laugh about later.
                 </p>
               </div>
-              <div className="relative border border-[rgba(248,242,232,0.22)] bg-[rgba(248,242,232,0.98)] px-7 py-8 lg:ml-auto lg:max-w-xl">
+              <div className="relative border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)] px-7 py-8 lg:ml-auto lg:max-w-xl">
+                <div className="absolute -right-4 -top-4 rounded-full border-2 border-[var(--fren-blue)] bg-[var(--fren-yellow)] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[var(--fren-blue)]">
+                  Photo Drop
+                </div>
                 <p className="fren-kicker">Shared Album</p>
                 <p className="mt-4 font-serif text-3xl font-semibold tracking-[-0.04em] text-[var(--fren-ink)]">
                   Add your best shots.

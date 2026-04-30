@@ -1,20 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8f2e8;
-  --foreground: #3f67c8;
-  --fren-ivory: #f8f2e8;
-  --fren-blue-soft: #8fb3e7;
-  --fren-blue: #3f67c8;
-  --fren-pink: #e23d8a;
-  --fren-coral: #ff7b5e;
-  --fren-marigold: #f3b53d;
-  --fren-ink: #3f67c8;
-  --fren-copy: rgba(63, 103, 200, 0.9);
-  --fren-line: rgba(63, 103, 200, 0.2);
-  --fren-line-strong: rgba(63, 103, 200, 0.3);
-  --fren-shadow: 0 22px 46px -28px rgba(63, 103, 200, 0.2);
-  --fren-shadow-soft: 0 16px 30px -22px rgba(63, 103, 200, 0.12);
+  --background: #f8f1e7;
+  --foreground: #4268c9;
+  --fren-ivory: #f8f1e7;
+  --fren-blue-soft: #91b6e8;
+  --fren-blue: #4268c9;
+  --fren-pink: #e13b86;
+  --fren-coral: #ff765e;
+  --fren-yellow: #f4b73f;
+  --fren-marigold: #f4b73f;
+  --fren-ink: #4268c9;
+  --fren-copy: rgba(66, 104, 201, 0.92);
+  --fren-line: rgba(66, 104, 201, 0.24);
+  --fren-line-strong: rgba(66, 104, 201, 0.36);
+  --fren-shadow: 0 16px 22px -12px rgba(66, 104, 201, 0.24);
+  --fren-shadow-soft: 0 14px 18px -12px rgba(66, 104, 201, 0.16);
 }
 
 @theme inline {
@@ -32,57 +33,60 @@ body {
 }
 
 .fren-page {
-  background:
-    radial-gradient(circle at 92% 8%, rgba(226, 61, 138, 0.08), transparent 36%),
-    radial-gradient(circle at 8% 30%, rgba(243, 181, 61, 0.08), transparent 30%),
-    linear-gradient(180deg, rgba(248, 242, 232, 0.99), rgba(248, 242, 232, 1));
+  background: var(--fren-ivory);
   color: var(--fren-ink);
 }
 
 .fren-hero {
-  border: 1px solid var(--fren-line);
+  border: 2px solid var(--fren-blue);
   background:
-    linear-gradient(165deg, rgba(248, 242, 232, 0.99), rgba(143, 179, 231, 0.08) 52%, rgba(226, 61, 138, 0.05)),
-    linear-gradient(0deg, rgba(255, 255, 255, 0.2), transparent);
-  box-shadow: 0 38px 72px -44px rgba(63, 103, 200, 0.28);
+    linear-gradient(var(--fren-ivory), var(--fren-ivory)),
+    repeating-linear-gradient(
+      90deg,
+      rgba(66, 104, 201, 0.16) 0 10px,
+      rgba(248, 241, 231, 0.98) 10px 20px
+    );
+  box-shadow: 0 24px 34px -16px rgba(66, 104, 201, 0.28);
 }
 
 .fren-hero-stripe {
-  background:
-    linear-gradient(90deg, rgba(63, 103, 200, 0.12) 0, rgba(63, 103, 200, 0.12) 24%, transparent 24%, transparent 48%, rgba(63, 103, 200, 0.12) 48%, rgba(63, 103, 200, 0.12) 72%, transparent 72%, transparent 100%);
-  background-size: 160px 100%;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--fren-blue) 0 14px,
+    var(--fren-pink) 14px 28px,
+    var(--fren-coral) 28px 42px,
+    var(--fren-yellow) 42px 56px
+  );
 }
 
 .fren-section {
-  border: 1px solid var(--fren-line);
+  border: 2px solid var(--fren-blue);
   border-radius: 1.45rem;
   box-shadow: var(--fren-shadow);
 }
 
 .fren-section--ivory {
-  background: linear-gradient(180deg, rgba(248, 242, 232, 0.97), rgba(248, 242, 232, 0.94));
+  background: var(--fren-ivory);
 }
 
 .fren-section--blush {
-  background:
-    linear-gradient(145deg, rgba(248, 242, 232, 0.98), rgba(226, 61, 138, 0.07)),
-    rgba(248, 242, 232, 0.98);
+  background: rgba(225, 59, 134, 0.08);
 }
 
 .fren-section--blue {
-  background: linear-gradient(180deg, rgba(248, 242, 232, 0.98), rgba(143, 179, 231, 0.17));
+  background: rgba(145, 182, 232, 0.2);
 }
 
 .fren-section--warm {
-  background: linear-gradient(180deg, rgba(248, 242, 232, 0.98), rgba(255, 123, 94, 0.14));
+  background: rgba(255, 118, 94, 0.12);
 }
 
 .fren-stripe-band {
   background:
     repeating-linear-gradient(
       90deg,
-      rgba(143, 179, 231, 0.14) 0 12px,
-      rgba(248, 242, 232, 0.98) 12px 24px
+      rgba(66, 104, 201, 0.18) 0 12px,
+      rgba(248, 241, 231, 0.98) 12px 24px
     );
 }
 
@@ -121,36 +125,37 @@ body {
 }
 
 .fren-chip {
-  border: 1px solid rgba(63, 103, 200, 0.1);
-  background: rgba(248, 242, 232, 0.92);
+  border: 2px solid var(--fren-blue);
+  background: var(--fren-ivory);
   color: var(--fren-blue);
   box-shadow: var(--fren-shadow-soft);
 }
 
 .fren-chip--accent {
-  border-color: rgba(226, 61, 138, 0.2);
+  border-color: var(--fren-pink);
+  background: rgba(225, 59, 134, 0.14);
   color: var(--fren-pink);
 }
 
 .fren-button-primary {
-  border: 1px solid rgba(63, 103, 200, 0.02);
-  background: linear-gradient(140deg, rgba(63, 103, 200, 1), rgba(41, 79, 173, 0.94));
+  border: 2px solid var(--fren-blue);
+  background: var(--fren-blue);
   color: var(--fren-ivory);
-  box-shadow: 0 22px 34px -18px rgba(63, 103, 200, 0.48);
+  box-shadow: 0 18px 24px -14px rgba(66, 104, 201, 0.52);
 }
 
 .fren-button-secondary {
-  border: 1px solid rgba(63, 103, 200, 0.16);
-  background: rgba(248, 242, 232, 0.88);
+  border: 2px solid var(--fren-blue);
+  background: var(--fren-ivory);
   color: var(--fren-blue);
   box-shadow: var(--fren-shadow-soft);
 }
 
 .fren-button-warm {
-  border: 1px solid rgba(255, 123, 94, 0.08);
-  background: linear-gradient(125deg, rgba(226, 61, 138, 1), rgba(255, 123, 94, 0.94));
+  border: 2px solid var(--fren-blue);
+  background: var(--fren-coral);
   color: var(--fren-ivory);
-  box-shadow: 0 22px 34px -18px rgba(226, 61, 138, 0.5);
+  box-shadow: 0 18px 24px -14px rgba(225, 59, 134, 0.5);
 }
 
 .fren-title {
@@ -167,47 +172,12 @@ body {
   border-top: 1px solid var(--fren-line-strong);
 }
 
-.fren-hero-photo-wrap {
-  position: relative;
-  max-width: 24rem;
-}
-
-.fren-hero-photo-wrap::before {
-  content: "";
-  position: absolute;
-  inset: -0.65rem 0.8rem 0.65rem -0.8rem;
-  border-radius: 9rem 9rem 1.25rem 1.25rem;
-  background: linear-gradient(145deg, rgba(226, 61, 138, 0.22), rgba(63, 103, 200, 0.18));
-  z-index: 0;
-}
-
-.fren-hero-photo {
-  position: relative;
-  z-index: 1;
-  aspect-ratio: 4 / 5;
-  overflow: hidden;
-  border: 1px solid rgba(63, 103, 200, 0.18);
-  border-radius: 8rem 8rem 1.15rem 1.15rem;
-  box-shadow: 0 32px 52px -30px rgba(63, 103, 200, 0.35);
-}
-
-.fren-hero-photo::after {
-  content: "";
-  position: absolute;
-  inset: auto 0 0 0;
-  height: 28%;
-  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.18));
-}
-
-.fren-hero-art {
-  background:
-    radial-gradient(circle at 90% 14%, rgba(226, 61, 138, 0.2), transparent 38%),
-    radial-gradient(circle at 12% 88%, rgba(243, 181, 61, 0.22), transparent 36%),
-    linear-gradient(165deg, rgba(248, 242, 232, 0.98), rgba(143, 179, 231, 0.2));
-  box-shadow: 0 30px 54px -34px rgba(63, 103, 200, 0.26);
-}
-
-.fren-hero-art-stripe {
-  background:
-    linear-gradient(90deg, rgba(63, 103, 200, 0.8), rgba(226, 61, 138, 0.84), rgba(255, 123, 94, 0.8), rgba(243, 181, 61, 0.72));
+.fren-tile-band {
+  background: repeating-linear-gradient(
+    90deg,
+    var(--fren-blue) 0 10px,
+    var(--fren-pink) 10px 20px,
+    var(--fren-coral) 20px 30px,
+    var(--fren-yellow) 30px 40px
+  );
 }
