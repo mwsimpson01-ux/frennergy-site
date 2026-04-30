@@ -75,8 +75,8 @@ const dayPlans: DayPlan[] = [
         label: "Back to the house to get ready",
       },
       {
-        time: "Evening",
-        label: "Dinner",
+        time: "7:30 PM",
+        label: "Dinner at La O",
       },
       {
         time: "Night",
@@ -191,19 +191,21 @@ export default function FrennergyPage() {
                 <div className="absolute -left-4 -top-4 z-20 rounded-full border-2 border-[var(--fren-blue)] bg-[var(--fren-yellow)] px-4 py-2 text-[11px] font-bold uppercase tracking-[0.14em] text-[var(--fren-blue)] shadow-[0_14px_20px_-12px_rgba(66,104,201,0.5)]">
                   Chelsea Edition
                 </div>
-                <div className="absolute -right-3 top-14 z-0 h-full w-full rounded-[2.1rem] bg-[var(--fren-coral)]" />
-                <div className="absolute -right-6 -bottom-5 z-0 h-full w-full rounded-[2.1rem] border-2 border-dashed border-[var(--fren-blue)] bg-[var(--fren-pink)]" />
-                <div className="relative z-10 overflow-hidden rounded-[2.1rem] border-4 border-[var(--fren-blue)] bg-[var(--fren-ivory)] p-3 shadow-[0_30px_36px_-18px_rgba(66,104,201,0.5)]">
-                  <div className="fren-tile-band mb-3 h-3 rounded-full" />
-                  <div className="relative aspect-square overflow-hidden rounded-[1.4rem] border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)]">
+                <div className="absolute -right-1 top-10 z-0 h-full w-full rounded-[2.1rem] bg-[var(--fren-coral)]" />
+                <div className="absolute -right-4 -bottom-3 z-0 h-full w-full rounded-[2.1rem] border-2 border-dashed border-[var(--fren-blue)] bg-[var(--fren-pink)]" />
+                <div className="relative z-10 overflow-hidden rounded-[2.1rem] border-4 border-[var(--fren-blue)] bg-[var(--fren-ivory)] p-2 shadow-[0_30px_36px_-18px_rgba(66,104,201,0.5)]">
+                  <div className="fren-tile-band mb-2 h-3 rounded-full" />
+                  <div className="relative aspect-square overflow-hidden rounded-[1.2rem] border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)] p-1">
+                    <div className="relative h-full w-full overflow-hidden rounded-full border border-[var(--fren-blue)] bg-[var(--fren-ivory)]">
                     <Image
-                      src="/chelsea-hero-circle.png"
+                      src="/chelsea-hero-circle-v2.png"
                       alt="Chelsea in pink against a sparkly pink backdrop"
                       fill
                       className="object-cover object-center"
                       sizes="(min-width: 1024px) 42vw, 100vw"
                       priority
                     />
+                    </div>
                   </div>
                   <div className="mt-3 flex flex-wrap gap-2">
                     <span className="rounded-full border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[var(--fren-blue)]">
