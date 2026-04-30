@@ -204,38 +204,36 @@ export default function FrennergyPage() {
           </div>
         </section>
 
-        <section className="mt-8 grid gap-5 lg:grid-cols-[1.08fr_0.92fr] lg:items-stretch">
-          <div>
-            <Countdown targetDate={tripStart} label="Countdown to San Juan" />
-          </div>
+        <section className="mt-8">
+          <Countdown targetDate={tripStart} label="Countdown to San Juan" />
+        </section>
 
-          <section aria-labelledby="music-title">
-            <div className="relative flex h-full min-h-[100%] flex-col overflow-hidden rounded-[1.8rem] border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)] px-7 py-8 shadow-[0_24px_30px_-18px_rgba(225,59,134,0.45)]">
-              <div className="fren-tile-band absolute inset-x-0 top-0 h-3" />
-              <div className="absolute -left-7 top-14 h-24 w-24 rounded-2xl border-2 border-[var(--fren-blue)] bg-[var(--fren-coral)] opacity-70" />
-              <div className="absolute -right-8 bottom-6 h-28 w-28 rounded-full border-2 border-[var(--fren-blue)] bg-[var(--fren-yellow)] opacity-70" />
-              <div className="pointer-events-none absolute right-6 top-6 text-[rgba(255,123,94,0.7)]">
-                <IconHeadphones className="h-16 w-16 rotate-[8deg]" />
-              </div>
+        <section className="mt-5" aria-labelledby="music-title">
+          <div className="relative overflow-hidden rounded-[1.8rem] border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)] px-7 py-8 shadow-[0_24px_30px_-18px_rgba(225,59,134,0.45)] sm:px-9 sm:py-9">
+            <div className="fren-tile-band absolute inset-x-0 top-0 h-3" />
+            <div className="pointer-events-none absolute right-7 top-7 text-[rgba(255,123,94,0.9)]">
+              <IconHeadphones className="h-16 w-16 rotate-[8deg]" />
+            </div>
+            <div className="max-w-3xl">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--fren-pink)]">
                 Now Playing
               </p>
-              <h2 id="music-title" className="mt-3 max-w-sm font-serif text-[3rem] font-semibold leading-[0.9] tracking-[-0.04em] text-[var(--fren-ink)]">
+              <h2 id="music-title" className="mt-3 font-serif text-[3.15rem] font-semibold leading-[0.9] tracking-[-0.04em] text-[var(--fren-ink)] sm:text-[3.5rem]">
                 Weekend Playlist
               </h2>
-              <p className="fren-copy mt-4 max-w-md text-base leading-8">
+              <p className="fren-copy mt-4 max-w-2xl text-lg leading-8">
                 Add your favorites for the pregame, the ferry, and every getting-ready moment.
               </p>
               <a
                 href={playlistUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="fren-button-warm mt-7 inline-flex items-center justify-center self-start rounded-full px-8 py-4 text-base font-semibold uppercase tracking-[0.12em] transition duration-300 hover:-translate-y-1 hover:brightness-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--fren-coral)] focus-visible:ring-offset-2"
+                className="fren-button-warm mt-7 inline-flex items-center justify-center rounded-full px-8 py-4 text-base font-semibold uppercase tracking-[0.12em] transition duration-300 hover:-translate-y-1 hover:brightness-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--fren-coral)] focus-visible:ring-offset-2"
               >
                 Cue the Playlist
               </a>
             </div>
-          </section>
+          </div>
         </section>
 
         <section id="itinerary" className="mt-12 sm:mt-14" aria-labelledby="itinerary-title">
