@@ -68,29 +68,29 @@ export function Countdown({ targetDate, label = "Hot Girl Summer begins in..." }
   return (
     <section
       aria-label="Countdown to trip"
-      className="relative overflow-hidden rounded-[1.9rem] border-2 border-[var(--fren-blue)] bg-[var(--fren-blue)] shadow-[0_28px_34px_-16px_rgba(66,104,201,0.5)]"
+      className="relative overflow-hidden rounded-[1.6rem] border-2 border-[var(--fren-blue)] bg-[var(--fren-blue)] shadow-[0_28px_34px_-16px_rgba(66,104,201,0.5)] sm:rounded-[1.9rem]"
     >
       <div className="h-3 bg-[repeating-linear-gradient(90deg,var(--fren-yellow)_0_14px,var(--fren-coral)_14px_28px,var(--fren-pink)_28px_42px,var(--fren-ivory)_42px_56px)]" />
-      <div className="relative grid gap-6 px-5 py-6 sm:grid-cols-[0.84fr_1.16fr] sm:items-end sm:px-6 sm:py-8">
+      <div className="relative grid gap-4 px-4 py-4 sm:grid-cols-[0.84fr_1.16fr] sm:items-end sm:gap-6 sm:px-6 sm:py-8">
         <div>
           <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-[rgba(248,242,232,0.92)]">
             <Spark className="h-4 w-4 text-[var(--fren-yellow)]" />
             {label}
           </p>
-          <p className="mt-3 max-w-[14rem] font-serif text-[2.35rem] font-semibold leading-[0.92] tracking-[-0.05em] text-[var(--fren-ivory)] sm:text-[2.9rem]">
+          <p className="mt-2 max-w-[13rem] font-serif text-[2.05rem] font-semibold leading-[0.94] tracking-[-0.04em] text-[var(--fren-ivory)] sm:mt-3 sm:max-w-[14rem] sm:text-[2.9rem] sm:tracking-[-0.05em]">
             Weekend begins soon.
           </p>
         </div>
-        <div className="grid grid-cols-3 gap-2 border-t border-[rgba(248,242,232,0.3)] pt-4 sm:border-t-0 sm:pt-0">
+        <div className="grid grid-cols-3 gap-2 border-t border-[rgba(248,242,232,0.3)] pt-3 sm:border-t-0 sm:pt-0">
         {items.map((item) => (
           <div
             key={item.label}
-            className={`rounded-[0.95rem] border-2 border-[var(--fren-ivory)] bg-[rgba(248,242,232,0.16)] px-2 py-3 text-center sm:px-4 ${item.style}`}
+            className={`rounded-[0.85rem] border-2 border-[var(--fren-ivory)] bg-[rgba(248,242,232,0.16)] px-2 py-2.5 text-center sm:rounded-[0.95rem] sm:px-4 sm:py-3 ${item.style}`}
           >
-            <p className="font-serif text-[2.55rem] font-semibold leading-none tracking-[-0.05em] text-[var(--fren-ivory)] sm:text-[3.4rem]">
+            <p className="font-serif text-[2.15rem] font-semibold leading-none tracking-[-0.04em] text-[var(--fren-ivory)] sm:text-[3.4rem] sm:tracking-[-0.05em]">
               {item.value}
             </p>
-            <p className="mt-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-[rgba(248,242,232,0.92)] sm:text-xs">
+            <p className="mt-1.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-[rgba(248,242,232,0.92)] sm:mt-2 sm:text-xs sm:tracking-[0.16em]">
               {item.label}
             </p>
           </div>

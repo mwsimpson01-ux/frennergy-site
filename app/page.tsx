@@ -134,35 +134,35 @@ export default function FrennergyPage() {
 
   return (
     <main className="fren-page font-sans">
-      <div className="mx-auto w-full max-w-7xl px-4 pb-24 pt-6 sm:px-8 sm:pb-28 sm:pt-10">
-        <section className="fren-hero relative overflow-hidden rounded-[2.4rem] px-6 pb-8 pt-7 sm:px-10 sm:pb-10 sm:pt-9">
+      <div className="mx-auto w-full max-w-7xl px-4 pb-20 pt-4 sm:px-8 sm:pb-28 sm:pt-10">
+        <section className="fren-hero relative overflow-hidden rounded-[2.1rem] px-4 pb-6 pt-5 sm:rounded-[2.4rem] sm:px-10 sm:pb-10 sm:pt-9">
           <div className="fren-hero-stripe absolute inset-x-0 top-0 h-3" />
-          <div className="grid gap-8 lg:grid-cols-[1.03fr_0.97fr] lg:items-center">
+          <div className="grid gap-4 sm:gap-5 lg:grid-cols-[1.03fr_0.97fr] lg:items-center">
             <div className="order-2 max-w-[42rem] lg:order-1 lg:pr-6">
               <p className="fren-kicker">Chelsea&apos;s Bachelorette Weekend</p>
-              <p className="mt-5 inline-flex rounded-full border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)] px-4 py-1 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--fren-blue)]">
+              <p className="mt-3 inline-flex rounded-full border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)] px-3.5 py-1 text-[13px] font-semibold uppercase tracking-[0.13em] text-[var(--fren-blue)] sm:mt-5 sm:px-4 sm:text-sm sm:tracking-[0.16em]">
                 San Juan, Puerto Rico
               </p>
-              <h1 className="mt-5 max-w-[10ch] font-serif text-[4rem] font-semibold leading-[0.84] tracking-[-0.055em] text-[var(--fren-ink)] sm:text-[5.2rem] lg:text-[6.1rem]">
+              <h1 className="mt-3 max-w-[9.5ch] font-serif text-[3.35rem] font-semibold leading-[0.86] tracking-[-0.05em] text-[var(--fren-ink)] sm:mt-5 sm:max-w-[10ch] sm:text-[5.2rem] lg:text-[6.1rem]">
                 Hot Girl
                 <br />
                 Frennergy
               </h1>
-              <p className="fren-copy mt-6 max-w-2xl text-[1.02rem] leading-8 sm:text-[1.18rem]">
+              <p className="fren-copy mt-4 max-w-xl text-[1rem] leading-7 sm:mt-6 sm:max-w-2xl sm:text-[1.18rem] sm:leading-8">
                 A San Juan weekend for Chelsea — rooftop dinners, pool days, spritzes, and one
                 very well-dressed itinerary.
               </p>
 
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-6 flex flex-col gap-2.5 sm:mt-8 sm:flex-row sm:gap-3">
                 <a
                   href="#itinerary"
-                  className="fren-button-primary inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-[0.12em] transition duration-300 hover:-translate-y-1 hover:brightness-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--fren-blue)] focus-visible:ring-offset-2"
+                  className="fren-button-primary inline-flex items-center justify-center rounded-full px-6 py-3 text-base font-semibold uppercase tracking-[0.11em] transition duration-300 hover:-translate-y-1 hover:brightness-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--fren-blue)] focus-visible:ring-offset-2 sm:text-sm sm:tracking-[0.12em]"
                 >
                   View Itinerary
                 </a>
                 <a
                   href="#details"
-                  className="fren-button-secondary inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-[0.12em] transition duration-300 hover:-translate-y-1 hover:bg-[rgba(248,242,232,1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--fren-blue)] focus-visible:ring-offset-2"
+                  className="fren-button-secondary inline-flex items-center justify-center rounded-full px-6 py-3 text-base font-semibold uppercase tracking-[0.11em] transition duration-300 hover:-translate-y-1 hover:bg-[rgba(248,242,232,1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--fren-blue)] focus-visible:ring-offset-2 sm:text-sm sm:tracking-[0.12em]"
                 >
                   Trip Details
                 </a>
@@ -170,15 +170,15 @@ export default function FrennergyPage() {
             </div>
 
             <aside className="order-1 lg:order-2 lg:pt-2">
-              <div className="relative mx-auto max-w-[30rem] lg:ml-auto">
-                <div className="absolute -left-4 -top-4 z-20 rounded-full border-2 border-[var(--fren-blue)] bg-[var(--fren-yellow)] px-4 py-2 text-[11px] font-bold uppercase tracking-[0.14em] text-[var(--fren-blue)] shadow-[0_14px_20px_-12px_rgba(66,104,201,0.5)]">
+              <div className="relative mx-auto max-w-[26.5rem] lg:ml-auto lg:max-w-[30rem]">
+                <div className="absolute -left-2 -top-3 z-20 rounded-full border-2 border-[var(--fren-blue)] bg-[var(--fren-yellow)] px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.12em] text-[var(--fren-blue)] shadow-[0_14px_20px_-12px_rgba(66,104,201,0.5)] sm:-left-4 sm:-top-4 sm:px-4 sm:py-2 sm:text-[11px] sm:tracking-[0.14em]">
                   Chelsea Edition
                 </div>
-                <div className="absolute -right-1 top-12 z-0 h-full w-full rounded-[2.1rem] bg-[var(--fren-coral)]" />
-                <div className="absolute -right-3 -bottom-2 z-0 h-full w-full rounded-[2.1rem] border-2 border-dashed border-[var(--fren-blue)] bg-[var(--fren-pink)]" />
-                <div className="relative z-10 overflow-hidden rounded-[2.1rem] border-4 border-[var(--fren-blue)] bg-[var(--fren-ivory)] p-2 shadow-[0_30px_36px_-18px_rgba(66,104,201,0.5)]">
+                <div className="absolute -right-1 top-8 z-0 h-full w-full rounded-[1.7rem] bg-[var(--fren-coral)] sm:top-12 sm:rounded-[2.1rem]" />
+                <div className="absolute -right-2 -bottom-1 z-0 h-full w-full rounded-[1.7rem] border-2 border-dashed border-[var(--fren-blue)] bg-[var(--fren-pink)] sm:-right-3 sm:-bottom-2 sm:rounded-[2.1rem]" />
+                <div className="relative z-10 overflow-hidden rounded-[1.7rem] border-4 border-[var(--fren-blue)] bg-[var(--fren-ivory)] p-1.5 shadow-[0_30px_36px_-18px_rgba(66,104,201,0.5)] sm:rounded-[2.1rem] sm:p-2">
                   <div className="fren-tile-band mb-2 h-3 rounded-full" />
-                  <div className="relative aspect-square overflow-hidden rounded-[1.2rem] border-2 border-[var(--fren-blue)] bg-[#f8d5de] p-1">
+                  <div className="relative aspect-square overflow-hidden rounded-[1rem] border-2 border-[var(--fren-blue)] bg-[#f8d5de] p-1 sm:rounded-[1.2rem]">
                     <div className="relative h-full w-full overflow-hidden rounded-full border border-[var(--fren-blue)] bg-[var(--fren-ivory)]">
                       <Image
                         src="/chelsea-hero-circle-v2.png"
@@ -190,11 +190,11 @@ export default function FrennergyPage() {
                       />
                     </div>
                   </div>
-                  <div className="mt-3 flex flex-wrap gap-2">
-                    <span className="rounded-full border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[var(--fren-blue)]">
+                  <div className="mt-2.5 flex flex-wrap gap-1.5 sm:mt-3 sm:gap-2">
+                    <span className="rounded-full border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)] px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.12em] text-[var(--fren-blue)] sm:px-3 sm:text-[10px] sm:tracking-[0.14em]">
                       San Juan Weekend
                     </span>
-                    <span className="rounded-full border-2 border-[var(--fren-blue)] bg-[var(--fren-yellow)] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[var(--fren-blue)]">
+                    <span className="rounded-full border-2 border-[var(--fren-blue)] bg-[var(--fren-yellow)] px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.12em] text-[var(--fren-blue)] sm:px-3 sm:text-[10px] sm:tracking-[0.14em]">
                       May 22-24
                     </span>
                   </div>
@@ -204,31 +204,31 @@ export default function FrennergyPage() {
           </div>
         </section>
 
-        <section className="mt-8">
+        <section className="mt-6 sm:mt-8">
           <Countdown targetDate={tripStart} label="Countdown to San Juan" />
         </section>
 
-        <section className="mt-5" aria-labelledby="music-title">
-          <div className="relative overflow-hidden rounded-[1.8rem] border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)] px-7 py-8 shadow-[0_24px_30px_-18px_rgba(225,59,134,0.45)] sm:px-9 sm:py-9">
+        <section className="mt-4 sm:mt-5" aria-labelledby="music-title">
+          <div className="relative overflow-hidden rounded-[1.6rem] border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)] px-5 py-6 shadow-[0_24px_30px_-18px_rgba(225,59,134,0.45)] sm:rounded-[1.8rem] sm:px-9 sm:py-9">
             <div className="fren-tile-band absolute inset-x-0 top-0 h-3" />
-            <div className="pointer-events-none absolute right-7 top-7 text-[rgba(255,123,94,0.9)]">
-              <IconHeadphones className="h-16 w-16 rotate-[8deg]" />
+            <div className="pointer-events-none absolute right-4 top-4 text-[rgba(255,123,94,0.9)] sm:right-7 sm:top-7">
+              <IconHeadphones className="h-12 w-12 rotate-[8deg] sm:h-16 sm:w-16" />
             </div>
-            <div className="max-w-3xl">
+            <div className="max-w-3xl pr-10 sm:pr-0">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--fren-pink)]">
                 Now Playing
               </p>
-              <h2 id="music-title" className="mt-3 font-serif text-[3.15rem] font-semibold leading-[0.9] tracking-[-0.04em] text-[var(--fren-ink)] sm:text-[3.5rem]">
+              <h2 id="music-title" className="mt-2 font-serif text-[2.55rem] font-semibold leading-[0.9] tracking-[-0.04em] text-[var(--fren-ink)] sm:mt-3 sm:text-[3.5rem]">
                 Weekend Playlist
               </h2>
-              <p className="fren-copy mt-4 max-w-2xl text-lg leading-8">
+              <p className="fren-copy mt-3 max-w-[20rem] text-[1.03rem] leading-7 sm:mt-4 sm:max-w-2xl sm:text-lg sm:leading-8">
                 Add your favorites for the pregame, the ferry, and every getting-ready moment.
               </p>
               <a
                 href={playlistUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="fren-button-warm mt-7 inline-flex items-center justify-center rounded-full px-8 py-4 text-base font-semibold uppercase tracking-[0.12em] transition duration-300 hover:-translate-y-1 hover:brightness-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--fren-coral)] focus-visible:ring-offset-2"
+                className="fren-button-warm mt-5 inline-flex items-center justify-center rounded-full px-7 py-3.5 text-[1.05rem] font-semibold uppercase tracking-[0.11em] transition duration-300 hover:-translate-y-1 hover:brightness-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--fren-coral)] focus-visible:ring-offset-2 sm:mt-7 sm:px-8 sm:py-4 sm:text-base sm:tracking-[0.12em]"
               >
                 Cue the Playlist
               </a>
@@ -236,24 +236,24 @@ export default function FrennergyPage() {
           </div>
         </section>
 
-        <section id="itinerary" className="mt-12 sm:mt-14" aria-labelledby="itinerary-title">
+        <section id="itinerary" className="mt-10 sm:mt-14" aria-labelledby="itinerary-title">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
               <p className="fren-kicker">Day-by-Day Guide</p>
-              <h2 id="itinerary-title" className="mt-3 font-serif text-[2.9rem] font-semibold tracking-[-0.04em] text-[var(--fren-ink)] sm:text-[3.7rem]">
+              <h2 id="itinerary-title" className="mt-2 font-serif text-[2.45rem] font-semibold tracking-[-0.04em] text-[var(--fren-ink)] sm:mt-3 sm:text-[3.7rem]">
                 Day-by-Day Guide
               </h2>
             </div>
-            <p className="fren-copy max-w-md text-sm leading-7 sm:text-base sm:text-right">
+            <p className="fren-copy max-w-md text-base leading-7 sm:text-base sm:text-right">
               Three days, three moods, one very cute agenda.
             </p>
           </div>
 
-          <div className="mt-8 grid gap-4 sm:gap-5 lg:grid-cols-3">
+          <div className="mt-6 grid gap-3 sm:mt-8 sm:gap-5 lg:grid-cols-3">
             {[fridayPlan, saturdayPlan, sundayPlan].map((plan, planIndex) => (
               <article
                 key={plan.day}
-                className={`fren-section relative overflow-hidden border-2 px-4 py-5 sm:px-6 sm:py-7 ${
+                className={`fren-section relative overflow-hidden border-2 px-3.5 py-4 sm:px-6 sm:py-7 ${
                   planIndex === 0
                     ? "fren-section--warm"
                     : planIndex === 1
@@ -271,19 +271,19 @@ export default function FrennergyPage() {
                   }`}
                 />
                 <p className="fren-kicker">{plan.day}</p>
-                <h3 className="mt-2 font-serif text-[1.9rem] font-semibold tracking-[-0.04em] text-[var(--fren-ink)] sm:text-[2.3rem]">
+                <h3 className="mt-1.5 font-serif text-[1.75rem] font-semibold tracking-[-0.04em] text-[var(--fren-ink)] sm:mt-2 sm:text-[2.3rem]">
                   {plan.theme}
                 </h3>
-                <div className="mt-4 space-y-2 sm:mt-6 sm:space-y-2.5">
+                <div className="mt-3 space-y-1.5 sm:mt-6 sm:space-y-2.5">
                   {plan.events.map((event) => (
                     <article
                       key={`${plan.day}-${event.time}`}
-                      className="grid gap-1.5 rounded-[0.95rem] border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)] px-3.5 py-3 sm:grid-cols-[118px_1fr] sm:items-center sm:gap-2 sm:px-4 sm:py-3.5"
+                      className="grid gap-1 rounded-[0.9rem] border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)] px-3 py-2.5 sm:grid-cols-[118px_1fr] sm:items-center sm:gap-2 sm:px-4 sm:py-3.5"
                     >
-                      <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[var(--fren-blue)] sm:text-[11px] sm:tracking-[0.16em]">
+                      <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--fren-blue)] sm:text-[11px] sm:tracking-[0.16em]">
                         {event.time}
                       </p>
-                      <h4 className="text-[0.95rem] font-semibold leading-6 text-[var(--fren-ink)] sm:text-base">
+                      <h4 className="text-[0.92rem] font-semibold leading-6 text-[var(--fren-ink)] sm:text-base">
                         {event.label}
                       </h4>
                     </article>
@@ -294,28 +294,28 @@ export default function FrennergyPage() {
           </div>
         </section>
 
-        <section id="details" className="mt-16">
-          <div className="fren-section fren-section--ivory border-2 px-6 py-8 sm:px-8">
-            <div className="fren-tile-band mb-5 h-2 rounded-full" />
+        <section id="details" className="mt-12 sm:mt-16">
+          <div className="fren-section fren-section--ivory border-2 px-4 py-6 sm:px-8 sm:py-8">
+            <div className="fren-tile-band mb-4 h-2 rounded-full sm:mb-5" />
             <p className="fren-kicker">Trip Details</p>
-            <h2 className="mt-4 font-serif text-[2.9rem] font-semibold tracking-[-0.04em] text-[var(--fren-ink)] sm:text-[3.7rem]">
+            <h2 className="mt-2 font-serif text-[2.45rem] font-semibold tracking-[-0.04em] text-[var(--fren-ink)] sm:mt-4 sm:text-[3.7rem]">
               Trip Details
             </h2>
-            <p className="fren-copy mt-5 max-w-lg text-sm leading-7 sm:text-base">
+            <p className="fren-copy mt-3 max-w-lg text-base leading-7 sm:mt-5 sm:text-base">
               The essentials: where we&apos;re staying, how we&apos;re getting around, and what to
               know before the first spritz.
             </p>
-            <div className="mt-5 space-y-2.5">
+            <div className="mt-4 space-y-2 sm:mt-5 sm:space-y-2.5">
               {tripDetails.map((detail) => (
                 <div
                   key={detail.label}
-                  className="grid gap-2 rounded-[0.95rem] border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)] px-4 py-2.5 sm:grid-cols-[150px_1fr] sm:items-center"
+                  className="grid gap-1.5 rounded-[0.9rem] border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)] px-3 py-2.5 sm:grid-cols-[150px_1fr] sm:items-center sm:px-4"
                 >
                   <p className="fren-meta flex items-center gap-2 text-[var(--fren-pink)]">
                     <span className="h-1.5 w-1.5 rounded-full bg-[var(--fren-coral)]" />
                     {detail.label}
                   </p>
-                  <p className="fren-copy text-sm leading-7 sm:text-base">{detail.value}</p>
+                  <p className="fren-copy text-[1.02rem] leading-7 sm:text-base">{detail.value}</p>
                 </div>
               ))}
             </div>
