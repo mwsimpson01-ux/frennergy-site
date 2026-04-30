@@ -151,7 +151,7 @@ export default function FrennergyPage() {
 
   return (
     <main className="fren-page font-sans">
-      <div className="mx-auto w-full max-w-7xl px-4 pb-24 pt-6 sm:px-8 sm:pb-32 sm:pt-10">
+      <div className="mx-auto w-full max-w-7xl px-4 pb-24 pt-6 sm:px-8 sm:pb-28 sm:pt-10">
         <section className="fren-hero relative overflow-hidden rounded-[2.4rem] px-6 pb-8 pt-7 sm:px-10 sm:pb-10 sm:pt-9">
           <div className="fren-hero-stripe absolute inset-x-0 top-0 h-3" />
           <div className="grid gap-8 lg:grid-cols-[1.03fr_0.97fr] lg:items-center">
@@ -170,7 +170,7 @@ export default function FrennergyPage() {
                 very well-dressed itinerary.
               </p>
 
-              <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
                   href="#itinerary"
                   className="fren-button-primary inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-[0.12em] transition duration-300 hover:-translate-y-1 hover:brightness-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--fren-blue)] focus-visible:ring-offset-2"
@@ -186,25 +186,25 @@ export default function FrennergyPage() {
               </div>
             </div>
 
-            <aside className="order-1 lg:order-2">
+            <aside className="order-1 lg:order-2 lg:pt-2">
               <div className="relative mx-auto max-w-[30rem] lg:ml-auto">
                 <div className="absolute -left-4 -top-4 z-20 rounded-full border-2 border-[var(--fren-blue)] bg-[var(--fren-yellow)] px-4 py-2 text-[11px] font-bold uppercase tracking-[0.14em] text-[var(--fren-blue)] shadow-[0_14px_20px_-12px_rgba(66,104,201,0.5)]">
                   Chelsea Edition
                 </div>
-                <div className="absolute -right-1 top-10 z-0 h-full w-full rounded-[2.1rem] bg-[var(--fren-coral)]" />
-                <div className="absolute -right-4 -bottom-3 z-0 h-full w-full rounded-[2.1rem] border-2 border-dashed border-[var(--fren-blue)] bg-[var(--fren-pink)]" />
+                <div className="absolute -right-1 top-12 z-0 h-full w-full rounded-[2.1rem] bg-[var(--fren-coral)]" />
+                <div className="absolute -right-3 -bottom-2 z-0 h-full w-full rounded-[2.1rem] border-2 border-dashed border-[var(--fren-blue)] bg-[var(--fren-pink)]" />
                 <div className="relative z-10 overflow-hidden rounded-[2.1rem] border-4 border-[var(--fren-blue)] bg-[var(--fren-ivory)] p-2 shadow-[0_30px_36px_-18px_rgba(66,104,201,0.5)]">
                   <div className="fren-tile-band mb-2 h-3 rounded-full" />
-                  <div className="relative aspect-square overflow-hidden rounded-[1.2rem] border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)] p-1">
+                  <div className="relative aspect-square overflow-hidden rounded-[1.2rem] border-2 border-[var(--fren-blue)] bg-[#f8d5de] p-1">
                     <div className="relative h-full w-full overflow-hidden rounded-full border border-[var(--fren-blue)] bg-[var(--fren-ivory)]">
-                    <Image
-                      src="/chelsea-hero-circle-v2.png"
-                      alt="Chelsea in pink against a sparkly pink backdrop"
-                      fill
-                      className="object-cover object-center"
-                      sizes="(min-width: 1024px) 42vw, 100vw"
-                      priority
-                    />
+                      <Image
+                        src="/chelsea-hero-circle-v2.png"
+                        alt="Chelsea in pink against a sparkly pink backdrop"
+                        fill
+                        className="object-cover object-center"
+                        sizes="(min-width: 1024px) 42vw, 100vw"
+                        priority
+                      />
                     </div>
                   </div>
                   <div className="mt-3 flex flex-wrap gap-2">
@@ -235,7 +235,7 @@ export default function FrennergyPage() {
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--fren-pink)]">
                 Now Playing
               </p>
-              <h2 id="music-title" className="mt-4 max-w-xs font-serif text-[2.55rem] font-semibold leading-[0.9] tracking-[-0.04em] text-[var(--fren-ink)]">
+              <h2 id="music-title" className="mt-3 max-w-sm font-serif text-[2.75rem] font-semibold leading-[0.9] tracking-[-0.04em] text-[var(--fren-ink)]">
                 Weekend Playlist
               </h2>
               <p className="fren-copy mt-4 max-w-sm text-sm leading-7">
@@ -245,7 +245,7 @@ export default function FrennergyPage() {
                 href={playlistUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="fren-button-warm mt-8 inline-flex items-center justify-center self-start rounded-full px-7 py-3.5 text-sm font-semibold uppercase tracking-[0.12em] transition duration-300 hover:-translate-y-1 hover:brightness-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--fren-coral)] focus-visible:ring-offset-2"
+                className="fren-button-warm mt-6 inline-flex items-center justify-center self-start rounded-full px-7 py-3.5 text-sm font-semibold uppercase tracking-[0.12em] transition duration-300 hover:-translate-y-1 hover:brightness-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--fren-coral)] focus-visible:ring-offset-2"
               >
                 Cue the Playlist
               </a>
@@ -267,7 +267,7 @@ export default function FrennergyPage() {
           </p>
         </section>
 
-        <section className="mt-16 grid gap-8 lg:grid-cols-[0.72fr_1.28fr]" aria-labelledby="overview-title">
+        <section className="mt-14 grid gap-8 lg:grid-cols-[0.72fr_1.28fr]" aria-labelledby="overview-title">
           <div className="lg:pr-8">
             <p className="fren-kicker">Weekend Overview</p>
             <h2 id="overview-title" className="mt-4 font-serif text-[2.9rem] font-semibold tracking-[-0.04em] text-[var(--fren-ink)] sm:text-[3.7rem]">
@@ -280,7 +280,7 @@ export default function FrennergyPage() {
               Chelsea.
             </p>
           </div>
-          <div className="fren-section fren-section--blush relative grid gap-6 overflow-hidden border-2 px-6 py-8 sm:px-8">
+          <div className="fren-section fren-section--blush relative grid gap-5 overflow-hidden border-2 px-6 py-7 sm:px-8">
             <div className="fren-tile-band absolute inset-x-0 top-0 h-2" />
             <div className="grid gap-4 sm:grid-cols-[1.15fr_0.85fr] sm:items-start">
               <p className="fren-copy max-w-xl text-base leading-8">
@@ -294,8 +294,8 @@ export default function FrennergyPage() {
                 </p>
               </div>
             </div>
-            <div className="fren-editorial-rule pt-5">
-              <div className="flex flex-wrap gap-2.5 text-[11px] font-semibold uppercase tracking-[0.13em] sm:text-xs">
+            <div className="fren-editorial-rule pt-4">
+              <div className="flex flex-wrap gap-2 text-[11px] font-semibold uppercase tracking-[0.13em] sm:text-xs">
                 {overviewPills.map((pill, index) => (
                   <span
                     key={pill}
@@ -313,7 +313,7 @@ export default function FrennergyPage() {
           </div>
         </section>
 
-        <section id="itinerary" className="mt-18 sm:mt-20" aria-labelledby="itinerary-title">
+        <section id="itinerary" className="mt-16 sm:mt-18" aria-labelledby="itinerary-title">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
               <p className="fren-kicker">Day-by-Day Guide</p>
@@ -338,6 +338,15 @@ export default function FrennergyPage() {
                       : "fren-section--blue"
                 }`}
               >
+                <div
+                  className={`-mx-4 -mt-5 mb-4 h-2 rounded-t-[1.2rem] sm:-mx-6 sm:-mt-7 ${
+                    planIndex === 0
+                      ? "bg-[linear-gradient(90deg,var(--fren-coral),var(--fren-pink))]"
+                      : planIndex === 1
+                        ? "bg-[linear-gradient(90deg,var(--fren-pink),var(--fren-coral))]"
+                        : "bg-[linear-gradient(90deg,var(--fren-blue-soft),var(--fren-yellow))]"
+                  }`}
+                />
                 <p className="fren-kicker">{plan.day}</p>
                 <h3 className="mt-2 font-serif text-[1.9rem] font-semibold tracking-[-0.04em] text-[var(--fren-ink)] sm:text-[2.3rem]">
                   {plan.theme}
@@ -362,7 +371,7 @@ export default function FrennergyPage() {
           </div>
         </section>
 
-        <section id="details" className="mt-18">
+        <section id="details" className="mt-16">
           <div className="fren-section fren-section--ivory border-2 px-6 py-8 sm:px-8">
             <div className="fren-tile-band mb-5 h-2 rounded-full" />
             <p className="fren-kicker">Trip Details</p>
@@ -373,13 +382,16 @@ export default function FrennergyPage() {
               The essentials: where we&apos;re staying, how we&apos;re getting around, and what to
               know before the first spritz.
             </p>
-            <div className="mt-6 space-y-3">
+            <div className="mt-5 space-y-2.5">
               {tripDetails.map((detail) => (
                 <div
                   key={detail.label}
-                  className="grid gap-2 rounded-[1rem] border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)] px-4 py-3 sm:grid-cols-[150px_1fr] sm:items-center"
+                  className="grid gap-2 rounded-[0.95rem] border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)] px-4 py-2.5 sm:grid-cols-[150px_1fr] sm:items-center"
                 >
-                  <p className="fren-meta text-[var(--fren-pink)]">{detail.label}</p>
+                  <p className="fren-meta flex items-center gap-2 text-[var(--fren-pink)]">
+                    <span className="h-1.5 w-1.5 rounded-full bg-[var(--fren-coral)]" />
+                    {detail.label}
+                  </p>
                   <p className="fren-copy text-sm leading-7 sm:text-base">{detail.value}</p>
                 </div>
               ))}
@@ -387,11 +399,14 @@ export default function FrennergyPage() {
           </div>
         </section>
 
-        <section id="photos" className="mt-20" aria-labelledby="photos-title">
+        <section id="photos" className="mt-16" aria-labelledby="photos-title">
           <div className="relative overflow-hidden rounded-[2rem] border-2 border-[var(--fren-blue)] bg-[var(--fren-blue)] px-6 py-11 shadow-[0_26px_38px_-20px_rgba(66,104,201,0.56)] sm:px-10 sm:py-14">
             <div className="fren-tile-band absolute inset-x-0 top-0 h-3" />
             <div className="grid gap-8 lg:grid-cols-[0.86fr_1.14fr] lg:items-center">
-              <div className="max-w-md">
+              <div className="relative max-w-md">
+                <div className="pointer-events-none absolute -left-3 top-24 h-12 w-12 rounded-lg border-2 border-[var(--fren-ivory)] bg-[rgba(255,255,255,0.08)]" />
+                <div className="pointer-events-none absolute left-10 top-36 h-10 w-10 rounded-lg border-2 border-[var(--fren-yellow)] bg-[rgba(255,255,255,0.08)]" />
+                <div className="pointer-events-none absolute left-24 top-20 h-8 w-8 rounded-lg border-2 border-[var(--fren-coral)] bg-[rgba(255,255,255,0.08)]" />
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[rgba(248,242,232,0.82)]">
                   Shared Album
                 </p>
@@ -403,7 +418,7 @@ export default function FrennergyPage() {
                   we&apos;ll laugh about later.
                 </p>
               </div>
-              <div className="relative border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)] px-7 py-8 lg:ml-auto lg:max-w-xl">
+              <div className="relative -mt-3 border-2 border-[var(--fren-blue)] bg-[var(--fren-ivory)] px-7 py-8 lg:ml-auto lg:max-w-xl">
                 <div className="absolute -right-4 -top-4 rounded-full border-2 border-[var(--fren-blue)] bg-[var(--fren-yellow)] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[var(--fren-blue)]">
                   Photo Drop
                 </div>
@@ -426,7 +441,7 @@ export default function FrennergyPage() {
           </div>
         </section>
 
-        <footer className="mt-20 pb-4">
+        <footer className="mt-16 pb-4">
           <div className="fren-editorial-rule pt-8">
             <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
               <div>
