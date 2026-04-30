@@ -145,14 +145,20 @@ export default function FrennergyPage() {
               <p className="mt-3 inline-flex rounded-full border border-[var(--fren-blue)]/60 bg-[var(--fren-ivory)] px-3.5 py-1 text-[13px] font-semibold uppercase tracking-[0.13em] text-[var(--fren-blue)] sm:mt-4 sm:px-4 sm:text-sm sm:tracking-[0.16em]">
                 San Juan, Puerto Rico
               </p>
-              <h1 className="mt-4 max-w-[9.2ch] leading-[0.8] sm:mt-5 sm:max-w-[10ch]">
-                <span className="block font-sans text-[1.2rem] font-extrabold uppercase tracking-[0.24em] text-[var(--fren-pink)] sm:text-[1.42rem]">
-                  Hot Girl
-                </span>
-                <span className="relative block font-serif text-[4.15rem] font-semibold tracking-[-0.058em] text-[var(--fren-blue)] sm:text-[6.35rem] lg:text-[7.05rem]">
-                  Frennergy
-                  <span className="pointer-events-none absolute -left-1 top-3 -z-10 h-[86%] w-[104%] rounded-[1.2rem] bg-[rgba(225,59,134,0.12)] sm:top-4" />
-                  <span className="pointer-events-none absolute -bottom-2 left-1/2 h-2.5 w-[76%] -translate-x-1/2 rounded-full bg-[rgba(255,118,94,0.44)] blur-[1px]" />
+              <h1 className="mt-4 sm:mt-5">
+                <span className="sr-only">Hot Girl Frennergy</span>
+                <span className="relative block w-fit">
+                  <span className="mb-1 flex items-end gap-2 pl-1 sm:mb-2 sm:gap-2.5">
+                    <span className="-rotate-[6deg] rounded-[0.7rem] bg-[var(--fren-pink)] px-3 py-1 font-sans text-[2rem] font-black uppercase leading-none tracking-[0.12em] text-[var(--fren-ivory)] shadow-[0_8px_14px_-10px_rgba(225,59,134,0.8)] sm:px-4 sm:py-1.5 sm:text-[2.35rem]">
+                      Hot
+                    </span>
+                    <span className="rotate-[3deg] rounded-[0.7rem] bg-[var(--fren-yellow)] px-3 py-1 font-sans text-[2rem] font-black uppercase leading-none tracking-[0.12em] text-[var(--fren-ivory)] shadow-[0_8px_14px_-10px_rgba(244,183,63,0.8)] sm:px-4 sm:py-1.5 sm:text-[2.35rem]">
+                      Girl
+                    </span>
+                  </span>
+                  <span className="relative block font-serif text-[4.45rem] font-semibold leading-[0.88] tracking-[-0.065em] text-[var(--fren-blue)] [text-shadow:0_2px_0_#f8f1e7,2px_0_0_#f8f1e7,-2px_0_0_#f8f1e7,0_-2px_0_#f8f1e7,0_7px_0_rgba(255,118,94,0.34)] sm:text-[6.65rem] lg:text-[7.2rem]">
+                    Frennergy
+                  </span>
                 </span>
               </h1>
               <p className="fren-copy mt-4 max-w-xl text-[1rem] leading-7 sm:mt-6 sm:max-w-2xl sm:text-[1.13rem] sm:leading-8">
@@ -171,7 +177,7 @@ export default function FrennergyPage() {
                   href="#details"
                   className="fren-button-secondary inline-flex items-center justify-center rounded-full px-6 py-3 text-base font-semibold uppercase tracking-[0.11em] transition duration-300 hover:-translate-y-1 hover:bg-[rgba(248,242,232,1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--fren-blue)] focus-visible:ring-offset-2 sm:text-sm sm:tracking-[0.12em]"
                 >
-                  Trip Details
+                  Details
                 </a>
               </div>
             </div>
@@ -255,9 +261,6 @@ export default function FrennergyPage() {
                 Agenda
               </h2>
             </div>
-            <p className="fren-copy max-w-md text-base leading-7 sm:text-base sm:text-right">
-              Three days, three moods, one very cute agenda.
-            </p>
           </div>
 
           <div className="mt-6 grid gap-3 sm:mt-8 sm:gap-6 lg:grid-cols-3">
@@ -353,7 +356,7 @@ export default function FrennergyPage() {
                   Hot Girl Frennergy
                 </p>
                 <p className="fren-copy mt-2 text-sm">
-                  San Juan, Puerto Rico. May 22 to May 24. Best dressed only.
+                  San Juan, Puerto Rico. May 22 to May 24.
                 </p>
               </div>
               <div className="sm:text-right">
