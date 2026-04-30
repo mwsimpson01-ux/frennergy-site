@@ -142,16 +142,16 @@ export default function FrennergyPage() {
           <div className="grid gap-6 sm:gap-8 lg:grid-cols-[0.96fr_1.04fr] lg:items-center">
             <div className="order-1 max-w-[42rem] lg:pr-6">
               <p className="fren-kicker">Chelsea&apos;s Bachelorette Weekend</p>
-              <div className="mt-3 flex flex-wrap items-center gap-2 sm:mt-4">
-                <p className="inline-flex rounded-full border border-[var(--fren-blue)]/60 bg-[var(--fren-ivory)] px-3.5 py-1 text-[13px] font-semibold uppercase tracking-[0.13em] text-[var(--fren-blue)] sm:px-4 sm:text-sm sm:tracking-[0.16em]">
+              <div className="mt-2 flex flex-wrap items-center gap-1.5 sm:mt-4 sm:gap-2">
+                <p className="inline-flex rounded-full border border-[var(--fren-blue)]/55 bg-[var(--fren-ivory)] px-3 py-0.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--fren-blue)] sm:px-4 sm:py-1 sm:text-sm sm:tracking-[0.16em]">
                   San Juan, Puerto Rico
                 </p>
-                <p className="inline-flex rounded-full bg-[var(--fren-yellow)] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-[var(--fren-blue)] sm:hidden">
+                <p className="inline-flex rounded-full bg-[var(--fren-yellow)] px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-[0.13em] text-[var(--fren-blue)] sm:hidden">
                   May 22-24
                 </p>
               </div>
 
-              <div className="relative mt-3 sm:mt-5">
+              <div className="relative mt-4 sm:mt-5">
                 <h1 className="relative z-10">
                   <span className="sr-only">Hot Girl Frennergy</span>
                   <span className="relative block w-fit">
@@ -169,7 +169,7 @@ export default function FrennergyPage() {
                   </span>
                 </h1>
 
-                <div className="relative z-0 -mt-4 mr-0 ml-auto w-[78%] max-w-[16rem] sm:hidden">
+                <div className="relative z-0 -mt-2 mr-0 ml-auto w-[72%] max-w-[14.75rem] translate-y-1 sm:hidden">
                   <div className="relative aspect-square overflow-hidden rounded-full border-2 border-[var(--fren-blue)] bg-[#f8d5de] shadow-[0_18px_28px_-16px_rgba(66,104,201,0.45)]">
                     <Image
                       src="/chelsea-hero-circle-v2.png"
@@ -183,11 +183,11 @@ export default function FrennergyPage() {
                 </div>
               </div>
               <p className="fren-copy mt-4 max-w-xl text-[1rem] leading-7 sm:mt-6 sm:max-w-2xl sm:text-[1.13rem] sm:leading-8">
-                Chelsea&apos;s San Juan weekend: rooftop dinners, poolside glam, spritzes, and
-                nonstop main-character energy.
+                Sunshine, spritzes, rooftop dinners, poolside glam, and just the right amount of
+                chaos.
               </p>
 
-              <div className="mt-6 flex flex-col gap-2.5 sm:mt-8 sm:flex-row sm:gap-3">
+              <div className="mt-5 flex flex-col gap-2.5 sm:mt-8 sm:flex-row sm:gap-3">
                 <a
                   href="#itinerary"
                   className="fren-button-primary inline-flex items-center justify-center rounded-full px-6 py-3 text-base font-semibold uppercase tracking-[0.11em] transition duration-300 hover:-translate-y-1 hover:brightness-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--fren-blue)] focus-visible:ring-offset-2 sm:px-7 sm:text-sm sm:tracking-[0.12em]"
